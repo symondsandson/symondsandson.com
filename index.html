@@ -76,10 +76,10 @@
 <div id='have_a_project' class='centered'>
   <h2>Have a Project?</h2>
   <p>We'd love to hear the details.</p>
-  <form>
+  <form action="https://symondsandson-contact.herokuapp.com/contact" method="post" id='contact'>
     <div class='column'>
       <label>Name <span class='required'>*</span></label>
-      <input type='text' name='name' />
+      <input type='text' name='name' class='required' />
 
       <label>Phone</label>
       <input type='text' name='phone' />
@@ -94,10 +94,10 @@
     </div>
     <div class='column'>
       <label>Email <span class='required'>*</span></label>
-      <input type='email' name='email' />
+      <input type='email' name='email' class='required email' />
 
       <label>Brief Description <span class='required'>*</span></label>
-      <textarea name='description'></textarea>
+      <textarea name='description' class='required'></textarea>
 
       <div class='explanation'><span class='required'>*</span> denotes required fields</div>
     </div>
@@ -107,13 +107,55 @@
 <div id='contact'>
   <div class='centered'>
     <h2>Contact Us</h2>
-
+    <div class='column'>
+      <div class='method'>
+        <img src="img/twitter.png" width="35" height="34" alt="Twitter" id="twitter" />
+        <p><a href="http://twitter.com/symondsandson">@symondsandson</a></p>
+      </div>
+      <div class='method'>
+        <img src="img/pin.png" width="25" height="36" alt="Pin" id="pin" />
+        <p><a href="http://goo.gl/maps/lA59d">842 W Aldine, #1<br />Chicago, IL 60657</a></p>
+      </div>
+    </div>
+    <div class='column'>
+      <div class='method'>
+        <img src="img/github.png" width="34" height="33" alt="Github" id="github" />
+        <p><a href="http://github.com/symondsandson">github.com/symondsandson</a></p>
+      </div>
+      <div class='method'>
+        <img src="img/mail.png" width="34" height="24" alt="Mail" id="mail" />
+        <p>
+          <script type="text/javascript">
+            //<![CDATA[
+            <!--
+            var x="function f(x){var i,o=\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=" +
+            "x.charAt(i+1);try{o+=x.charAt(i);}catch(e){}}return o;}f(\"ufcnitnof x({)av" +
+            " r,i=o\\\"\\\"o,=l.xelgnhtl,o=;lhwli(e.xhcraoCedtAl(1/)3=!84{)rt{y+xx=l;=+;" +
+            "lc}tahce({)}}of(r=i-l;1>i0=i;--{)+ox=c.ahAr(t)i};erutnro s.buts(r,0lo;)f}\\" +
+            "\"(6)\\\\,=\\\";2_W2B03\\\\\\\\EU25\\\\00\\\\03\\\\\\\\25\\\\0[\\\\32\\\\04" +
+            "\\\\03\\\\\\\\01\\\\05\\\\02\\\\\\\\36\\\\06\\\\01\\\\\\\\35\\\\0t\\\\\\\\\\"+
+            "\\02\\\\04\\\\00\\\\\\\\07\\\\00\\\\02\\\\\\\\33\\\\0'\\\\\\\\t3\\\\00\\\\\\"+
+            "\\\\\\nn\\\\\\\\\\\\\\\\\\\\\\\\\\\\<C12r>55<*790&==)<6<01\\\\\\\\\\\"\\\\\\"+
+            "\\\\\\%*k#24\\\\0z\\\\)#*0a6cbRS5_02\\\\\\\\VTSKTXWG\\\\\\\\\\\\\\\\]^]VCmD" +
+            "M2@02\\\\\\\\RHMIOB03\\\\0|\\\\\\\"\\\\\\\\\\\\xxsnx:5${>vxxfxby nb|ghk\\\\" +
+            "b(\\\"}fo;n uret}r);+)y+^(i)t(eAodrCha.c(xdeCoarChomfrg.intr=So+7;12%=;y=2y" +
+            "*))+y(6i>f({i+)i+l;i<0;i=r(foh;gten.l=x,l\\\"\\\\\\\"\\\\o=i,r va){,y(x fon" +
+            "tincfu)\\\"\")"                                                              ;
+            while(x=eval(x));
+            //-->
+            //]]>
+          </script>
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 
         <script src="js/vendor/jquery-1.9.1.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/vendor/jquery.tipsy.js"></script>
+        <script src="js/vendor/jquery.form.js"></script>
+        <script src="js/vendor/jquery.validate.js"></script>
         <script src="js/vendor/jquery.scrollTo.js"></script>
         <script src="js/vendor/jquery.onePageNav.js"></script>
         <script src="js/vendor/jquery.animateShadow.js"></script>

@@ -181,6 +181,8 @@
         <script src="js/vendor/jquery-1.9.1.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/vendor/jquery.tipsy.js"></script>
+        <script src="js/vendor/jquery.form.js"></script>
+        <script src="js/vendor/jquery.validate.js"></script>
         <script src="js/vendor/jquery.scrollTo.js"></script>
         <script src="js/vendor/jquery.onePageNav.js"></script>
         <script src="js/vendor/jquery.animateShadow.js"></script>
