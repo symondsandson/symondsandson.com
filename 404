@@ -23,7 +23,7 @@
           <div class='centered'>
             <ul>
               <li class='current'>
-                <a href="/#top"><img src="/img/logo.png" width="80" height="80" id="logo" alt="Symonds & Son" /></a>
+                <a href="/#top"><img src="/img/logo.png" width="75" height="75" id="logo" alt="Symonds & Son" /></a>
               </li>
               <li><a href="/#who_we_are">Who We Are</a></li>
               <li><a href="/#our_work">Our Work</a></li>
