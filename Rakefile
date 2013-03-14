@@ -1,5 +1,7 @@
 desc "deploy build directory to github pages"
 task :deploy do
+  puts "## Building ##"
+  system "bundle exec middleman build"
   puts "## Deploying branch to Github Pages "
   cp_r ".nojekyll", "build/.nojekyll"
   cp_r "CNAME", "build/CNAME"

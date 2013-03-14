@@ -193,7 +193,7 @@
         gravity: 'n',
         html: false,
         live: false,
-        offset: 0,
+        offset: 5,
         opacity: 0.9,
         title: 'title',
         trigger: 'hover'
