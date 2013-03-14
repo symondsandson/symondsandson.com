@@ -17,6 +17,7 @@ $(window).scroll(function() {
   }
 })
 
+$("#contact").validate();
 $('#tailored').tipsy({gravity: 'sw', fade: true});
 $('#tradition').tipsy({gravity: 's', fade: true});
 $('#technologies').tipsy({gravity: 'se', fade: true});

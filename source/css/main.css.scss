@@ -3,11 +3,25 @@ $gray: #393939;
 
 @import "compass/css3";
 
-@include font-face("Edmond Sans Bold", font-files("/css/fonts/Edmondsans-Bold.otf"));
-@include font-face("Edmond Sans Medium", font-files("/css/fonts/Edmondsans-Medium.otf"));
-@include font-face("Edmond Sans Regular", font-files("/css/fonts/Edmondsans-Regular.otf"));
-@include font-face("Cubano Regular", font-files("/css/fonts/Cubano-Regular.otf"));
-@include font-face("Vevey", font-files("/css/fonts/vevey.ttf"));
+@font-face {
+  font-family: "Edmond Sans Bold";
+  src: url('fonts/Edmondsans-Bold.otf') format('opentype'); }
+
+@font-face {
+  font-family: "Edmond Sans Medium";
+  src: url('fonts/Edmondsans-Medium.otf') format('opentype'); }
+
+@font-face {
+  font-family: "Edmond Sans Regular";
+  src: url('fonts/Edmondsans-Regular.otf') format('opentype'); }
+
+@font-face {
+  font-family: "Cubano Regular";
+  src: url('fonts/Cubano-Regular.otf') format('opentype'); }
+
+@font-face {
+  font-family: "Vevey";
+  src: url('fonts/vevey.ttf') format('truetype'); }
 
 .centered {width: 960px; margin: 0 auto; padding: 0;}
 h2 {text-transform: uppercase; font-family: "Vevey"; font-size: 42px; margin: 100px 0 0 0; font-weight: normal; float: left; clear: both;}
@@ -21,7 +35,7 @@ div#navbar {
   ul { height: 100%; list-style-type: none; float: left; clear: both; margin: 0; padding: 0; width: 100%;
     li { float: left; width: 150px; text-align: center;
       a { color: black; text-decoration: none; height: 100px; width: 150px; line-height: 105px; float: left; @include transition(all 0.2s linear);}
-      &.current { background: url("/img/current_indicator.png") top left no-repeat;
+      &.current { background: url("../img/current_indicator.png") top left no-repeat;
         a {color: $orange;}
       }
       &:hover {
@@ -35,6 +49,7 @@ div#navbar {
         @include border-radius(2px); 
         @include box-shadow(inset lighten($orange, 20) 0 1px 1px);
         @include text-shadow(darken($orange, 10) 0 -1px 0);
+        @include transition(all 0s linear);
         border: 1px solid darken($orange, 20); margin: 30px 0 0 0;
         &:hover {
           @include background(linear-gradient($orange, darken($orange, 10) 70%));
@@ -52,15 +67,15 @@ div#navbar {
 div#top { position: relative; height: 900px;
   #big_logo {margin: 200px 0 0 404px;}
   h3, h4 {width: 100%; text-align: center; text-transform: uppercase; font-weight: normal;}
-  h3 {background: url("/img/artisans.png") center no-repeat; font-family: "Vevey"; font-size: 42px; color: white; padding: 10px 0 0 0; margin: 37px 0 0 0;}
-  h4 {background: url("/img/crafters.png") center no-repeat; font-family: "Cubano Regular"; font-size: 18px; letter-spacing: 8px; padding: 0; margin: 0;}
+  h3 {background: url("../img/artisans.png") center no-repeat; font-family: "Vevey"; font-size: 42px; color: white; padding: 10px 0 0 0; margin: 37px 0 0 0;}
+  h4 {background: url("../img/crafters.png") center no-repeat; font-family: "Cubano Regular"; font-size: 18px; letter-spacing: 8px; padding: 0; margin: 0;}
 
   ul {width: 100%; float: left; clear: both; margin: 0; padding: 0; list-style-type: none;
     li {float: left; width: 33%; text-align: center; margin: 100px 0 0 0; line-height: 26px;}
   }
 }
 
-div#who_we_are { position: relative; background: url("/img/who_we_are.jpg") top left repeat-x; height: 935px; width: 100%;
+div#who_we_are { position: relative; background: url("../img/who_we_are.jpg") top left repeat-x; height: 935px; width: 100%;
   h2 {color: white;}
   p {float: left; clear: both; color: white; padding: 0 70px; line-height: 38px; margin: 80px 0 0 0;}
   #ampersand {position: absolute; left: 50%; margin-left: -46px; bottom: 280px;}
@@ -73,14 +88,16 @@ div#who_we_are { position: relative; background: url("/img/who_we_are.jpg") top 
 
 div#have_a_project { position: relative; clear: both;
   p {float: left; clear: both;}
-  form { float: left; clear: both; width: 100%; margin: 0 0 100px 0;
+  form { float: left; clear: both; width: 100%; margin: 0 0 100px 0; position: relative;
     .column {float: left; width: 50%;
       &:last-of-type {
-        label {margin: 0 0 0 38px;}
+        label {margin: 0 0 5px 38px;}
         input, textarea {float: right;}
       }
     }
-    label {font-size: 22px; float: left; clear: both; margin: 0 0 5px 0; padding: 0; }
+    label {font-size: 22px; float: left; clear: both; margin: 0 0 5px 0; padding: 0; 
+      &.error {font-size: 14px; position: relative; margin: 0; top: -10px; color: darken(red, 10);}
+    }
     input, textarea {
       float: left; clear: both; border: 0; @include border-radius(4px); width: 90%; font-size: 22px; line-height: 26px;
       padding: 5px; margin: 0 0 20px 0;
@@ -96,19 +113,36 @@ div#have_a_project { position: relative; clear: both;
           @include background(linear-gradient($orange, darken($orange, 10) 70%));
           @include box-shadow(inset darken($orange, 20) 0 1px 1px);
         }
-        &:invalid {
-          @include box-shadow(darken(red, 10) 3px 3px 5px);
-        }
+      }
+      &:invalid {
+        @include box-shadow(darken(red, 10) 0px 0px 5px);
+      }
+      &.error {
+        @include box-shadow(darken(red, 10) 0px 0px 5px);
+      }
+      &.valid {
+        @include box-shadow(darken(green, 10) 0px 0px 5px); 
       }
     }
-    textarea {height: 220px;}
+    textarea {height: 210px;}
     span.required {color: $orange;}
-    div.explanation {float: right; clear: both; text-align: right; margin-top: 38px; font-size: 14px;}
+    div.explanation {position: absolute; text-align: right; bottom: 3px; right: 0; font-size: 14px;}
   }
 }
 
-div#contact { position: relative; background: url("/img/contact_us.jpg") top left repeat-x; height: 512px; width: 100%; clear: both;
-  h2 {color: white;}
+div#contact { position: relative; background: url("../img/contact_us.jpg") top left repeat-x; height: 512px; width: 100%; clear: both;
+  h2 {color: white; width: 100%; clear: both;}
+  .column {float: left; width: 50%; margin: 0;
+    .method {float: left; clear: both; width: 100%; margin: 60px 0 0 140px; position: relative;
+      img {position: absolute; 
+        &#pin {left: -48px; top: 22px;}
+        &#twitter {left: -54px; top: 13px;}
+        &#mail {left: -54px; top: 18px;}
+        &#github {left: -54px; top: 15px;}
+      }
+      a {text-decoration: none; color: white;}
+    }
+  }
 }
 
 .tipsy { font-size: 16px; position: absolute; padding: 5px; z-index: 50; font-family: "Edmond Sans Regular";}
