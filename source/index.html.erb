@@ -1,0 +1,91 @@
+<div id='navbar'>
+  <div class='centered'>
+    <ul>
+      <li class='current'>
+        <%= link_to tag(:img, src: 'img/logo.png', width: '80', height: '80', id: 'logo', alt: 'Symonds & Son'), '#top' %>
+      </li>
+      <li><%= link_to 'Who We Are', '#who_we_are' %></li>
+      <li><%= link_to 'Contact', '#contact' %></li>
+      <li><%= link_to 'Blog', 'http://joshsymonds.com', class: 'external' %></li>
+      <li id='button'><%= link_to 'Have a Project?', '#have_a_project' %></li>
+    </ul>
+  </div>
+</div>
+
+<div id='top' class='centered'>
+  <%= tag :img, src: 'img/big_logo.png', width: '153', height: '152', id: 'big_logo', alt: 'Symonds & Son' %>
+  <h3>Application Artisans</h3>
+  <h4>&amp; Web Crafters</h4>
+
+  <ul>
+    <li id='tailored' title="Like any quality craftsman, our work is our life and our pride. The products we deliver meet the exacting standards of any artisan.">
+      <%= tag(:img, src: 'img/tailored.png', width: '182', height: '183') %>
+      <p>A tradition of excellence,<br/>dependability, and beauty</p>
+    </li>
+
+    <li id='tradition' title="Your application is unique and needs to reflect who you are. We craft one-of-a-kind works of art, built to satisfy you, our client.">
+      <%= tag(:img, src: 'img/tradition.png', width: '182', height: '183') %>
+      <p>Tailored to match<br/>your needs</p>
+    </li>
+
+    <li id='technologies' title="Modern tools like Ruby on Rails and RubyMotion combine with our classic business model to delight our customers with wonderful products.">
+      <%= tag(:img, src: 'img/technologies.png', width: '182', height: '183') %>
+      <p>New technologies,</br>classic business</p>
+    </li>
+</div>
+
+<div id='who_we_are'>
+  <div class='centered'>
+    <h2>Who We Are</h2>
+    <p>Symonds &amp; Son is a development workshop dedicated to one ideal: creating the finest iPhone and web applications in existence, tailored meticulously to our client's specifications. We work with you to visualize, design, and finally produce your product, becoming your partners in development and business. Your success is our success, achieved through the amazing application we will deliver you.</p>
+    <%= tag(:img, src: 'img/ampersand.png', width: '93', height: '107', alt: 'Ampersand', id: 'ampersand') %>
+    <ul>
+      <li>
+        <%= tag(:img, src: 'img/symonds.png', width: '181', height: '242', alt: 'Steve Symonds') %>
+        <p>Steve Symonds has provided business development services to scores of organizations around the world, specializing in crafting strategic business solutions for companies ranging from start-up to Fortune 100. He's generated more than $1 billion in revenue and investment for his diverse clientele.</p>
+      </li>
+      <li>
+        <%= tag(:img, src: 'img/son.png', width: '181', height: '241', alt: 'Josh Symonds') %>
+        <p>Josh Symonds is a Ruby on Rails and iOS expert, having successfully developed, launched, and scaled websites and apps from thousands to millions of users. He's equally at home with powerful frontend technologies and backend server management.</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div id='have_a_project' class='centered'>
+  <h2>Have a Project?</h2>
+  <p>We'd love to hear the details.</p>
+  <form>
+    <div class='column'>
+      <label>Name <span class='required'>*</span></label>
+      <input type='text' name='name' />
+
+      <label>Phone</label>
+      <input type='text' name='phone' />
+
+      <label>Deadline</label>
+      <input type='text' name='deadline' />
+
+      <label>Budget</label>
+      <input type='text' name='budget' />
+
+      <input class="button" name="send" type="submit" value="Send">
+    </div>
+    <div class='column'>
+      <label>Email <span class='required'>*</span></label>
+      <input type='email' name='email' />
+
+      <label>Brief Description <span class='required'>*</span></label>
+      <textarea name='description'></textarea>
+
+      <div class='explanation'><span class='required'>*</span> denotes required fields</div>
+    </div>
+  </form>
+</div>
+
+<div id='contact'>
+  <div class='centered'>
+    <h2>Contact Us</h2>
+
+  </div>
+</div>

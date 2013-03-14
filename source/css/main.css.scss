@@ -1,0 +1,138 @@
+$orange: #da594c;
+$gray: #393939;
+
+@import "compass/css3";
+
+@include font-face("Edmond Sans Bold", font-files("/css/fonts/Edmondsans-Bold.otf"));
+@include font-face("Edmond Sans Medium", font-files("/css/fonts/Edmondsans-Medium.otf"));
+@include font-face("Edmond Sans Regular", font-files("/css/fonts/Edmondsans-Regular.otf"));
+@include font-face("Cubano Regular", font-files("/css/fonts/Cubano-Regular.otf"));
+@include font-face("Vevey", font-files("/css/fonts/vevey.ttf"));
+
+.centered {width: 960px; margin: 0 auto; padding: 0;}
+h2 {text-transform: uppercase; font-family: "Vevey"; font-size: 42px; margin: 100px 0 0 0; font-weight: normal; float: left; clear: both;}
+p {font-family: "Edmond Sans Regular";}
+
+body {width: 100%; padding: 0; margin: 0; font-family: "Edmond Sans Medium"; font-size: 18px; background-color: #f2f2e6; color: $gray; font-weight: normal;}
+
+div#navbar {
+  background-color: #ffffff; height: 100px; position: fixed; width: 100%; z-index: 100;
+  @include transition(all 0.4s linear);
+  ul { height: 100%; list-style-type: none; float: left; clear: both; margin: 0; padding: 0; width: 100%;
+    li { float: left; width: 150px; text-align: center;
+      a { color: black; text-decoration: none; height: 100px; width: 150px; line-height: 105px; float: left; @include transition(all 0.2s linear);}
+      &.current { background: url("/img/current_indicator.png") top left no-repeat;
+        a {color: $orange;}
+      }
+      &:hover {
+        a {color: $orange;}
+      }
+    }
+    li#button {float: right;
+      a {
+        width: 100%; text-align: center; color: white; height: 40px; line-height: 40px; font-weight: normal; font-family: "Edmond Sans Regular";
+        @include background(linear-gradient(lighten($orange, 5), $orange 70%));
+        @include border-radius(2px); 
+        @include box-shadow(inset lighten($orange, 20) 0 1px 1px);
+        @include text-shadow(darken($orange, 10) 0 -1px 0);
+        border: 1px solid darken($orange, 20); margin: 30px 0 0 0;
+        &:hover {
+          @include background(linear-gradient($orange, darken($orange, 10) 70%));
+          @include box-shadow(inset darken($orange, 20) 0 1px 1px);
+        };
+      }
+    }
+  }
+  &.moving {
+    opacity: 0.9;
+    @include box-shadow(rgba(black, 0.3) 0 2px 10px);
+  }
+}
+
+div#top { position: relative; height: 900px;
+  #big_logo {margin: 200px 0 0 404px;}
+  h3, h4 {width: 100%; text-align: center; text-transform: uppercase; font-weight: normal;}
+  h3 {background: url("/img/artisans.png") center no-repeat; font-family: "Vevey"; font-size: 42px; color: white; padding: 10px 0 0 0; margin: 37px 0 0 0;}
+  h4 {background: url("/img/crafters.png") center no-repeat; font-family: "Cubano Regular"; font-size: 18px; letter-spacing: 8px; padding: 0; margin: 0;}
+
+  ul {width: 100%; float: left; clear: both; margin: 0; padding: 0; list-style-type: none;
+    li {float: left; width: 33%; text-align: center; margin: 100px 0 0 0; line-height: 26px;}
+  }
+}
+
+div#who_we_are { position: relative; background: url("/img/who_we_are.jpg") top left repeat-x; height: 935px; width: 100%;
+  h2 {color: white;}
+  p {float: left; clear: both; color: white; padding: 0 70px; line-height: 38px; margin: 80px 0 0 0;}
+  #ampersand {position: absolute; left: 50%; margin-left: -46px; bottom: 280px;}
+  ul {width: 100%; float: left; clear: both; margin: 0; padding: 0; list-style-type: none;
+    li {float: left; width: 50%; text-align: center; margin: 60px 0 0 0; line-height: 26px;
+      p {font-size: 16px; line-height: 24px; margin: 20px 0 0 0;}
+    }
+  }
+}
+
+div#have_a_project { position: relative; clear: both;
+  p {float: left; clear: both;}
+  form { float: left; clear: both; width: 100%; margin: 0 0 100px 0;
+    .column {float: left; width: 50%;
+      &:last-of-type {
+        label {margin: 0 0 0 38px;}
+        input, textarea {float: right;}
+      }
+    }
+    label {font-size: 22px; float: left; clear: both; margin: 0 0 5px 0; padding: 0; }
+    input, textarea {
+      float: left; clear: both; border: 0; @include border-radius(4px); width: 90%; font-size: 22px; line-height: 26px;
+      padding: 5px; margin: 0 0 20px 0;
+      &[type='submit'] {
+        width: 92%; text-align: center; color: white; height: 40px; line-height: 30px; font-weight: normal;
+        padding: 5px;
+        @include background(linear-gradient(lighten($orange, 5), $orange 70%));
+        @include border-radius(2px); 
+        @include box-shadow(inset lighten($orange, 20) 0 1px 1px);
+        @include text-shadow(darken($orange, 10) 0 -1px 0);
+        border: 1px solid darken($orange, 20); margin: 30px 0 0 0;
+        &:hover {
+          @include background(linear-gradient($orange, darken($orange, 10) 70%));
+          @include box-shadow(inset darken($orange, 20) 0 1px 1px);
+        }
+        &:invalid {
+          @include box-shadow(darken(red, 10) 3px 3px 5px);
+        }
+      }
+    }
+    textarea {height: 220px;}
+    span.required {color: $orange;}
+    div.explanation {float: right; clear: both; text-align: right; margin-top: 38px; font-size: 14px;}
+  }
+}
+
+div#contact { position: relative; background: url("/img/contact_us.jpg") top left repeat-x; height: 512px; width: 100%; clear: both;
+  h2 {color: white;}
+}
+
+.tipsy { font-size: 16px; position: absolute; padding: 5px; z-index: 50; font-family: "Edmond Sans Regular";}
+  .tipsy-inner { background-color: #fefefd; color: $gray; max-width: 400px; padding: 10px; text-align: left; }
+
+  /* Rounded corners */
+  .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+  
+  /* Uncomment for shadow */
+  /*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
+  
+  .tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 5px dashed #000; }
+  
+  /* Rules to colour arrows */
+  .tipsy-arrow-n { border-bottom-color: #fefefd; }
+  .tipsy-arrow-s { border-top-color: #fefefd; }
+  .tipsy-arrow-e { border-left-color: #fefefd; }
+  .tipsy-arrow-w { border-right-color: #fefefd; }
+  
+  .tipsy-n .tipsy-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-nw .tipsy-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
+    .tipsy-ne .tipsy-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none;  border-left-color: transparent; border-right-color: transparent;}
+  .tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -5px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-se .tipsy-arrow { bottom: 0; right: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+  .tipsy-e .tipsy-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
+  .tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }
