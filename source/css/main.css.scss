@@ -145,6 +145,26 @@ div#contact { position: relative; background: url("../img/contact_us.jpg") top l
   }
 }
 
+div#our_work {position: relative; background-color: white; width: 100%; clear: both; float: left; padding: 0 0 100px 0;
+  h2 {color: black; width: 100%; clear: both; margin-bottom: 80px;}
+  .box {width: 300px; float: left;
+    img {border: 10px solid #f2f2e6; @include border-radius(2px); }
+    h4 {margin: 5px 0 0 0; float: left; width: 50%;
+      a {color: $gray; text-decoration: none;}
+    }
+    p {margin: 8px 0 0 0; font-size: 16px; float: right; width: 50%; padding: 0; text-align: right;}
+    &:nth-of-type(3n-1) {margin: 0 30px;}
+  }
+  ul {width: 100%; float: left; clear: both; margin: 90px 0 0 0; padding: 0; list-style-type: none; background: url("../img/chat_bubble.png") top left no-repeat; height: 276px;
+    li {float: left; width: 660px; padding: 10px 0 0 90px; line-height: 30px; margin: 60px 0 0 110px; background: url("../img/quote.png") top left no-repeat;
+      p {margin: 0;}
+      h4 {margin: 20px 0 0 0;}
+    }
+  }
+}
+
+footer {clear: both; width: 100%; font-size: 14px; text-align: center; margin: 50px 0 20px 0; background: url("../img/crafters.png") center no-repeat; font-family: "Cubano Regular"; letter-spacing: 1px; }
+
 .tipsy { font-size: 16px; position: absolute; padding: 5px; z-index: 50; font-family: "Edmond Sans Regular";}
   .tipsy-inner { background-color: #fefefd; color: $gray; max-width: 400px; padding: 10px; text-align: left; }
 
