@@ -27,15 +27,15 @@ $gray: #393939;
 h2 {text-transform: uppercase; font-family: "Vevey"; font-size: 42px; margin: 100px 0 0 0; font-weight: normal; float: left; clear: both;}
 p {font-family: "Edmond Sans Regular";}
 
-body {width: 100%; padding: 0; margin: 0; font-family: "Edmond Sans Medium"; font-size: 18px; background-color: #f2f2e6; color: $gray; font-weight: normal;}
+body {width: 100%; padding: 0; margin: 0; font-family: "Edmond Sans Medium"; font-size: 18px; background-color: #f2f2e6; color: $gray; font-weight: normal; -webkit-font-smoothing: antialiased;}
 
 div#navbar {
   background-color: #ffffff; height: 100px; position: fixed; width: 100%; z-index: 100;
-  @include transition(all 0.4s linear);
+  @include transition(all 0.4s linear translate3d(0, 0, 0));
   ul { height: 100%; list-style-type: none; float: left; clear: both; margin: 0; padding: 0; width: 100%;
     li { float: left; width: 150px; text-align: center;
       a { color: black; text-decoration: none; height: 100px; width: 150px; line-height: 105px; float: left; @include transition(all 0.2s linear);}
-      &.current { background: url("../img/current_indicator.png") top left no-repeat;
+      &.current { background: url("/img/current_indicator.png") top left no-repeat;
         a {color: $orange;}
       }
       &:hover {
@@ -44,7 +44,7 @@ div#navbar {
     }
     li#button {float: right;
       a {
-        width: 100%; text-align: center; color: white; height: 40px; line-height: 40px; font-weight: normal; font-family: "Edmond Sans Regular";
+        width: 100%; text-align: center; color: white; height: 40px; line-height: 40px; font-weight: normal;
         @include background(linear-gradient(lighten($orange, 5), $orange 70%));
         @include border-radius(2px); 
         @include box-shadow(inset lighten($orange, 20) 0 1px 1px);
@@ -52,6 +52,9 @@ div#navbar {
         @include transition(all 0s linear);
         border: 1px solid darken($orange, 20); margin: 30px 0 0 0;
         &:hover {
+          @include background(linear-gradient(lighten($orange, 8), lighten($orange, 3) 70%));
+        };
+        &:active {
           @include background(linear-gradient($orange, darken($orange, 10) 70%));
           @include box-shadow(inset darken($orange, 20) 0 1px 1px);
         };
@@ -67,15 +70,15 @@ div#navbar {
 div#top { position: relative; height: 900px;
   #big_logo {margin: 200px 0 0 404px;}
   h3, h4 {width: 100%; text-align: center; text-transform: uppercase; font-weight: normal;}
-  h3 {background: url("../img/artisans.png") center no-repeat; font-family: "Vevey"; font-size: 42px; color: white; padding: 10px 0 0 0; margin: 37px 0 0 0;}
-  h4 {background: url("../img/crafters.png") center no-repeat; font-family: "Cubano Regular"; font-size: 18px; letter-spacing: 8px; padding: 0; margin: 0;}
+  h3 {background: url("/img/artisans.png") center no-repeat; font-family: "Vevey"; font-size: 42px; color: white; padding: 10px 0 0 0; margin: 37px 0 0 0;}
+  h4 {background: url("/img/crafters.png") center no-repeat; font-family: "Cubano Regular"; font-size: 18px; letter-spacing: 8px; padding: 0; margin: 0;}
 
   ul {width: 100%; float: left; clear: both; margin: 0; padding: 0; list-style-type: none;
     li {float: left; width: 33%; text-align: center; margin: 100px 0 0 0; line-height: 26px;}
   }
 }
 
-div#who_we_are { position: relative; background: url("../img/who_we_are.jpg") top left repeat-x; height: 935px; width: 100%;
+div#who_we_are { position: relative; background: url("/img/who_we_are.jpg") top left repeat-x; height: 935px; width: 100%;
   h2 {color: white;}
   p {float: left; clear: both; color: white; padding: 0 70px; line-height: 38px; margin: 80px 0 0 0;}
   #ampersand {position: absolute; left: 50%; margin-left: -46px; bottom: 280px;}
@@ -99,20 +102,23 @@ div#have_a_project { position: relative; clear: both;
       &.error {font-size: 14px; position: relative; margin: 0; top: -10px; color: darken(red, 10);}
     }
     input, textarea {
-      float: left; clear: both; border: 0; @include border-radius(4px); width: 90%; font-size: 22px; line-height: 26px;
+      float: left; clear: both; border: 0; @include border-radius(2px); width: 90%; font-size: 22px; line-height: 30px;
       padding: 5px; margin: 0 0 20px 0;
       &[type='submit'] {
-        width: 92%; text-align: center; color: white; height: 40px; line-height: 30px; font-weight: normal;
-        padding: 5px;
+        width: 92%; text-align: center; color: white; height: 45px; line-height: 35px; font-weight: normal;
+        padding: 5px; text-transform: uppercase;
         @include background(linear-gradient(lighten($orange, 5), $orange 70%));
         @include border-radius(2px); 
         @include box-shadow(inset lighten($orange, 20) 0 1px 1px);
         @include text-shadow(darken($orange, 10) 0 -1px 0);
         border: 1px solid darken($orange, 20); margin: 30px 0 0 0;
         &:hover {
+          @include background(linear-gradient(lighten($orange, 8), lighten($orange, 3) 70%));
+        };
+        &:active {
           @include background(linear-gradient($orange, darken($orange, 10) 70%));
           @include box-shadow(inset darken($orange, 20) 0 1px 1px);
-        }
+        };
       }
       &:invalid {
         @include box-shadow(darken(red, 10) 0px 0px 5px);
@@ -130,7 +136,7 @@ div#have_a_project { position: relative; clear: both;
   }
 }
 
-div#contact { position: relative; background: url("../img/contact_us.jpg") top left repeat-x; height: 512px; width: 100%; clear: both;
+div#contact { position: relative; background: url("/img/contact_us.jpg") top left repeat-x; height: 512px; width: 100%; clear: both;
   h2 {color: white; width: 100%; clear: both;}
   .column {float: left; width: 50%; margin: 0;
     .method {float: left; clear: both; width: 100%; margin: 60px 0 0 140px; position: relative;
@@ -155,26 +161,26 @@ div#our_work {position: relative; background-color: white; width: 100%; clear: b
     p {margin: 8px 0 0 0; font-size: 16px; float: right; width: 50%; padding: 0; text-align: right;}
     &:nth-of-type(3n-1) {margin: 0 30px;}
   }
-  ul {width: 100%; float: left; clear: both; margin: 90px 0 0 0; padding: 0; list-style-type: none; background: url("../img/chat_bubble.png") top left no-repeat; height: 276px;
-    li {float: left; width: 660px; padding: 10px 0 0 90px; line-height: 30px; margin: 60px 0 0 110px; background: url("../img/quote.png") top left no-repeat;
+  ul {width: 100%; float: left; clear: both; margin: 90px 0 0 0; padding: 0; list-style-type: none; background: url("/img/chat_bubble.png") top left no-repeat; height: 276px;
+    li {float: left; width: 660px; padding: 10px 0 0 90px; line-height: 30px; margin: 60px 0 0 110px; background: url("/img/quote.png") top left no-repeat;
       p {margin: 0;}
       h4 {margin: 20px 0 0 0;}
     }
   }
 }
 
-footer {clear: both; width: 100%; font-size: 14px; text-align: center; margin: 50px 0 20px 0; background: url("../img/crafters.png") center no-repeat; font-family: "Cubano Regular"; letter-spacing: 1px; }
+footer {clear: both; width: 100%; font-size: 14px; text-align: center; margin: 50px 0 20px 0; background: url("/img/crafters.png") center no-repeat; font-family: "Cubano Regular"; letter-spacing: 1px; }
 
-.tipsy { font-size: 16px; position: absolute; padding: 5px; z-index: 50; font-family: "Edmond Sans Regular";}
-  .tipsy-inner { background-color: #fefefd; color: $gray; max-width: 400px; padding: 10px; text-align: left; }
+.tipsy { font-size: 16px; position: absolute; padding: 10px; z-index: 50; font-family: "Edmond Sans Regular"; }
+  .tipsy-inner { background-color: #fefefd; color: $gray; max-width: 330px; padding: 10px; text-align: left; }
 
   /* Rounded corners */
   .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
   
   /* Uncomment for shadow */
-  /*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
+  .tipsy-inner { @include box-shadow(lighten(black, 80) 0 2px 5px) }
   
-  .tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 5px dashed #000; }
+  .tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 10px dashed #000;}
   
   /* Rules to colour arrows */
   .tipsy-arrow-n { border-bottom-color: #fefefd; }
@@ -185,8 +191,8 @@ footer {clear: both; width: 100%; font-size: 14px; text-align: center; margin: 5
   .tipsy-n .tipsy-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
     .tipsy-nw .tipsy-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
     .tipsy-ne .tipsy-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none;  border-left-color: transparent; border-right-color: transparent;}
-  .tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -5px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
-    .tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
-    .tipsy-se .tipsy-arrow { bottom: 0; right: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+  .tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -10px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-sw .tipsy-arrow { bottom: 0; left: 15px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-se .tipsy-arrow { bottom: 0; right: 15px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
   .tipsy-e .tipsy-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
   .tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }

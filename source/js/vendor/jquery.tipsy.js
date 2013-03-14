@@ -60,9 +60,9 @@
                 
                 if (gravity.length == 2) {
                     if (gravity.charAt(1) == 'w') {
-                        tp.left = pos.left + pos.width / 2 - 15;
+                        tp.left = pos.left + pos.width / 2 - 30;
                     } else {
-                        tp.left = pos.left + pos.width / 2 - actualWidth + 15;
+                        tp.left = pos.left + pos.width / 2 - actualWidth + 30;
                     }
                 }
                 
@@ -194,7 +194,7 @@
         html: false,
         live: false,
         offset: 0,
-        opacity: 0.8,
+        opacity: 0.9,
         title: 'title',
         trigger: 'hover'
     };

@@ -6,7 +6,8 @@ $('#navbar').onePageNav({
   },
   end: function() {
     $('#device-dummy').remove();
-  }
+  },
+  changeHash: true
 })
 
 $(window).scroll(function() {
@@ -17,7 +18,7 @@ $(window).scroll(function() {
   }
 })
 
-$("#contact").validate();
+$("#contact_form").validate();
 $('#tailored').tipsy({gravity: 'sw', fade: true});
 $('#tradition').tipsy({gravity: 's', fade: true});
 $('#technologies').tipsy({gravity: 'se', fade: true});

@@ -13,9 +13,9 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/boilerplate.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/boilerplate.css">
+        <link rel="stylesheet" href="/css/main.css">
         <script src="js/vendor/modernizr-2.6.1.min.js"></script>
     </head>
     <body>
@@ -23,7 +23,7 @@
           <div class='centered'>
             <ul>
               <li class='current'>
-                <%= link_to tag(:img, src: 'img/logo.png', width: '80', height: '80', id: 'logo', alt: 'Symonds & Son'), '/#top' %>
+                <%= link_to tag(:img, src: '/img/logo.png', width: '75', height: '75', id: 'logo', alt: 'Symonds & Son'), '/#top' %>
               </li>
               <li><%= link_to 'Who We Are', '/#who_we_are' %></li>
               <li><%= link_to 'Our Work', '/#our_work' %></li>
@@ -36,16 +36,16 @@
 
         <%= yield %>
 
-        <script src="js/vendor/jquery-1.9.1.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/vendor/jquery.tipsy.js"></script>
-        <script src="js/vendor/jquery.form.js"></script>
-        <script src="js/vendor/jquery.validate.js"></script>
-        <script src="js/vendor/jquery.scrollTo.js"></script>
-        <script src="js/vendor/jquery.onePageNav.js"></script>
-        <script src="js/vendor/jquery.animateShadow.js"></script>
+        <script src="/js/vendor/jquery-1.9.1.js"></script>
+        <script src="/js/plugins.js"></script>
+        <script src="/js/vendor/jquery.tipsy.js"></script>
+        <script src="/js/vendor/jquery.form.js"></script>
+        <script src="/js/vendor/jquery.validate.js"></script>
+        <script src="/js/vendor/jquery.scrollTo.js"></script>
+        <script src="/js/vendor/jquery.onePageNav.js"></script>
+        <script src="/js/vendor/jquery.animateShadow.js"></script>
         <% if data.page.javascript %>
-            <script src="js/<%= data.page.javascript %>.js"></script>
+            <script src="/js/<%= data.page.javascript %>.js"></script>
         <% end %>
 
         <script>
