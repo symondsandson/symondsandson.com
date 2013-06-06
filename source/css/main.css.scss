@@ -46,7 +46,7 @@ div#navbar {
       a {
         width: 100%; text-align: center; color: white; height: 40px; line-height: 40px; font-weight: normal;
         @include background(linear-gradient(lighten($orange, 5), $orange 70%));
-        @include border-radius(2px); 
+        @include border-radius(2px);
         @include box-shadow(inset lighten($orange, 20) 0 1px 1px);
         @include text-shadow(darken($orange, 10) 0 -1px 0);
         @include transition(all 0s linear);
@@ -98,7 +98,7 @@ div#have_a_project { position: relative; clear: both;
         input, textarea {float: right;}
       }
     }
-    label {font-size: 22px; float: left; clear: both; margin: 0 0 5px 0; padding: 0; 
+    label {font-size: 22px; float: left; clear: both; margin: 0 0 5px 0; padding: 0;
       &.error {font-size: 14px; position: relative; margin: 0; top: -10px; color: darken(red, 10);}
     }
     input, textarea {
@@ -108,7 +108,7 @@ div#have_a_project { position: relative; clear: both;
         width: 92%; text-align: center; color: white; height: 45px; line-height: 35px; font-weight: normal;
         padding: 5px; text-transform: uppercase;
         @include background(linear-gradient(lighten($orange, 5), $orange 70%));
-        @include border-radius(2px); 
+        @include border-radius(2px);
         @include box-shadow(inset lighten($orange, 20) 0 1px 1px);
         @include text-shadow(darken($orange, 10) 0 -1px 0);
         border: 1px solid darken($orange, 20); margin: 30px 0 0 0;
@@ -127,7 +127,7 @@ div#have_a_project { position: relative; clear: both;
         @include box-shadow(darken(red, 10) 0px 0px 5px);
       }
       &.valid {
-        @include box-shadow(darken(green, 10) 0px 0px 5px); 
+        @include box-shadow(darken(green, 10) 0px 0px 5px);
       }
     }
     textarea {height: 210px;}
@@ -140,7 +140,7 @@ div#contact { position: relative; background: url("/img/contact_us.jpg") top lef
   h2 {color: white; width: 100%; clear: both;}
   .column {float: left; width: 50%; margin: 0;
     .method {float: left; clear: both; width: 100%; margin: 60px 0 0 140px; position: relative;
-      img {position: absolute; 
+      img {position: absolute;
         &#pin {left: -48px; top: 22px;}
         &#twitter {left: -54px; top: 13px;}
         &#mail {left: -54px; top: 18px;}
@@ -161,10 +161,13 @@ div#our_work {position: relative; background-color: white; width: 100%; clear: b
     p {margin: 8px 0 0 0; font-size: 16px; float: right; width: 50%; padding: 0; text-align: right;}
     &:nth-of-type(3n-1) {margin: 0 30px;}
   }
-  ul {width: 100%; float: left; clear: both; margin: 90px 0 0 0; padding: 0; list-style-type: none; background: url("/img/chat_bubble.png") top left no-repeat; height: 276px;
-    li {float: left; width: 660px; padding: 10px 0 0 90px; line-height: 30px; margin: 60px 0 0 110px; background: url("/img/quote.png") top left no-repeat;
+  ul {width: 100%; float: left; clear: both; margin: 90px 0 0 0; padding: 0; list-style-type: none; background-color: #f2f2e6; position: relative;
+    img {position: absolute; left: 38px; top: -30px;}
+    li {float: left; width: 660px; padding: 10px 0 0 90px; line-height: 30px; margin: 40px 0 40px 110px; background: url("/img/quote.png") top left no-repeat;
       p {margin: 0;}
-      h4 {margin: 20px 0 0 0;}
+      h4 {margin: 20px 0 0 0;
+        span {font-weight: normal; font-size: 16px; margin: 5px 0 0 30px;}
+      }
     }
   }
 }
@@ -176,18 +179,18 @@ footer {clear: both; width: 100%; font-size: 14px; text-align: center; margin: 5
 
   /* Rounded corners */
   .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
-  
+
   /* Uncomment for shadow */
   .tipsy-inner { @include box-shadow(lighten(black, 80) 0 2px 5px) }
-  
+
   .tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 10px dashed #000;}
-  
+
   /* Rules to colour arrows */
   .tipsy-arrow-n { border-bottom-color: #fefefd; }
   .tipsy-arrow-s { border-top-color: #fefefd; }
   .tipsy-arrow-e { border-left-color: #fefefd; }
   .tipsy-arrow-w { border-right-color: #fefefd; }
-  
+
   .tipsy-n .tipsy-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
     .tipsy-nw .tipsy-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
     .tipsy-ne .tipsy-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none;  border-left-color: transparent; border-right-color: transparent;}

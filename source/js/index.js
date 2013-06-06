@@ -7,7 +7,7 @@ $('#navbar').onePageNav({
   end: function() {
     $('#device-dummy').remove();
   },
-  changeHash: true
+  changeHash: false
 })
 
 $(window).scroll(function() {
