@@ -24,9 +24,11 @@ $(function() {
   $('#tradition').tipsy({gravity: 's', fade: true});
   $('#technologies').tipsy({gravity: 'se', fade: true});
 
-  $('#masonry').masonry({
-    gutter: 20,
-    columWidth: 280,
-    itemSelector: '.box'
+  $('#masonry').imagesLoaded(function() {
+    $('#masonry').masonry({
+      gutter: 20,
+      columWidth: 280,
+      itemSelector: '.box'
+    });
   });
 });
