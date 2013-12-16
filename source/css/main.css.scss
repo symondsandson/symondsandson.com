@@ -80,11 +80,12 @@ div#top { position: relative; height: 900px;
 
 div#who_we_are { position: relative; background: url("/img/who_we_are.jpg") top left repeat-x; height: 935px; width: 100%;
   h2 {color: white;}
-  p {float: left; clear: both; color: white; padding: 0 70px; line-height: 38px; margin: 80px 0 0 0;}
-  #ampersand {position: absolute; left: 50%; margin-left: -46px; bottom: 280px;}
+  p {float: left; clear: both; color: white; padding: 0 70px; line-height: 30px; margin: 80px 0 0 0;}
+  #ampersand {position: absolute; left: 50%; margin-left: -46px; bottom: 400px;}
   ul {width: 100%; float: left; clear: both; margin: 0; padding: 0; list-style-type: none;
-    li {float: left; width: 50%; text-align: center; margin: 60px 0 0 0; line-height: 26px;
-      p {font-size: 16px; line-height: 24px; margin: 20px 0 0 0;}
+    li {float: left; width: 50%; margin: 120px 0 0 0; line-height: 26px;
+      h2 {text-align: center; margin: 0 0 30px 0; float: none; clear: none;}
+      p {line-height: 30px; margin: 20px 0 0 0;}
     }
   }
 }
@@ -151,23 +152,26 @@ div#contact { position: relative; background: url("/img/contact_us.jpg") top lef
   }
 }
 
-div#our_work {position: relative; background-color: white; width: 100%; clear: both; float: left; padding: 0 0 100px 0;
-  h2 {color: black; width: 100%; clear: both; margin-bottom: 80px;}
-  .box {width: 300px; float: left;
-    img {border: 10px solid #f2f2e6; @include border-radius(2px); }
-    h4 {margin: 5px 0 0 0; float: left; width: 50%;
-      a {color: $gray; text-decoration: none;}
-    }
-    p {margin: 8px 0 0 0; font-size: 16px; float: right; width: 50%; padding: 0; text-align: right;}
-    &:nth-of-type(3n-1) {margin: 0 30px;}
-  }
-  ul {width: 100%; float: left; clear: both; margin: 90px 0 0 0; padding: 0; list-style-type: none; background-color: #f2f2e6; position: relative;
+div#our_experience {position: relative; background-color: white; width: 100%; clear: both; float: left; padding: 0 0 100px 0;
+  h2 {color: black; width: 100%; clear: both; margin-bottom: 0;}
+
+  ul {width: 940px; float: left; clear: both; margin: 25px 0 90px 0; padding: 0; list-style-type: none; background-color: #f2f2e6; position: relative; @include border-radius(5px);
     img {position: absolute; left: 38px; top: -30px;}
-    li {float: left; width: 660px; padding: 10px 0 0 90px; line-height: 30px; margin: 40px 0 40px 110px; background: url("/img/quote.png") top left no-repeat;
+    li {float: left; width: 780px; padding: 10px 0 0 90px; line-height: 30px; margin: 40px 0;
       p {margin: 0;}
       h4 {margin: 20px 0 0 0;
         span {font-weight: normal; font-size: 16px; margin: 5px 0 0 30px;}
       }
+    }
+  }
+
+  #masonry {float: left; clear: both; width: 100%;
+    .box {width: 280px; border: 10px solid #f2f2e6; @include border-radius(5px); background-color: #f2f2e6; margin: 0 0 20px 0;
+      img { display: block; margin: 10px auto 10px auto;}
+      h4 {margin: 5px 0 0 0; float: left; clear: both;
+        a {color: $gray; text-decoration: none;}
+      }
+      p {margin: 8px 0 0 0; font-size: 18px; float: left; text-align: left;  line-height: 26px;}
     }
   }
 }

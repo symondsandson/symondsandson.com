@@ -22,3 +22,9 @@ $("#contact_form").validate();
 $('#tailored').tipsy({gravity: 'sw', fade: true});
 $('#tradition').tipsy({gravity: 's', fade: true});
 $('#technologies').tipsy({gravity: 'se', fade: true});
+
+$('#masonry').masonry({
+  gutter: 20,
+  columWidth: 280,
+  itemSelector: '.box'
+});

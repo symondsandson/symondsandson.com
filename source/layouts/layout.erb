@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <!-- Use title if it's in the page YAML frontmatter -->
         <title>Symonds &amp; Son<%= data.page.title ? " | #{data.page.title}": '' %></title>
-        <meta name="viewport" content="width=1260;">
+        <meta name="viewport">
         <meta name="description" content="">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -26,7 +26,7 @@
                 <%= link_to tag(:img, src: '/img/logo.png', width: '75', height: '75', id: 'logo', alt: 'Symonds & Son'), '/#top' %>
               </li>
               <li><%= link_to 'Who We Are', '/#who_we_are' %></li>
-              <li><%= link_to 'Our Work', '/#our_work' %></li>
+              <li><%= link_to 'Our Experience', '/#our_experience' %></li>
               <li><%= link_to 'Contact', '/#contact' %></li>
               <li><%= link_to 'Blog', 'http://joshsymonds.com', target: '_blank', class: 'external' %></li>
               <li id='button'><%= link_to 'Have a Project?', '/#have_a_project' %></li>
@@ -43,6 +43,7 @@
         <script src="/js/vendor/jquery.validate.js"></script>
         <script src="/js/vendor/jquery.scrollTo.js"></script>
         <script src="/js/vendor/jquery.onePageNav.js"></script>
+        <script src="/js/vendor/jquery.masonry.js"></script>
         <script src="/js/vendor/jquery.animateShadow.js"></script>
         <% if data.page.javascript %>
             <script src="/js/<%= data.page.javascript %>.js"></script>

@@ -9,15 +9,15 @@ javascript: index
   <ul>
     <li id='tailored' title="Like any quality craftsman, our work is our life and our pride. The products we deliver meet the exacting standards of any artisan.">
       <%= tag(:img, src: 'img/tailored.png', width: '182', height: '183') %>
-      <p>A tradition of excellence,<br/>dependability, and beauty</p>
+      <p>A tradition of excellence,<br/>dependability, and stability</p>
     </li>
 
-    <li id='tradition' title="Your application is unique and needs to reflect who you are. We craft one-of-a-kind works of art, built to satisfy you, our client.">
+    <li id='tradition' title="Your application and the needs of your customers are unique. We build and scale your application from a few clients to many millions, ensuring uptime all the way.">
       <%= tag(:img, src: 'img/tradition.png', width: '182', height: '183') %>
-      <p>Tailored to match<br/>your needs</p>
+      <p>Scaled to match<br/>your needs</p>
     </li>
 
-    <li id='technologies' title="Modern tools like Ruby on Rails and RubyMotion combine with our classic business model to delight our customers with wonderful products.">
+    <li id='technologies' title="Modern tools like Ruby on Rails, RubyMotion, and Chef combine with our classic business model to delight our customers with wonderful and valuable products.">
       <%= tag(:img, src: 'img/technologies.png', width: '182', height: '183') %>
       <p>New technologies,</br>classic business</p>
     </li>
@@ -26,55 +26,113 @@ javascript: index
 <div id='who_we_are'>
   <div class='centered'>
     <h2>Who We Are</h2>
-    <p>Symonds &amp; Son is a development workshop dedicated to one ideal: creating the finest iPhone and web applications in existence, tailored meticulously to our client's specifications. We work with you to visualize, design, and finally produce your product, becoming your partners in development and business. Your success is our success, achieved through the amazing application we will deliver you.</p>
+    <p>Symonds &amp; Son is a Ruby development shop. We create and scale amazing web applications: whether you're looking to create an iPhone or web app, or simply take your existing product from serving thousands of customers to millions, we will tailor our solutions meticulously to your specifications. We work with you to visualize, produce, and scale your application, becoming your partners in development and business.</p>
     <%= tag(:img, src: 'img/ampersand.png', width: '93', height: '107', alt: 'Ampersand', id: 'ampersand') %>
     <ul>
       <li>
-        <%= tag(:img, src: 'img/symonds.png', width: '181', height: '242', alt: 'Steve Symonds') %>
-        <p>Steve Symonds has provided business development services to scores of organizations around the world, specializing in crafting strategic business solutions for companies ranging from start-up to Fortune 100. He's generated more than $1 billion in revenue and investment for his diverse clientele.</p>
+        <h2>Operations</h2>
+        <p>From one server, to thirty, then to a hundred: you need a partner intimately familiar with managing and administering a Rails application and the software surrounding it. Whatever the database, cache, log management or search software you're running, Symonds &amp; Son provides the expertise to scale your application from where you are to where you want to be.</p>
       </li>
       <li>
-        <%= tag(:img, src: 'img/son.png', width: '181', height: '241', alt: 'Josh Symonds') %>
-        <p>Josh Symonds is a Ruby on Rails and iOS expert, having successfully developed, launched, and scaled websites and apps from thousands to millions of users. He's equally at home with powerful frontend technologies and backend server management.</p>
+        <h2>Development</h2>
+        <p>At Symonds &amp; Son, we pride ourselves on our incredible developers and the many years of experience they've had creating the most complicated Rails applications on the Internet. We provide expert-level guidance and programming, creating Rails applications from scratch and improving existing ones to be more efficient, more user-friendly, and more tested.</p>
       </li>
     </ul>
   </div>
 </div>
 
-<div id='our_work'>
+<div id='our_experience'>
   <div class='centered'>
-    <h2>Our Work</h2>
-    <div class='box'>
-      <%= link_to tag(:img, src: 'img/kinotify.png', width: '280', height: '205', alt: 'Kinotify'), 'http://kinotify.com', target: '_blank' %>
-      <h4><%= link_to 'Kinotify', 'http://kinotify.com', target: '_blank' %></h4>
-      <p>iPhone and Web</p>
-    </div>
-
-    <div class='box'>
-      <%= link_to tag(:img, src: 'img/girlsguideto.png', width: '280', height: '205', alt: 'GirlsGuideTo'), 'http://girlsguideto.com', target: '_blank' %>
-      <h4><%= link_to 'GirlsGuideTo', 'http://girlsguideto.com', target: '_blank' %></h4>
-      <p>Web</p>
-    </div>
-
-    <div class='box'>
-      <%= link_to tag(:img, src: 'img/intelsat.png', width: '280', height: '205', alt: 'GirlsGuideTo'), 'http://intelsat.com', target: '_blank' %>
-      <h4><%= link_to 'Intelsat', 'http://intelsat.com', target: '_blank' %></h4>
-      <p>Business Development</p>
-    </div>
-
-    <div class='box'>
-      <%= link_to tag(:img, src: 'img/gistify.png', width: '280', height: '205', alt: 'Gistify'), 'http://gistifyapp.com', target: '_blank' %>
-      <h4><%= link_to 'Gistify', 'http://gistifyapp.com', target: '_blank' %></h4>
-      <p>Web and Desktop</p>
-    </div>
+    <h2>Our Experience</h2>
 
     <ul>
       <%= tag(:img, src: 'img/chat_bubble.png', width: '40', height: '30', alt: '') %>
       <li>
-        <p>Having worked with Josh Symonds on several application projects, I am always amazed at not only his technical capabilities, but his ability to explain the functional side of the application as well. He definitely demonstrates a deep understanding of back-end server architecture and infrastructure as well as the front-end application components. Always courteous, professional and a pleasure to work with.</p>
-        <h4>Luke S.<span>Founder &amp; CEO, Kinotify</span></h4>
+        <p>Our team has had dozens of years of experience with the technologies that make the Internet run at scale. Whether it's a web application or a mobile application, whatever software stack you seek to employ, chances are we've not only used it &mdash; we've used it to help a multi-million dollar company increase their uptime, reduce their operating costs, and most importantly, delight their customers. Here's a very small selection of the software we love using over and over again.</p>
       </li>
     </ul>
+
+    <div id='masonry'>
+      <div class='box'>
+        <%= link_to tag(:img, src: 'img/rails.png', width: '87', height: '111', alt: 'Ruby on Rails'), 'http://rubyonrails.org', target: '_blank' %>
+        <h4><%= link_to 'Ruby on Rails', 'http://rubyonrails.org/', target: '_blank' %></h4>
+        <p>Ruby on Rails is an amazing application framework that Symonds &amp; Son uses for quick, powerful application development. From the backend API of a iPhone application to a complicated web deployment, we can scale your Rails application from a few hundred users to many millions.</p>
+      </div>
+
+      <div class='box'>
+        <%= link_to tag(:img, src: 'img/rubymotion.png', width: '120', height: '120', alt: 'RubyMotion'), 'http://www.rubymotion.com/', target: '_blank' %>
+        <h4><%= link_to 'RubyMotion', 'http://rubymotion.com/', target: '_blank' %></h4>
+        <p>Want to quickly develop mobile applications? RubyMotion is what you've been looking for. For speed of development and getting to market quickly and easily, nothing can beat our use of this awesome tool-chain.</p>
+      </div>
+
+      <div class='box'>
+        <%= link_to tag(:img, src: 'img/postgresql.png', width: '120', height: '120', alt: 'PostgreSQL'), 'http://www.postgresql.org/', target: '_blank' %>
+        <h4><%= link_to 'PostgreSQL', 'http://www.postgresql.org/', target: '_blank' %></h4>
+        <p>A modern, powerful, and ACID-compliant database, PostgreSQL is fast and widely used by Symonds &amp; Son. We've created replicated database clusters, multi-master solutions, and have tuned PostgreSQL for our clients' exacting needs.</p>
+      </div>
+
+      <div class='box'>
+        <%= link_to tag(:img, src: 'img/chef.svg', alt: 'Chef'), 'http://www.getchef.com/chef/', target: '_blank' %>
+        <h4><%= link_to 'Chef', 'http://www.getchef.com/chef/', target: '_blank' %></h4>
+        <p>Chef is our software of choice for automating the provisioning and creation of servers. Our Chef installations save our customers thousands of dollars per month in hosting fees, while allowing them to quickly and responsively scale to the needs of their business.</p>
+      </div>
+
+      <div class='box'>
+        <%= link_to tag(:img, src: 'img/aws.png', width: '200', height: '37', alt: 'Amazon Web Services'), 'http://aws.amazon.com/', target: '_blank' %>
+        <h4><%= link_to 'Amazon Web Services', 'http://aws.amazon.com/', target: '_blank' %></h4>
+        <p>The home of the cloud. Symonds &amp; Son delivers amazing solutions targeted to Amazon Web Services, using Amazon's file storage service, content delivery networks, routing tables and auto-scaling instance creators.</p>
+      </div>
+
+      <div class='box'>
+        <%= link_to tag(:img, src: 'img/elasticsearch.png', width: '120', height: '85', alt: 'elasticsearch'), 'http://www.elasticsearch.org/', target: '_blank' %>
+        <h4><%= link_to 'elasticsearch', 'http://www.elasticsearch.org/', target: '_blank' %></h4>
+        <p>If you have a lot of data &mdash; not just gigabytes, but terabytes &mdash; and need to search through it quickly and accurately, Symonds &amp; Son has extensive experiencing setting up and operating elasticsearch searching clusters. With lightning-fast search indexing and retrieval, elasticsearch is our cloud-scale search software of choice.</p>
+      </div>
+
+      <div class='box'>
+        <%= link_to tag(:img, src: 'img/logstash.png', width: '75', height: '120', alt: 'logstash'), 'http://www.logstash.net/', target: '_blank' %>
+        <h4><%= link_to 'logstash', 'http://logstash.net/', target: '_blank' %></h4>
+        <p>For seeing all your logs in one place, there's no better solution than logstash. Quickly see what's going on in any software running on any of your servers.</p>
+      </div>
+
+      <div class='box'>
+        <%= link_to tag(:img, src: 'img/graylog2.png', width: '144', height: '25', alt: 'graylog2'), 'http://graylog2.org/', target: '_blank' %>
+        <h4><%= link_to 'graylog2', 'http://graylog2.org/', target: '_blank' %></h4>
+        <p>graylog2 is a professional event-driven log system that allows you to see events from multiple sources -- great for capturing log output or user activity in real-time.</p>
+      </div>
+
+      <div class='box'>
+        <%= link_to tag(:img, src: 'img/mysql.png', width: '170', height: '115', alt: 'MySQL'), 'http://www.mysql.com/', target: '_blank' %>
+        <h4><%= link_to 'MySQL', 'http://www.mysql.com/', target: '_blank' %></h4>
+        <p>Though less popular than PostgreSQL, MySQL is a powerful open-source database that Symonds &amp; Son has leveraged for its amazing clustering capabilities.</p>
+      </div>
+
+      <div class='box'>
+        <%= link_to tag(:img, src: 'img/centos.png', width: '96', height: '96', alt: 'CentOS'), 'http://www.centos.org/', target: '_blank' %>
+        <h4><%= link_to 'CentOS', 'http://www.centos.org/', target: '_blank' %></h4>
+        <p>A RedHat-based Linux distribution popular for its stability and reliability. Symonds &amp; Son has extensive experience creating large production applications on CentOS using customized deployment automation scripts.</p>
+      </div>
+
+      <div class='box'>
+        <%= link_to tag(:img, src: 'img/ubuntu.svg', width: '110', alt: 'ubuntu'), 'http://www.ubuntu.com/', target: '_blank' %>
+        <h4><%= link_to 'ubuntu', 'http://www.ubuntu.com/', target: '_blank' %></h4>
+        <p>Known for its cutting-edge sensibilities and popularity on Amazon's cloud, ubuntu is a common selection for companies looking for a well-known, well-supported Linux operating system. Our ubuntu clusters serve millions of API and web hits per month.</p>
+      </div>
+
+      <div class='box'>
+        <%= link_to tag(:img, src: 'img/nginx.svg', width: '170', alt: 'nginx'), 'http://nginx.org/', target: '_blank' %>
+        <h4><%= link_to 'nginx', 'http://nginx.org/', target: '_blank' %></h4>
+        <p>Our server software of choice. nginx is a powerful, scalable web server: it is highly customizable and, when configured properly, extremely fast for both end-users and servers.</p>
+      </div>
+
+      <div class='box'>
+        <%= link_to tag(:img, src: 'img/rackspace.png', width: '200', height: '73', alt: 'RackSpace'), 'http://www.rackspace.com/', target: '_blank' %>
+        <h4><%= link_to 'RackSpace', 'http://www.rackspace.com/', target: '_blank' %></h4>
+        <p>As popular as Amazon Web Services, RackSpace provides excellent support and performance servers that can't be beat. Symonds &amp; Son's development team are experts at deploying into RackSpace's OpenCloud and using their hosted solutions.</p>
+      </div>
+
+    </div>
+
   </div>
 </div>
 
