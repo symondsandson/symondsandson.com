@@ -79,7 +79,6 @@ div#top { position: relative; height: 900px;
 }
 
 div#who_we_are { position: relative; background: url("/img/who_we_are.jpg") top left repeat-x; height: 935px; width: 100%;
-  -webkit-background-size: 100% auto; -moz-background-size: 100% auto; -o-background-size: 100% auto; background-size: 100% auto;
   h2 {color: white;}
   p {float: left; clear: both; color: white; padding: 0 70px; line-height: 38px; margin: 80px 0 0 0;}
   #ampersand {position: absolute; left: 50%; margin-left: -46px; bottom: 280px;}
@@ -138,7 +137,6 @@ div#have_a_project { position: relative; clear: both;
 }
 
 div#contact { position: relative; background: url("/img/contact_us.jpg") top left repeat-x; height: 512px; width: 100%; clear: both;
-  -webkit-background-size: 100% auto; -moz-background-size: 100% auto; -o-background-size: 100% auto; background-size: 100% auto;
   h2 {color: white; width: 100%; clear: both;}
   .column {float: left; width: 50%; margin: 0;
     .method {float: left; clear: both; width: 100%; margin: 60px 0 0 140px; position: relative;
@@ -154,7 +152,6 @@ div#contact { position: relative; background: url("/img/contact_us.jpg") top lef
 }
 
 div#our_work {position: relative; background-color: white; width: 100%; clear: both; float: left; padding: 0 0 100px 0;
-  -webkit-background-size: 100% auto; -moz-background-size: 100% auto; -o-background-size: 100% auto; background-size: 100% auto;
   h2 {color: black; width: 100%; clear: both; margin-bottom: 80px;}
   .box {width: 300px; float: left;
     img {border: 10px solid #f2f2e6; @include border-radius(2px); }
