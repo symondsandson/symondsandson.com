@@ -2,40 +2,27 @@
 javascript: index
 ---
 <div id='top' class='centered'>
-  <%= tag :img, src: 'img/big_logo.png', width: '153', height: '152', id: 'big_logo', alt: 'Symonds & Son' %>
-  <h3>Application Artisans</h3>
-  <h4>&amp; Web Crafters</h4>
+  <h2>We're a team of developers<br/>and experts in Ruby</h2>
+  <h3>We're Symonds and Sons</h3>
 
-  <ul>
-    <li id='tailored' title="Like any quality craftsman, our work is our life and our pride. The products we deliver meet the exacting standards of any artisan.">
-      <%= tag(:img, src: 'img/tailored.png', width: '182', height: '183') %>
-      <p>A tradition of excellence,<br/>dependability, and stability</p>
-    </li>
+  <div id="getstarted">Let's Get Started</div>
 
-    <li id='tradition' title="Your application and the needs of your customers are unique. We build and scale your application from a few clients to many millions, ensuring uptime all the way.">
-      <%= tag(:img, src: 'img/tradition.png', width: '182', height: '183') %>
-      <p>Scaled to match<br/>your needs</p>
-    </li>
-
-    <li id='technologies' title="Modern tools like Ruby on Rails, RubyMotion, and Chef combine with our classic business model to delight our customers with wonderful and valuable products.">
-      <%= tag(:img, src: 'img/technologies.png', width: '182', height: '183') %>
-      <p>New technologies,</br>classic business</p>
-    </li>
+  <p>A tradition of excellence, dependability, and stability in developing &amp; managing DevOps systems.</p>
 </div>
 
 <div id='who_we_are'>
   <div class='centered'>
-    <h2>Who We Are</h2>
+    <h2>Web Crafters &amp; Application Artisans</h2>
+    <div id="ruby-divider"></div>
     <p>Symonds &amp; Son is a Ruby development shop. We create and scale amazing web applications: whether you're looking to create an iPhone or web app, or simply take your existing product from serving thousands of customers to millions, we will tailor our solutions meticulously to your specifications. We work with you to visualize, produce, and scale your application, becoming your partners in development and business.</p>
-    <%= tag(:img, src: 'img/ampersand.png', width: '93', height: '107', alt: 'Ampersand', id: 'ampersand') %>
-    <ul>
-      <li>
-        <h2>Operations</h2>
-        <p>From one server, to thirty, then to a hundred: you need a partner intimately familiar with managing and administering a Rails application and the software surrounding it. Whatever the database, cache, log management or search software you're running, Symonds &amp; Son provides the expertise to scale your application from where you are to where you want to be.</p>
-      </li>
-      <li>
+    <ul class="split vertical">
+      <li class="left black">
         <h2>Development</h2>
         <p>At Symonds &amp; Son, we pride ourselves on our incredible developers and the many years of experience they've had creating the most complicated Rails applications on the Internet. We provide expert-level guidance and programming, creating Rails applications from scratch and improving existing ones to be more efficient, more user-friendly, and more tested.</p>
+      </li>
+      <li class="right orange">
+        <h2>Operations</h2>
+        <p>From one server, to thirty, then to a hundred: you need a partner intimately familiar with managing and administering a Rails application and the software surrounding it. Whatever the database, cache, log management or search software you're running, Symonds &amp; Son provides the expertise to scale your application from where you are to where you want to be.</p>
       </li>
     </ul>
   </div>
@@ -43,102 +30,131 @@ javascript: index
 
 <div id='our_experience'>
   <div class='centered'>
-    <h2>Our Experience</h2>
+    <h4>Years of experience</h4>
+    <h5>as digital architects</h5>
 
-    <ul>
-      <%= tag(:img, src: 'img/chat_bubble.png', width: '40', height: '30', alt: '') %>
-      <li>
-        <p>Our team has had dozens of years of experience with the technologies that make the Internet run at scale. Whether it's a web application or a mobile application, whatever software stack you seek to employ, chances are we've not only used it &mdash; we've used it to help a multi-million dollar company increase their uptime, reduce their operating costs, and most importantly, delight their customers. Here's a very small selection of the software we love using over and over again.</p>
-      </li>
-    </ul>
+    <p>Our team has had dozens of years of experience with the technologies that make the Internet run at scale. Whether it's a web application or a mobile application, whatever software stack you seek to employ, chances are we've not only used it &mdash; we've used it to help a multi-million dollar company increase their uptime, reduce their operating costs, and most importantly, delight their customers. Here's a very small selection of the software we love using over and over again.</p>
 
     <div id='masonry'>
       <div class='box'>
         <%= link_to tag(:img, src: 'img/rails.png', width: '87', height: '111', alt: 'Ruby on Rails'), 'http://rubyonrails.org', target: '_blank' %>
-        <h4><%= link_to 'Ruby on Rails', 'http://rubyonrails.org/', target: '_blank' %></h4>
-        <p>Ruby on Rails is an amazing application framework that Symonds &amp; Son uses for quick, powerful application development. From the backend API of a iPhone application to a complicated web deployment, we can scale your Rails application from a few hundred users to many millions.</p>
       </div>
 
       <div class='box'>
         <%= link_to tag(:img, src: 'img/rubymotion.png', width: '120', height: '120', alt: 'RubyMotion'), 'http://www.rubymotion.com/', target: '_blank' %>
-        <h4><%= link_to 'RubyMotion', 'http://rubymotion.com/', target: '_blank' %></h4>
-        <p>Want to quickly develop mobile applications? RubyMotion is what you've been looking for. For speed of development and getting to market quickly and easily, nothing can beat our use of this awesome tool-chain.</p>
       </div>
 
       <div class='box'>
         <%= link_to tag(:img, src: 'img/postgresql.png', width: '120', height: '120', alt: 'PostgreSQL'), 'http://www.postgresql.org/', target: '_blank' %>
-        <h4><%= link_to 'PostgreSQL', 'http://www.postgresql.org/', target: '_blank' %></h4>
-        <p>A modern, powerful, and ACID-compliant database, PostgreSQL is fast and widely used by Symonds &amp; Son. We've created replicated database clusters, multi-master solutions, and have tuned PostgreSQL for our clients' exacting needs.</p>
-      </div>
-
-      <div class='box'>
-        <%= link_to tag(:img, src: 'img/chef.svg', alt: 'Chef'), 'http://www.getchef.com/chef/', target: '_blank' %>
-        <h4><%= link_to 'Chef', 'http://www.getchef.com/chef/', target: '_blank' %></h4>
-        <p>Chef is our software of choice for automating the provisioning and creation of servers. Our Chef installations save our customers thousands of dollars per month in hosting fees, while allowing them to quickly and responsively scale to the needs of their business.</p>
-      </div>
-
-      <div class='box'>
-        <%= link_to tag(:img, src: 'img/aws.png', width: '200', height: '37', alt: 'Amazon Web Services'), 'http://aws.amazon.com/', target: '_blank' %>
-        <h4><%= link_to 'Amazon Web Services', 'http://aws.amazon.com/', target: '_blank' %></h4>
-        <p>The home of the cloud. Symonds &amp; Son delivers amazing solutions targeted to Amazon Web Services, using Amazon's file storage service, content delivery networks, routing tables and auto-scaling instance creators.</p>
       </div>
 
       <div class='box'>
         <%= link_to tag(:img, src: 'img/elasticsearch.png', width: '120', height: '85', alt: 'elasticsearch'), 'http://www.elasticsearch.org/', target: '_blank' %>
-        <h4><%= link_to 'elasticsearch', 'http://www.elasticsearch.org/', target: '_blank' %></h4>
-        <p>If you have a lot of data &mdash; not just gigabytes, but terabytes &mdash; and need to search through it quickly and accurately, Symonds &amp; Son has extensive experiencing setting up and operating elasticsearch searching clusters. With lightning-fast search indexing and retrieval, elasticsearch is our cloud-scale search software of choice.</p>
-      </div>
-
-      <div class='box'>
-        <%= link_to tag(:img, src: 'img/logstash.png', width: '75', height: '120', alt: 'logstash'), 'http://www.logstash.net/', target: '_blank' %>
-        <h4><%= link_to 'logstash', 'http://logstash.net/', target: '_blank' %></h4>
-        <p>For seeing all your logs in one place, there's no better solution than logstash. Quickly see what's going on in any software running on any of your servers.</p>
-      </div>
-
-      <div class='box'>
-        <%= link_to tag(:img, src: 'img/graylog2.png', width: '144', height: '25', alt: 'graylog2'), 'http://graylog2.org/', target: '_blank' %>
-        <h4><%= link_to 'graylog2', 'http://graylog2.org/', target: '_blank' %></h4>
-        <p>graylog2 is a professional event-driven log system that allows you to see events from multiple sources -- great for capturing log output or user activity in real-time.</p>
       </div>
 
       <div class='box'>
         <%= link_to tag(:img, src: 'img/mysql.png', width: '170', height: '115', alt: 'MySQL'), 'http://www.mysql.com/', target: '_blank' %>
-        <h4><%= link_to 'MySQL', 'http://www.mysql.com/', target: '_blank' %></h4>
-        <p>Though less popular than PostgreSQL, MySQL is a powerful open-source database that Symonds &amp; Son has leveraged for its amazing clustering capabilities.</p>
+      </div>
+
+      <div class='box'>
+        <%= link_to tag(:img, src: 'img/logstash.png', width: '75', height: '120', alt: 'logstash'), 'http://www.logstash.net/', target: '_blank' %>
       </div>
 
       <div class='box'>
         <%= link_to tag(:img, src: 'img/centos.png', width: '96', height: '96', alt: 'CentOS'), 'http://www.centos.org/', target: '_blank' %>
-        <h4><%= link_to 'CentOS', 'http://www.centos.org/', target: '_blank' %></h4>
-        <p>A RedHat-based Linux distribution popular for its stability and reliability. Symonds &amp; Son has extensive experience creating large production applications on CentOS using customized deployment automation scripts.</p>
       </div>
-
-      <div class='box'>
-        <%= link_to tag(:img, src: 'img/ubuntu.svg', width: '110', alt: 'ubuntu'), 'http://www.ubuntu.com/', target: '_blank' %>
-        <h4><%= link_to 'ubuntu', 'http://www.ubuntu.com/', target: '_blank' %></h4>
-        <p>Known for its cutting-edge sensibilities and popularity on Amazon's cloud, ubuntu is a common selection for companies looking for a well-known, well-supported Linux operating system. Our ubuntu clusters serve millions of API and web hits per month.</p>
-      </div>
-
-      <div class='box'>
-        <%= link_to tag(:img, src: 'img/nginx.svg', width: '170', alt: 'nginx'), 'http://nginx.org/', target: '_blank' %>
-        <h4><%= link_to 'nginx', 'http://nginx.org/', target: '_blank' %></h4>
-        <p>Our server software of choice. nginx is a powerful, scalable web server: it is highly customizable and, when configured properly, extremely fast for both end-users and servers.</p>
-      </div>
-
-      <div class='box'>
-        <%= link_to tag(:img, src: 'img/rackspace.png', width: '200', height: '73', alt: 'RackSpace'), 'http://www.rackspace.com/', target: '_blank' %>
-        <h4><%= link_to 'RackSpace', 'http://www.rackspace.com/', target: '_blank' %></h4>
-        <p>As popular as Amazon Web Services, RackSpace provides excellent support and performance servers that can't be beat. Symonds &amp; Son's development team are experts at deploying into RackSpace's OpenCloud and using their hosted solutions.</p>
-      </div>
-
     </div>
-
   </div>
+</div>
+
+<div id="clients">
+  <div id="rolodex">
+    <div class="card">
+      <img class="logo" alt="" src=""/>
+      <div class="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec est justo. Donec ac mi orci. Integer et rhoncus justo, non suscipit massa. Duis accumsan molestie ante, in ornare lectus interdum non. Vivamus ac ante vestibulum, ornare diam a, facilisis massa. Mauris pharetra risus nec magna sagittis molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eleifend vel felis sed mattis. Nunc dolor tortor, finibus sed gravida ut, feugiat nec erat. Pellentesque lectus nisl, iaculis nec fringilla quis, ultricies ut felis. Aenean dictum faucibus ante id aliquam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus placerat laoreet massa, eu consequat nisl interdum vitae. Sed non felis ornare, vestibulum ligula nec, mollis nulla.
+      </div>
+      <div class="title">
+        Name, Company
+      </div>
+    </div>
+    <div class="card">
+      <img class="logo" alt="" src=""/>
+      <div class="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec est justo. Donec ac mi orci. Integer et rhoncus justo, non suscipit massa. Duis accumsan molestie ante, in ornare lectus interdum non. Vivamus ac ante vestibulum, ornare diam a, facilisis massa. Mauris pharetra risus nec magna sagittis molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eleifend vel felis sed mattis. Nunc dolor tortor, finibus sed gravida ut, feugiat nec erat. Pellentesque lectus nisl, iaculis nec fringilla quis, ultricies ut felis. Aenean dictum faucibus ante id aliquam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus placerat laoreet massa, eu consequat nisl interdum vitae. Sed non felis ornare, vestibulum ligula nec, mollis nulla.
+      </div>
+      <div class="title">
+        Name, Company
+      </div>
+    </div>
+    <div class="card">
+      <img class="logo" alt="" src=""/>
+      <div class="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec est justo. Donec ac mi orci. Integer et rhoncus justo, non suscipit massa. Duis accumsan molestie ante, in ornare lectus interdum non. Vivamus ac ante vestibulum, ornare diam a, facilisis massa. Mauris pharetra risus nec magna sagittis molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eleifend vel felis sed mattis. Nunc dolor tortor, finibus sed gravida ut, feugiat nec erat. Pellentesque lectus nisl, iaculis nec fringilla quis, ultricies ut felis. Aenean dictum faucibus ante id aliquam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus placerat laoreet massa, eu consequat nisl interdum vitae. Sed non felis ornare, vestibulum ligula nec, mollis nulla.
+      </div>
+      <div class="title">
+        Name, Company
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="team">
+  <h2>Modern Day Artisans</h2>
+  <h3>meet the team</h3>
+
+  <div class="split vertical">
+    <div class="orange left">
+      <h3>Symonds (Steve)</h3>
+      <h4>Co-Founder, VP of Sales</h4>
+      <p>
+        Steve is a serial entrepreneur, experienced in building digital media, social media, mobile and high tech companies in a variety of verticals. Steve has propelled numerous early-stage companies through development of market-leading products and services, leveraging IP rights, and raising capital.
+      </p>
+      <div class="email">
+        <a href="mailto:steve@symondsandson.com">steve@symondsandson.com</a>
+      </div>
+    </div>
+    <div class="right">
+      <!-- TODO: Josh photo here -->
+      <h3>Son (Josh)</h3>
+      <h4>Co-Founder, Lead Developer</h4>
+    </div>
+  </div>
+</div>
+
+<div id="careers">
+  <h3>Careers</h3>
+  <div class="black split vertical">
+    <div class="left">
+      <p>Do you have amazing skills, but feel you're undercompensated? Are you a meticulous, friendly, personable and responsible coder who works well in a team? Would you like to work remotely and still be an integral part of our projects? If you have many of the skills we need, here's your chance:</p>
+      <p>If you're interested please provide a copy of your resume and cover letter. Include your GitHub account, StackOverflow profile, or whatever other information you have that would establish your credentials as a great coder and fine human being.</p>
+    </div>
+    <div class="right">
+      <p>We're hiring developers experienced in&hellip;</p>
+      <ul>
+        <li>Ruby and Ruby on Rails</li>
+        <li>Angular.js and/or Ember.js</li>
+        <li>Elasticsearch</li>
+        <li>Sidekiq, Resque, or other Redis backed delayed job system</li>
+        <li>DevOps (Chef preferred)</li>
+        <li>Working Remotely</li>
+      </ul>
+      <div id="join-the-team">Join The Team</div>
+    </div>
+  </div>
+</div>
+
+<div id="blog">
+  <h3>We're Not Just Developers</h3>
+  <h4>We're thought leaders of our craft.</h4>
+  <div id="quill-divider"></div>
+  <!-- TODO: Blog ledes go here. -->
 </div>
 
 <div id='contact'>
   <div class='centered'>
-    <h2>Contact Us</h2>
+    <h2>Have a Project?</h2>
+    <h3>We'd love to hear the details.</h3>
     <div class='column'>
       <div class='method'>
         <%= tag(:img, src: 'img/twitter.png', width: '35', height: '34', alt: 'Twitter', id: 'twitter') %>
