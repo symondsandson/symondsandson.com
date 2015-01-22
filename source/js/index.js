@@ -9,15 +9,7 @@ $(function() {
       $('#device-dummy').remove();
     },
     changeHash: false
-  })
-
-  $(window).scroll(function() {
-    if ($('#navbar').offset().top != 0) {
-      $('#navbar').addClass('moving')
-    } else {
-      $('#navbar').removeClass('moving')
-    }
-  })
+  });
 
   $("#contact_form").validate();
   $('#tailored').tipsy({gravity: 'sw', fade: true});
