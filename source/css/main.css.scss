@@ -488,6 +488,19 @@ div#our_experience {
         }
     }
 
+    $boxsize: 70px;
+    #tools {
+        .box {
+            width: $boxsize;
+            height: $boxsize;
+            margin-right: $boxsize/2;
+            img {
+                width: $boxsize;
+                height: $boxsize;
+            }
+        }
+    }
+
     #masonry {
         float: left;
         clear: both;
