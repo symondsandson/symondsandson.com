@@ -20,12 +20,10 @@ $darkgray: #3e3e3e;
     font-family: "Cubano Regular";
     src: url('fonts/Cubano-Regular.otf') format('opentype'); }
 
-@font-face {
-    font-family: "Vevey";
-    src: url('fonts/vevey.ttf') format('truetype'); }
+
 
 .centered {
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
 }
@@ -74,7 +72,7 @@ $darkgray: #3e3e3e;
 
 h2 {
     text-transform: uppercase;
-    font-family: "Vevey";
+    font-family: 'Lato', sans-serif;
     font-size: 42px;
     margin: 0 auto;
     font-weight: normal;
@@ -83,7 +81,7 @@ h2 {
 }
 
 h3 {
-    font-family: "Vevey";
+    font-family: 'Lato', sans-serif;
     font-size: 36px;
     margin: 0 auto;
     font-weight: normal;
@@ -93,14 +91,14 @@ h3 {
 
 
 p {
-    font-family: "Edmond Sans Regular";
+    font-family: 'Lato', sans-serif;
 }
 
 body {
     width: 100%;
     padding: 0;
     margin: 0;
-    font-family: "Edmond Sans Medium";
+    font-family: 'Lato', sans-serif;
     font-size: 18px;
     background-color: #f2f2e6;
     color: $gray;
@@ -114,6 +112,12 @@ div#navbar {
     width: 100%;
     z-index: 100;
     top: 30px;
+
+    div {
+        width: 800px;
+        margin: 0 auto;
+        padding: 0;
+    }
 
     ul {
         height: 100%;
@@ -202,7 +206,6 @@ div#top {
     h4 {
         width: 100%;
         text-align: center;
-        text-transform: uppercase;
         font-weight: normal;
         font-size: 18px;
         letter-spacing: 8px;
@@ -545,7 +548,7 @@ footer {
     text-align: center;
     margin: 50px 0 20px 0;
     background: url("/img/crafters.png") center no-repeat;
-    font-family: "Cubano Regular";
+    font-family: 'Lato', sans-serif;
     letter-spacing: 1px;
 }
 
