@@ -62,12 +62,9 @@ $darkgray: #3e3e3e;
     color: #FFFFFF
 }
 
-#started-sidebar {
-    @include rotate(-90deg);
-    display: inline-block;
-    padding: 5px 10px;
-    position: absolute;
-    right: -55px;
+.white {
+    background-color: #FFFFFF;
+    color: #000000;
 }
 
 h2 {
@@ -175,10 +172,33 @@ div#navbar {
 
 div#top {
     position: relative;
-    height: 900px;
+    height: 585px;
     width: 100%;
-    padding-top: 230px;
+    padding-top: 350px;
     background: url("/img/top_background.jpg") top left repeat-x;
+
+    h2, h4, p {
+        margin: 0 auto;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    h2 {
+        font-size: 42px;
+        letter-spacing: 3px;
+        font-weight: 300;
+    }
+
+    h4 {
+        width: 100%;
+        text-align: center;
+        font-weight: 100;
+        font-size: 18px;
+        font-style: italic;
+        padding: 0;
+        margin: 0;
+        margin-top: 30px;
+    }
 
     #getstarted {
         color: $orange;
@@ -192,47 +212,40 @@ div#top {
         @include border-radius(4px, 4px);
     }
 
-    h2, h4, p {
-        margin: 0 auto;
-        text-align: center;
-        color: #FFFFFF;
-    }
-
-
-    h2 {
-        font-size: 50px;
-    }
-
-    h4 {
-        width: 100%;
-        text-align: center;
-        font-weight: normal;
-        font-size: 18px;
-        letter-spacing: 8px;
-        padding: 0;
-        margin: 0;
-        margin-top: 30px;
+    .section-footer {
+        position: relative;
+        font-weight: 100;
+        font-style: italic;
+        font-size: 16px;
+        top: 260px;
     }
 }
 
 div#who_we_are {
     position: relative;
-    height: 935px;
     width: 100%;
+    margin-top: 45px;
 
     p {
-        float: left;
-        clear: both;
         padding: 0 70px;
         line-height: 30px;
-        margin: 80px 0 0 0;
+        margin: 80px auto 0 auto;
+        width: 50%;
+        text-align: center;
     }
-    #ampersand {
+
+    #started-sidebar {
+        // TODO: Box shadow
+        @include rotate(-90deg);
+        @include border-top-right-radius(3px);
+        @include border-top-left-radius(3px);
+        display: inline-block;
+        padding: 5px 10px;
         position: absolute;
-        left: 50%;
-        margin-left: -46px;
-        bottom: 400px;
+        right: -55px;
+        top: 110px;
     }
+
     ul {
         width: 100%;
         float: left;
@@ -243,21 +256,24 @@ div#who_we_are {
         li {
             float: left;
             width: 50%;
-            margin: 120px 0 0 0;
+            margin: 0;
             padding-top: 40px;
             padding-bottom: 40px;
             line-height: 26px;
             text-align: center;
 
-            h2 {
-                text-align: center;
-                margin: 0 0 30px 0;
-                float: none;
-                clear: none;
+            &.left * {
+                margin-left: 100px;
             }
+
+            &.right * {
+                margin-right: 100px;
+            }
+
             p {
                 line-height: 30px;
                 margin: 20px 0 0 0;
+                font-size: 16px;
             }
         }
     }
@@ -266,6 +282,19 @@ div#who_we_are {
         margin: 0 auto;
         margin-top: 30px;
     }
+}
+
+div#team {
+    display: inline-block;
+    .split.vertical {
+        width: 50%;
+        margin: 0 auto;
+        height: 500px;
+    }
+}
+
+div#careers {
+    display: inline-block;
 }
 
 div#have_a_project {
@@ -312,8 +341,8 @@ div#have_a_project {
                 color: darken(red, 10);
             }
         }
-        input, textarea {
 
+        input, textarea {
             float: left;
             clear: both;
             border: 0;
