@@ -355,6 +355,45 @@ div#team {
 
 div#careers {
     display: inline-block;
+    color: #FFFFFF;
+    padding: 30px 0;
+    background: url("/img/checkered-bkgd.jpg") center no-repeat;
+
+    div.split.vertical {
+        div.left {
+            p {
+                margin-right: 40px;
+                float: right;
+                font-size: 14px;
+                width: 50%;
+                padding-bottom: 20px;
+                line-height: 24px;
+                text-align: center;
+            }
+        }
+
+        div.right {
+            p {
+                font-size: 16px;
+                margin-bottom: 25px;
+                margin-left: 22px;
+            }
+
+            ul {
+                font-size: 15px;
+                li {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+    #join-the-team {
+        margin-top: 35px;
+        margin-left: 22px;
+        font-size: 22px;
+        padding: 5px 25px;
+    }
 }
 
 div#have_a_project {
