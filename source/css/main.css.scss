@@ -287,10 +287,69 @@ div#who_we_are {
 
 div#team {
     display: inline-block;
+    width: 100%;
+    text-align: center;
+
+    h4 {
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+
+    h5 {
+        margin-top: 0px;
+        font-style: italic;
+        font-size: 15px;
+        font-weight: 300;
+    }
+
     .split.vertical {
-        width: 50%;
+        width: 622px;
         margin: 0 auto;
         height: 500px;
+
+        div {
+            padding: 20px 0;
+            width: 306px;
+            height: 305px;
+        }
+
+        div.right {
+            padding-top: 0;
+            height: 325px;
+
+            h3 {
+                padding-top: 20px;
+            }
+
+            h4 {
+                margin-top: 0px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 300;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        h4 {
+            font-size: 15px;
+            font-style: italic;
+            font-weight: 300;
+        }
     }
 }
 

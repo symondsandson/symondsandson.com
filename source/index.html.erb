@@ -113,24 +113,27 @@ javascript: index
 </div>
 
 <div id="team">
-  <h2>Modern Day Artisans</h2>
-  <h3>meet the team</h3>
+  <div class="centered">
+    <h4>Modern Day Artisans</h4>
+    <h5>meet the team</h5>
 
-  <div class="split vertical">
-    <div class="orange left">
-      <h3>Symonds (Steve)</h3>
-      <h4>Co-Founder, VP of Sales</h4>
-      <p>
-        Steve is a serial entrepreneur, experienced in building digital media, social media, mobile and high tech companies in a variety of verticals. Steve has propelled numerous early-stage companies through development of market-leading products and services, leveraging IP rights, and raising capital.
-      </p>
-      <div class="email">
-        <a href="mailto:steve@symondsandson.com">steve@symondsandson.com</a>
+    <div class="split vertical">
+      <div class="orange left">
+        <h3>Symonds (Steve)</h3>
+        <h4>Co-Founder, VP of Sales</h4>
+        <p>
+          Steve is a serial entrepreneur, experienced in building digital media, social media, mobile and high tech companies in a variety of verticals. Steve has propelled numerous early-stage companies through development of market-leading products and services, leveraging IP rights, and raising capital.
+        </p>
+        <div class="email">
+          <%= tag(:img, src: 'img/mail-icon.png', height: 10, width: 14) %>
+          <a href="mailto:steve@symondsandson.com">steve@symondsandson.com</a>
+        </div>
       </div>
-    </div>
-    <div class="right white">
-      <!-- TODO: Josh photo here -->
-      <h3>Son (Josh)</h3>
-      <h4>Co-Founder, Lead Developer</h4>
+      <div class="right white">
+        <%= tag(:img, src: 'img/josh-symonds.jpg', alt: 'Josh Symonds', id: 'josh') %>
+        <h3>Son (Josh)</h3>
+        <h4>Co-Founder, Lead Developer</h4>
+      </div>
     </div>
   </div>
 </div>
