@@ -174,7 +174,7 @@ div#top {
     position: relative;
     height: 585px;
     width: 100%;
-    padding-top: 350px;
+    padding-top: 270px;
     background: url("/img/header-bkgd.jpg") top left repeat-x;
 
     h2, h4, p {
@@ -184,7 +184,7 @@ div#top {
     }
 
     h2 {
-        font-size: 42px;
+        font-size: 34px;
         letter-spacing: 3px;
         font-weight: 300;
     }
@@ -192,7 +192,7 @@ div#top {
     h4 {
         width: 100%;
         text-align: center;
-        font-weight: 100;
+        font-weight: 300;
         font-size: 18px;
         font-style: italic;
         padding: 0;
@@ -203,9 +203,9 @@ div#top {
     #getstarted {
         color: $orange;
         height: 30px;
-        font-size: 25px;
+        font-size: 20px;
         line-height: 30px;
-        width: 250px;
+        width: 200px;
         margin: 30px auto;
         border: 2px solid $orange;
         text-align: center;
@@ -214,10 +214,10 @@ div#top {
 
     .section-footer {
         position: relative;
-        font-weight: 100;
+        font-weight: 300;
         font-style: italic;
-        font-size: 16px;
-        top: 260px;
+        font-size: 14px;
+        top: 120px;
     }
 }
 
