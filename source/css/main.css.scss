@@ -469,7 +469,7 @@ div#our_experience {
     width: 100%;
     clear: both;
     float: left;
-    padding: 0 0 100px 0;
+    padding: 0 0 60px 0;
 
     .background {
         background: url("/img/experience-bkgd.jpg") center no-repeat;
@@ -543,9 +543,23 @@ div#our_experience {
         }
     }
 
+    .title-area {
+        h4 {
+            padding-top: 60px;
+        }
+
+        h5 {
+            font-style: italic;
+            font-weight: 100;
+        }
+    }
+
+
     $boxsize: 70px;
     #tools {
-        height: 200px;
+        margin-top: 40px;
+        text-align: center;
+        @include opacity(0.5);
 
         .box {
             width: $boxsize;
@@ -557,42 +571,12 @@ div#our_experience {
             }
         }
     }
+}
 
-    #masonry {
-        float: left;
-        clear: both;
-        width: 100%;
-
-        .box {
-            width: 280px;
-            border: 10px solid #f2f2e6;
-            @include border-radius(5px);
-            background-color: #f2f2e6;
-            margin: 0 0 20px 0;
-
-            img {
-                display: block;
-                margin: 10px auto 10px auto;
-            }
-            h4 {
-                margin: 5px 0 0 0;
-                float: left;
-                clear: both;
-
-                a {
-                    color: $gray;
-                    text-decoration: none;
-                }
-            }
-            p {
-                margin: 8px 0 0 0;
-                font-size: 18px;
-                float: left;
-                text-align: left;
-                line-height: 26px;
-            }
-        }
-    }
+div#clients {
+    height: 500px;
+    width: 100%;
+    display: inline-block;
 }
 
 footer {
