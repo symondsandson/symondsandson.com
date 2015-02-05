@@ -252,6 +252,7 @@ div#who_we_are {
         clear: both;
         padding: 0;
         list-style-type: none;
+        margin-bottom: 0;
 
         li {
             float: left;
@@ -470,6 +471,28 @@ div#our_experience {
     float: left;
     padding: 0 0 100px 0;
 
+    .background {
+        background: url("/img/experience-bkgd.jpg") center no-repeat;
+        height: 500px;
+
+        h4 {
+            padding-top: 120px;
+        }
+
+        h5 {
+            font-style: italic;
+            font-weight: 100;
+        }
+
+        p {
+            padding-top: 60px;
+            width: 60%;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 32px;
+        }
+    }
+
     h2 {
         color: black;
         width: 100%;
@@ -522,6 +545,8 @@ div#our_experience {
 
     $boxsize: 70px;
     #tools {
+        height: 200px;
+
         .box {
             width: $boxsize;
             height: $boxsize;
