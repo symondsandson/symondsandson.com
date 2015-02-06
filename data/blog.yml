@@ -1,0 +1,10 @@
+posts:
+  - title: Chef Cookbook Continuous Integration
+    url: http://joshsymonds.com/blog/2015/02/04/chef-cookbook-continuous-integration/
+    lede: "Testing infrastructure is as crucial to the success of a business as testing applications. Yet most infrastructure is untested and validated only occasionally, and only by hand – this is especially a tragedy when chef is used, because chef has many high-quality tools to provide testing coverage from static analysis to unit testing and even full convergence runs."
+  - title: The Numbers Behind Consulting in 2014
+    url: http://joshsymonds.com/blog/2015/01/06/the-numbers-behind-consulting-in-2014/
+    lede: "I’ve always loved reading behind-the-scenes articles about people’s businesses: where their money came from, where it went, and what they learned from operating their companies. Since I recently finished closing the books on my business for 2014, I thought I’d make that sort of post for my own company – real numbers and real thoughts from a real business."
+  - title: Continuous Deployments With Consul
+    url: http://joshsymonds.com/blog/2014/10/21/continuous-deployments-with-consul/
+    lede: "I’ve fallen in love with consul. At first glance, it’s a bit like zookeeper or etcd – it handles service discovery, health checking, and even features a very simple k/v store. But consul does much more than merely expose a lovely DNS interface: one of its more powerful features is its ability to do cluster orchestration, efficiently and effectively propagating messages to all nodes."
