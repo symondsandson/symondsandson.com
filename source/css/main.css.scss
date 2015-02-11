@@ -477,91 +477,67 @@ div#careers {
 }
 
 div#have_a_project {
-    position: relative;
     clear: both;
+    background: url("/img/contact-bkgd.jpg") top left repeat-x;
+    padding-bottom: 25px;
+
+    h3 {
+        padding-top: 20px;
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    h4 {
+        margin-top: 0;
+        font-size: 20px;
+        font-weight: 300;
+        font-style: italic;
+        text-align: center;
+    }
 
     p {
         float: left;
         clear: both;
     }
+
     form {
-        float: left;
-        clear: both;
-        width: 100%;
-        margin: 0 0 100px 0;
-        position: relative;
-
-        .column {
-            float: left;
-            width: 50%;
-
-            &:last-of-type {
-
-                label {
-                    margin: 0 0 5px 38px;
-                }
-                input, textarea {
-                    float: right;
-                }
-            }
-        }
-        label {
-            font-size: 22px;
-            float: left;
-            clear: both;
-            margin: 0 0 5px 0;
-            padding: 0;
-
-            &.error {
-                font-size: 14px;
-                position: relative;
-                margin: 0;
-                top: -10px;
-                color: darken(red, 10);
-            }
-        }
+        width: 40%;
+        margin: 0 auto;
 
         input, textarea {
-            float: left;
             clear: both;
             border: 0;
             @include border-radius(2px);
-            width: 90%;
+            width: 98%;
             font-size: 22px;
             line-height: 30px;
 
             padding: 5px;
             margin: 0 0 20px 0;
 
-            &[type='submit'] {
+            &.deadline, &.budget {
+                width: 45%;
+            }
 
-                width: 92%;
+            &.budget {
+                float: right;
+            }
+
+            &[type='submit'] {
+                display: block;
+                width: 38%;
                 text-align: center;
                 color: white;
+                background-color: $gray;
                 height: 45px;
                 line-height: 35px;
                 font-weight: normal;
-
+                @include border-radius(3px);
                 padding: 5px;
                 text-transform: uppercase;
+                font-size:  20px;
 
-                @include background(linear-gradient(lighten($orange, 5), $orange 70%));
-                @include border-radius(2px);
-                @include box-shadow(inset lighten($orange, 20) 0 1px 1px);
-                @include text-shadow(darken($orange, 10) 0 -1px 0);
-
-                border: 1px solid darken($orange, 20);
-                margin: 30px 0 0 0;
-
-                &:hover {
-                    @include background(linear-gradient(lighten($orange, 8), lighten($orange, 3) 70%));
-                };
-
-                &:active {
-                    @include background(linear-gradient($orange, darken($orange, 10) 70%));
-                    @include box-shadow(inset darken($orange, 20) 0 1px 1px);
-                };
-
+                margin: 30px auto 0 auto;
             }
             &:invalid {
                 @include box-shadow(darken(red, 10) 0px 0px 5px);
@@ -762,10 +738,42 @@ footer {
     width: 100%;
     font-size: 14px;
     text-align: center;
-    margin: 50px 0 20px 0;
-    background: url("/img/crafters.png") center no-repeat;
+    margin: 0;
     font-family: 'Lato', sans-serif;
     letter-spacing: 1px;
+    background-color: $gray;
+    color: #FFFFFF;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+    .centered {
+        width: 75%;
+    }
+
+    .left {
+        float: left;
+        text-transform: uppercase;
+    }
+
+    .divider {
+        border-top: 2px solid #58595b;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .right {
+        float: right;
+        a {
+            text-decoration: none;
+            color: $orange;
+            margin-right: 35px;
+            margin-left: 10px;
+        }
+    }
+
+    .bottom {
+        color: #929497;
+    }
 }
 
 .tipsy {

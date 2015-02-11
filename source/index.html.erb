@@ -182,39 +182,41 @@ javascript: index
   </div>
 </div>
 
-<div id='have_a_project' class='centered'>
-  <h2>Have a Project?</h2>
-  <p>We'd love to hear the details.</p>
-  <form action="https://symondsandson-contact.herokuapp.com/contact" method="post" id='contact_form'>
-    <div class='column'>
-      <label>Name <span class='required'>*</span></label>
-      <input type='text' name='name' class='required' />
+<div id='have_a_project'>
+  <div class="centered">
+    <h3>Have a Project?</h3>
+    <h4>We'd love to hear the details.</h4>
+    <form action="https://symondsandson-contact.herokuapp.com/contact" method="post" id='contact_form'>
+      <input type='text' name='name' class='required' placeholder="NAME"/>
 
-      <label>Phone</label>
-      <input type='text' name='phone' />
+      <input type='text' name='phone' placeholder="PHONE"/>
 
-      <label>Deadline</label>
-      <input type='text' name='deadline' />
+      <input type='text' name='deadline' class="deadline" placeholder="DEADLINE"/>
+      <input type='text' name='budget' class="budget"placeholder="BUDGET"/>
 
-      <label>Budget</label>
-      <input type='text' name='budget' />
 
-      <input class="button" name="send" type="submit" value="Send">
-    </div>
-    <div class='column'>
-      <label>Email <span class='required'>*</span></label>
-      <input type='email' name='email' class='required email' />
+      <input type='email' name='email' class='required email' placeholder="EMAIL"/>
 
-      <label>Brief Description <span class='required'>*</span></label>
-      <textarea name='description' class='required'></textarea>
+      <textarea name='description' class='required' placeholder="DESCRIPTION"></textarea>
 
-      <div class='explanation'><span class='required'>*</span> denotes required fields</div>
-    </div>
-  </form>
+      <input class="button" name="send" type="submit" value="Send Message">
+    </form>
+  </div>
 </div>
 
 <footer>
   <div class='centered'>
-    &copy; 2013 Symonds &amp; Son
+    <span class="left">Symonds &amp; Sons</span>
+    <span class="right">
+      <%= tag(:img, src: "img/twitter-icon.png", alt: "twitter") %><a href="http://twitter.com/symondsandson">@symondsandson</a>
+      <%= tag(:img, src: "img/github-icon.png", alt: "github") %><a href="http://github.com/symondsandson">github.com/symondsandson</a>
+      <%= tag(:img, src: "img/mail-icon.png", alt: "email") %><a href="mailto:info@symondsandson.com">info@symondsandson.com</a>
+    </span>
+    <br/>
+    <div class="divider"></div>
+    <br/>
+    <span class="bottom">
+      Made with <%= tag(:img, src: 'img/heart-icon.png', alt: 'heart') %> in Chicago &copy; 2014 Symonds and Sons
+    </span>
   </div>
 </footer>
