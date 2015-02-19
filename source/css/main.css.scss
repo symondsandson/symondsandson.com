@@ -1,6 +1,7 @@
 $orange: #da594c;
 $gray: #393939;
 $darkgray: #3e3e3e;
+$white: #FFFFFF;
 
 @import "compass/css3";
 
@@ -731,6 +732,30 @@ div#clients {
     height: 500px;
     width: 100%;
     display: inline-block;
+
+    #rolodex {
+        width: 40%;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        .card {
+            text-align: center;
+            color: $gray;
+            background-color: $white;
+            .card-interior {
+                padding: 20px;
+            }
+            .logo {
+                margin-bottom: 20px;
+                width: 110px;
+                height: auto;
+                display: inline;
+            }
+            .title {
+                margin-top: 20px;
+            }
+        }
+    }
 }
 
 footer {
