@@ -729,12 +729,12 @@ div#our_experience {
 }
 
 div#clients {
-    height: 500px;
+    height: 550px;
     width: 100%;
     display: inline-block;
 
     #rolodex {
-        width: 40%;
+        width: 35%;
         margin-top: 40px;
         margin-left: auto;
         margin-right: auto;
@@ -744,17 +744,24 @@ div#clients {
             background-color: $white;
             .card-interior {
                 padding: 20px;
-            }
-            .logo {
-                margin-bottom: 20px;
-                width: 110px;
-                height: auto;
-                display: inline;
-            }
-            .title {
-                margin-top: 20px;
+                .logo {
+                    margin-bottom: 20px;
+                    width: 110px;
+                    height: auto;
+                    display: inline;
+                }
+                .description {
+                    color: $orange;
+                    font-style: italic;
+                }
+                .title {
+                    margin-top: 20px;
+                }
             }
         }
+    }
+    h5 {
+        text-align: center;
     }
 }
 
