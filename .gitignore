@@ -12,3 +12,6 @@
 
 # Ignore Sass' cache
 /.sass-cache
+
+# Ignore s3_sync file - has AWS creds.
+.s3_sync
