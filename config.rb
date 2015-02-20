@@ -11,15 +11,6 @@
 #   config.output_style = :compact
 # end
 
-compass_config do |config|
-  config.add_import_path "bower_components/slick.js/slick"
-  config.output_style = :compact
-end
-
-ready do
-  sprockets.append_path File.join root, 'source', 'bower_components'
-end
-
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -56,12 +47,25 @@ end
 #   end
 # end
 
+compass_config do |config|
+  config.add_import_path "bower_components/slick.js/slick"
+  config.output_style = :compact
+end
+
 set :css_dir, 'css'
-
 set :js_dir, 'js'
-
 set :images_dir, 'img'
+set :fonts_dir, 'fonts'
 
+bower_directory = 'source/bower_components'
+ready do
+  sprockets.append_path File.join root, bower_directory
+
+  # TODO: these should be done in a systematic fashion.
+  sprockets.import_asset('slick.js/slick/ajax-loader.gif') {|p| "#{images_dir}/ajax-loader.gif"}
+  sprockets.import_asset('slick.js/slick/fonts/slick.woff') {|p| "#{fonts_dir}/slick.woff"}
+  sprockets.import_asset('slick.js/slick/fonts/slick.ttf') {|p| "#{fonts_dir}/slick.ttf"}
+end
 
 activate :s3_sync do |s3_sync|
   s3_sync.bucket                     = 'ss-rewrite' # The name of the S3 bucket you are targetting. This is globally unique.
