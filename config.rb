@@ -48,7 +48,7 @@
 # end
 
 compass_config do |config|
-  config.add_import_path "bower_components/slick.js/slick"
+  config.add_import_path "../bower_components/slick.js/slick"
   config.output_style = :compact
 end
 
@@ -57,7 +57,7 @@ set :js_dir, 'js'
 set :images_dir, 'img'
 set :fonts_dir, 'fonts'
 
-bower_directory = 'source/bower_components'
+bower_directory = 'bower_components'
 ready do
   sprockets.append_path File.join root, bower_directory
 
