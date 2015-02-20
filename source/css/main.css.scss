@@ -203,7 +203,7 @@ div#navbar {
 
 div#top {
     position: relative;
-    height: 400px;
+    height: 500px;
     width: 100%;
     padding-top: 270px;
     background: url("/img/header-bkgd.jpg") top left repeat-x;
@@ -255,7 +255,6 @@ div#top {
 div#who_we_are {
     position: relative;
     width: 100%;
-    margin-top: 35px;
 
     #ruby-divider {
         @include icon-divider;
@@ -264,10 +263,17 @@ div#who_we_are {
     p {
         padding: 0 70px;
         line-height: 30px;
-        margin: 40px auto 0 auto;
+        margin: 40px auto 40px auto;
         width: 50%;
         text-align: center;
     }
+    h3 {
+        margin-top: 50px;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
 
     #started-sidebar {
         // TODO: Box shadow
