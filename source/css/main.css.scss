@@ -289,6 +289,7 @@ div#who_we_are {
 
     ul {
         width: 100%;
+        height: 625px;
         float: left;
         clear: both;
         padding: 0;
@@ -298,29 +299,12 @@ div#who_we_are {
         li {
             float: left;
             width: 50%;
+            height: 100%;
             margin: 0;
             padding-top: 40px;
             padding-bottom: 40px;
             line-height: 26px;
             text-align: center;
-
-            &.left * {
-                margin-left: 100px;
-            }
-
-            &.right * {
-                margin-right: 100px;
-            }
-
-            &.right h2, &.left h2 {
-                margin-left: 0;
-            }
-
-            p {
-                line-height: 30px;
-                margin: 20px 0 0 0;
-                font-size: 16px;
-            }
         }
     }
 
