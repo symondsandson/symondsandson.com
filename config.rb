@@ -16,6 +16,10 @@ compass_config do |config|
   config.output_style = :compact
 end
 
+ready do
+  sprockets.append_path File.join root, 'source', 'bower_components'
+end
+
 ###
 # Page options, layouts, aliases and proxies
 ###

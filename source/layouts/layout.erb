@@ -34,7 +34,8 @@
 
         <%= yield %>
 
-        <script src="/js/vendor/jquery-1.9.1.js"></script>
+        <%= javascript_include_tag "application" %>
+
         <script src="/js/plugins.js"></script>
         <script src="/js/vendor/jquery.tipsy.js"></script>
         <script src="/js/vendor/jquery.form.js"></script>
@@ -44,7 +45,6 @@
         <script src="/js/vendor/jquery.masonry.js"></script>
         <script src="/js/vendor/jquery.imagesLoaded.js"></script>
         <script src="/js/vendor/jquery.animateShadow.js"></script>
-        <script src="/js/vendor/slick-1.4.1/slick/slick.min.js"></script>
         <% if data.page.javascript %>
             <script src="/js/<%= data.page.javascript %>.js"></script>
         <% end %>
