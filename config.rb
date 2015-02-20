@@ -11,6 +11,11 @@
 #   config.output_style = :compact
 # end
 
+compass_config do |config|
+  config.add_import_path "bower_components/slick.js/slick"
+  config.output_style = :compact
+end
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -52,6 +57,7 @@ set :css_dir, 'css'
 set :js_dir, 'js'
 
 set :images_dir, 'img'
+
 
 activate :s3_sync do |s3_sync|
   s3_sync.bucket                     = 'ss-rewrite' # The name of the S3 bucket you are targetting. This is globally unique.

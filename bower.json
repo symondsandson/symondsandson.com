@@ -1,0 +1,21 @@
+{
+  "name": "symondsandson.com",
+  "version": "0.0.1",
+  "homepage": "https://github.com/symondsandson/symondsandson.com",
+  "authors": [
+    "Dave Liggat <dave@factorialsystems.ca>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "slick.js": "~1.4.1"
+  }
+}
