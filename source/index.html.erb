@@ -91,13 +91,13 @@ javascript: index
   <div class="centered">
     <div id="testimonials">
 
-      <% data.testimonials.clients.each do |client| %>
+      <% data.clients.testimonials.each do |testimonial| %>
         <div class="card">
           <div class="card-interior">
-            <%= tag(:img, src: "img/#{client.logo}", alt: client.company, class: 'logo') %>
+            <%= tag(:img, src: "img/#{testimonial.logo}", alt: testimonial.company, class: 'logo') %>
 
-            <div class="description"><%= client.description %></div>
-            <div class="title"><%= client.title %></div>
+            <div class="description"><%= testimonial.description %></div>
+            <div class="title"><%= testimonial.title %></div>
           </div>
         </div>
       <% end %>
