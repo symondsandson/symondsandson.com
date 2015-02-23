@@ -404,13 +404,17 @@ div#blog {
     }
 
     #posts {
-        margin: 0 auto 30px auto;
-        width: 75%;
-        /* padding: 0 40px; */
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        display: block;
+
+        width: 70%;
         .post {
-            width: 29%;
-            padding: 0 20px;
+            width: 30%;
+            padding: 0 1%;
             display: inline-block;
+            vertical-align: top;
 
             .title {
                 color: $orange;
