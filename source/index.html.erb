@@ -89,42 +89,19 @@ javascript: index
 <div id="clients" class="black">
 
   <div class="centered">
-    <div id="rolodex">
-      <div class="card">
-        <div class="card-interior">
-          <%= tag(:img, src: 'img/plyfe.png', alt: 'Plyfe', class: 'logo') %>
-          <div class="description">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec est justo. Donec ac mi orci. Integer et rhoncus justo, non suscipit massa. Duis accumsan molestie ante, in ornare lectus interdum non. Vivamus ac ante vestibulum, ornare diam a, facilisis massa. Mauris pharetra risus nec magna sagittis molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eleifend vel felis sed mattis."
-          </div>
-          <div class="title">
-            Name, Company
-          </div>
-        </div>
-      </div>
+    <div id="testimonials">
 
-      <div class="card">
-        <div class="card-interior">
-          <%= tag(:img, src: 'img/liveworld.png', alt: 'LiveWorld', class: 'logo') %>
-          <div class="description">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec est justo. Donec ac mi orci. Integer et rhoncus justo, non suscipit massa. Duis accumsan molestie ante, in ornare lectus interdum non. Vivamus ac ante vestibulum, ornare diam a, facilisis massa. Mauris pharetra risus nec magna sagittis molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eleifend vel felis sed mattis."
-          </div>
-          <div class="title">
-            Name, Company
-          </div>
-        </div>
-      </div>
+      <% data.testimonials.clients.each do |client| %>
+        <div class="card">
+          <div class="card-interior">
+            <%= tag(:img, src: "img/#{client.logo}", alt: client.company, class: 'logo') %>
 
-      <div class="card">
-        <div class="card-interior">
-          <%= tag(:img, src: 'img/jimmie-johnson.png', alt: 'Jimmie Johnson', class: 'logo') %>
-          <div class="description">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec est justo. Donec ac mi orci. Integer et rhoncus justo, non suscipit massa. Duis accumsan molestie ante, in ornare lectus interdum non. Vivamus ac ante vestibulum, ornare diam a, facilisis massa. Mauris pharetra risus nec magna sagittis molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eleifend vel felis sed mattis."
-          </div>
-          <div class="title">
-            Name, Company
+            <div class="description"><%= client.description %></div>
+            <div class="title"><%= client.title %></div>
           </div>
         </div>
-      </div>
+      <% end %>
+
     </div>
 
     <h5 class="uppercase">Just some of our clients</h5>

@@ -17,7 +17,7 @@ $(function() {
     $('#tradition').tipsy({gravity: 's', fade: true});
     $('#technologies').tipsy({gravity: 'se', fade: true});
 
-    $('#rolodex').slick({
+    $('#testimonials').slick({
       dots: true
     });
   });
