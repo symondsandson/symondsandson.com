@@ -18,7 +18,8 @@ $(function() {
     $('#technologies').tipsy({gravity: 'se', fade: true});
 
     $('#testimonials').slick({
-      dots: true
+      dots: true,
+      adaptiveHeight: true
     });
   });
 });
