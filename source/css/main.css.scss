@@ -775,16 +775,20 @@ div#clients {
         text-align: center;
     }
     #client_gallery {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 74%;
+        margin-left: 13%;
+        margin-right: 13%;
+        margin-bottom: 20px;
         .gallery_item {
-            float: left;
-            height: auto;
-            width: 170px;
-            margin-right: 10px;
-            margin-bottom: 10px;
+            display: table-cell;
+            padding-right: 25px;
+            vertical-align: middle;
+            height: 70px;
+            width: auto;
             background-color: $white;
+            img {
+                display: block;
+            }
         }
     }
 }

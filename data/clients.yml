@@ -13,23 +13,15 @@ testimonials:
     title: "Michael Dosik, VP Engineering"
 
 client_logos:
+  - company: "AT&T"
+    logo: att.png
+  - company: "Loral Space & Communications"
+    logo: loral.png
+  - company: Jimmie Johnson Racing
+    logo: jimmie-johnson.png
+  - company: Plyfe
+    logo: plyfe.png
   - company: Intelsat
     logo: intelsat.png
-  - company: Intelsat
-    logo: intelsat.png
-  - company: Intelsat
-    logo: intelsat.png
-  - company: Intelsat
-    logo: intelsat.png
-  - company: Intelsat
-    logo: intelsat.png
-  - company: Intelsat
-    logo: intelsat.png
-  - company: Intelsat
-    logo: intelsat.png
-  - company: Intelsat
-    logo: intelsat.png
-  - company: Intelsat
-    logo: intelsat.png
-  - company: Intelsat
-    logo: intelsat.png
+  - company: Totalmovie
+    logo: totalmovie.png
