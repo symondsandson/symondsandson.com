@@ -1,6 +1,3 @@
----
-javascript: index
----
 <div id='top' class='centered'>
   <h2>We're a team of developers<br/>and experts in Ruby</h2>
   <h4>We're Symonds &amp; Son</h4>
@@ -96,7 +93,7 @@ javascript: index
           <div class="card-interior">
             <%= tag(:img, src: "img/#{testimonial.logo}", alt: testimonial.company, class: 'logo') %>
 
-            <div class="description"><%= testimonial.description %></div>
+            <div class="description">"<%= testimonial.description %>"</div>
             <div class="title"><%= testimonial.title %></div>
           </div>
         </div>
