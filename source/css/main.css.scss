@@ -738,7 +738,7 @@ div#our_experience {
 }
 
 div#clients {
-    height: 650px;
+    min-height: 600px;
     width: 100%;
     display: inline-block;
 
@@ -770,8 +770,22 @@ div#clients {
             }
         }
     }
+
     h5 {
         text-align: center;
+    }
+    #client_gallery {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        .gallery_item {
+            float: left;
+            height: auto;
+            width: 170px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background-color: $white;
+        }
     }
 }
 
