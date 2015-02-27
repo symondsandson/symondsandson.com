@@ -781,11 +781,14 @@ div#clients {
         .gallery_item {
             display: table-cell;
             padding-right: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
             vertical-align: middle;
             height: 70px;
             width: auto;
             background-color: $white;
             img {
+                max-height: 70px;
                 display: block;
             }
         }
