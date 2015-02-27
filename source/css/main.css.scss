@@ -320,7 +320,7 @@ div#team {
     text-align: center;
 
     h4 {
-        margin-top: 50px;
+        margin-top: 30px;
         margin-bottom: 0;
     }
 
@@ -334,24 +334,23 @@ div#team {
     .split.vertical {
         width: 622px;
         margin: 0 auto;
-        height: 500px;
+        height: 670px;
 
         div {
-            padding: 20px 0;
             width: 306px;
-            height: 350px;
-        }
-
-        div.right {
-            padding-top: 0;
-            height: 370px;
-
+            height: 630px;
             h3 {
                 padding-top: 20px;
             }
+        }
+
+        div.right {
 
             h4 {
                 margin-top: 0px;
+            }
+            a {
+                color: black;
             }
         }
 
@@ -367,6 +366,7 @@ div#team {
             font-weight: 300;
             width: 80%;
             margin: 0 auto;
+            min-height: 240px;
         }
 
         h3 {
