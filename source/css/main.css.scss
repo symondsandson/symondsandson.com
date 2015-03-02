@@ -732,11 +732,11 @@ div#our_experience {
         @include opacity(0.5);
 
         .box {
-            width: $boxsize;
+            width: auto;
             height: $boxsize;
             margin-right: $boxsize/2;
             img {
-                width: $boxsize;
+                width: auto;
                 height: $boxsize;
             }
         }
