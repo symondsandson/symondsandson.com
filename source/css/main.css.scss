@@ -69,6 +69,11 @@ $light: #F9F9F9;
     color: #000000;
 }
 
+a.linkable_div {
+    text-decoration: none;
+    color: inherit;
+}
+
 h2 {
     text-transform: uppercase;
     font-family: 'Lato', sans-serif;
