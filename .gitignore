@@ -12,3 +12,8 @@
 
 # Ignore Sass' cache
 /.sass-cache
+
+/bower_components/
+
+# Ignore s3_sync file - has AWS creds.
+.s3_sync
