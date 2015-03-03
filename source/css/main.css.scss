@@ -206,6 +206,19 @@ div#navbar {
     }
 }
 
+#started-sidebar {
+    // TODO: Box shadow
+    @include rotate(-90deg);
+    @include border-top-right-radius(3px);
+    @include border-top-left-radius(3px);
+    display: inline-block;
+    padding: 5px 10px;
+    position: fixed;
+    right: -55px;
+    top: 50%;
+    z-index: 3000;
+}
+
 div#top {
     position: relative;
     height: 500px;
@@ -278,19 +291,6 @@ div#who_we_are {
         font-size: 20px;
         text-transform: uppercase;
         font-weight: bold;
-    }
-
-
-    #started-sidebar {
-        // TODO: Box shadow
-        @include rotate(-90deg);
-        @include border-top-right-radius(3px);
-        @include border-top-left-radius(3px);
-        display: inline-block;
-        padding: 5px 10px;
-        position: absolute;
-        right: -55px;
-        top: 110px;
     }
 
     ul {
