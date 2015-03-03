@@ -1,205 +1,962 @@
 $orange: #da594c;
 $gray: #393939;
+$darkgray: #3e3e3e;
+$white: #FFFFFF;
+$light: #F9F9F9;
 
 @import "compass/css3";
 
 @font-face {
-  font-family: "Edmond Sans Bold";
-  src: url('fonts/Edmondsans-Bold.otf') format('opentype'); }
+    font-family: "Edmond Sans Bold";
+    src: url('fonts/Edmondsans-Bold.otf') format('opentype'); }
 
 @font-face {
-  font-family: "Edmond Sans Medium";
-  src: url('fonts/Edmondsans-Medium.otf') format('opentype'); }
+    font-family: "Edmond Sans Medium";
+    src: url('fonts/Edmondsans-Medium.otf') format('opentype'); }
 
 @font-face {
-  font-family: "Edmond Sans Regular";
-  src: url('fonts/Edmondsans-Regular.otf') format('opentype'); }
+    font-family: "Edmond Sans Regular";
+    src: url('fonts/Edmondsans-Regular.otf') format('opentype'); }
 
 @font-face {
-  font-family: "Cubano Regular";
-  src: url('fonts/Cubano-Regular.otf') format('opentype'); }
+    font-family: "Cubano Regular";
+    src: url('fonts/Cubano-Regular.otf') format('opentype'); }
 
-@font-face {
-  font-family: "Vevey";
-  src: url('fonts/vevey.ttf') format('truetype'); }
 
-.centered {width: 960px; margin: 0 auto; padding: 0;}
-h2 {text-transform: uppercase; font-family: "Vevey"; font-size: 42px; margin: 100px 0 0 0; font-weight: normal; float: left; clear: both;}
-p {font-family: "Edmond Sans Regular";}
 
-body {width: 100%; padding: 0; margin: 0; font-family: "Edmond Sans Medium"; font-size: 18px; background-color: #f2f2e6; color: $gray; font-weight: normal; -webkit-font-smoothing: antialiased;}
+.centered {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.centered-full {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.bordered {
+    border: 2px solid #FFFFFF;
+    text-align: center;
+    @include border-radius(4px, 4px);
+    height: 35px;
+    line-height: 35px;
+    padding: 0 5px;
+    display: inline-block;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.orange {
+    background-color: $orange;
+    color: #FFFFFF;
+}
+
+.black {
+    background-color: $darkgray;
+    color: #FFFFFF
+}
+
+.white {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-size: 42px;
+    margin: 0 auto;
+    font-weight: normal;
+    clear: both;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 36px;
+    margin: 0 auto;
+    font-weight: normal;
+    clear: both;
+    text-align: center;
+}
+
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    background-color: $light;
+    color: $gray;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+}
 
 div#navbar {
-  background-color: #ffffff; height: 100px; position: fixed; width: 100%; z-index: 100;
-  @include transition(all 0.4s linear translate3d(0, 0, 0));
-  ul { height: 100%; list-style-type: none; float: left; clear: both; margin: 0; padding: 0; width: 100%;
-    li { float: left; width: 150px; text-align: center;
-      a { color: black; text-decoration: none; height: 100px; width: 150px; line-height: 105px; float: left; @include transition(all 0.2s linear);}
-      &.current { background: url("/img/current_indicator.png") top left no-repeat;
-        a {color: $orange;}
-      }
-      &:hover {
-        a {color: $orange;}
-      }
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    z-index: 100;
+    top: 30px;
+
+    div {
+        width: 800px;
+        margin: 0 auto;
+        padding: 0;
     }
-    li#button {float: right;
-      a {
-        width: 100%; text-align: center; color: white; height: 40px; line-height: 40px; font-weight: normal;
-        @include background(linear-gradient(lighten($orange, 5), $orange 70%));
-        @include border-radius(2px);
-        @include box-shadow(inset lighten($orange, 20) 0 1px 1px);
-        @include text-shadow(darken($orange, 10) 0 -1px 0);
-        @include transition(all 0s linear);
-        border: 1px solid darken($orange, 20); margin: 30px 0 0 0;
-        &:hover {
-          @include background(linear-gradient(lighten($orange, 8), lighten($orange, 3) 70%));
-        };
-        &:active {
-          @include background(linear-gradient($orange, darken($orange, 10) 70%));
-          @include box-shadow(inset darken($orange, 20) 0 1px 1px);
-        };
-      }
+
+    ul {
+        height: 100%;
+        list-style-type: none;
+        float: left;
+        clear: both;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+
+        li {
+            float: left;
+            text-align: center;
+
+            a {
+                font-size: 16px;
+                color: #FFFFFF;
+                text-decoration: none;
+                height: 100px;
+                margin-left: 30px;
+                line-height: 105px;
+                float: left;
+                @include transition(all 0.2s linear);
+            }
+            &:hover {
+                a {
+                    color: $orange;
+                }
+            }
+        }
     }
-  }
-  &.moving {
-    opacity: 0.9;
-    @include box-shadow(rgba(black, 0.3) 0 2px 10px);
-  }
 }
 
-div#top { position: relative; height: 900px;
-  #big_logo {margin: 200px 0 0 404px;}
-  h3, h4 {width: 100%; text-align: center; text-transform: uppercase; font-weight: normal;}
-  h3 {background: url("/img/artisans.png") center no-repeat; font-family: "Vevey"; font-size: 42px; color: white; padding: 10px 0 0 0; margin: 37px 0 0 0;}
-  h4 {background: url("/img/crafters.png") center no-repeat; font-family: "Cubano Regular"; font-size: 18px; letter-spacing: 8px; padding: 0; margin: 0;}
-
-  ul {width: 100%; float: left; clear: both; margin: 0; padding: 0; list-style-type: none;
-    li {float: left; width: 33%; text-align: center; margin: 100px 0 0 0; line-height: 26px;}
-  }
+.section-footer {
+    position: relative;
+    top: 380px;
 }
 
-div#who_we_are { position: relative; background: url("/img/who_we_are.jpg") top left repeat-x; height: 935px; width: 100%;
-  h2 {color: white;}
-  p {float: left; clear: both; color: white; padding: 0 70px; line-height: 30px; margin: 80px 0 0 0;}
-  #ampersand {position: absolute; left: 50%; margin-left: -46px; bottom: 400px;}
-  ul {width: 100%; float: left; clear: both; margin: 0; padding: 0; list-style-type: none;
-    li {float: left; width: 50%; margin: 120px 0 0 0; line-height: 26px;
-      h2 {text-align: center; margin: 0 0 30px 0; float: none; clear: none;}
-      p {line-height: 30px; margin: 20px 0 0 0;}
+.split.vertical {
+    width: 100%;
+
+    .left {
+        width: 50%;
+        float: left;
+        display: inline-block;
     }
-  }
+
+    .right {
+        width: 50%;
+        float: right;
+        display: inline-block;
+
+    }
 }
 
-div#have_a_project { position: relative; clear: both;
-  p {float: left; clear: both;}
-  form { float: left; clear: both; width: 100%; margin: 0 0 100px 0; position: relative;
-    .column {float: left; width: 50%;
-      &:last-of-type {
-        label {margin: 0 0 5px 38px;}
-        input, textarea {float: right;}
-      }
+@mixin icon-divider {
+    width: 100%;
+    height: 40px;
+
+    img {
+        display: block;
+        margin: 0 auto;
     }
-    label {font-size: 22px; float: left; clear: both; margin: 0 0 5px 0; padding: 0;
-      &.error {font-size: 14px; position: relative; margin: 0; top: -10px; color: darken(red, 10);}
+
+    .line {
+        width: 34%;
+
+        border-top: 1px solid $orange;
+        position: relative;
+        display: inline;
+        top: 10px;
+
+        &.left {
+            float: left;
+            margin-left: 12%;
+        }
+
+        &.right {
+            float: right;
+            margin-right: 12%;
+        }
     }
-    input, textarea {
-      float: left; clear: both; border: 0; @include border-radius(2px); width: 90%; font-size: 22px; line-height: 30px;
-      padding: 5px; margin: 0 0 20px 0;
-      &[type='submit'] {
-        width: 92%; text-align: center; color: white; height: 45px; line-height: 35px; font-weight: normal;
-        padding: 5px; text-transform: uppercase;
-        @include background(linear-gradient(lighten($orange, 5), $orange 70%));
-        @include border-radius(2px);
-        @include box-shadow(inset lighten($orange, 20) 0 1px 1px);
-        @include text-shadow(darken($orange, 10) 0 -1px 0);
-        border: 1px solid darken($orange, 20); margin: 30px 0 0 0;
-        &:hover {
-          @include background(linear-gradient(lighten($orange, 8), lighten($orange, 3) 70%));
-        };
-        &:active {
-          @include background(linear-gradient($orange, darken($orange, 10) 70%));
-          @include box-shadow(inset darken($orange, 20) 0 1px 1px);
-        };
-      }
-      &:invalid {
-        @include box-shadow(darken(red, 10) 0px 0px 5px);
-      }
-      &.error {
-        @include box-shadow(darken(red, 10) 0px 0px 5px);
-      }
-      &.valid {
-        @include box-shadow(darken(green, 10) 0px 0px 5px);
-      }
-    }
-    textarea {height: 210px;}
-    span.required {color: $orange;}
-    div.explanation {position: absolute; text-align: right; bottom: 3px; right: 0; font-size: 14px;}
-  }
 }
 
-div#contact { position: relative; background: url("/img/contact_us.jpg") top left repeat-x; height: 512px; width: 100%; clear: both;
-  h2 {color: white; width: 100%; clear: both;}
-  .column {float: left; width: 50%; margin: 0;
-    .method {float: left; clear: both; width: 100%; margin: 60px 0 0 140px; position: relative;
-      img {position: absolute;
-        &#pin {left: -48px; top: 22px;}
-        &#twitter {left: -54px; top: 13px;}
-        &#mail {left: -54px; top: 18px;}
-        &#github {left: -54px; top: 15px;}
-      }
-      a {text-decoration: none; color: white;}
+div#top {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    padding-top: 270px;
+    background: url("../img/header-bkgd.jpg") top left repeat-x;
+
+    h2, h4, p {
+        margin: 0 auto;
+        text-align: center;
+        color: #FFFFFF;
     }
-  }
+
+    h2 {
+        font-size: 34px;
+        letter-spacing: 3px;
+        font-weight: 300;
+    }
+
+    h4 {
+        width: 100%;
+        text-align: center;
+        font-weight: 300;
+        font-size: 20px;
+        font-style: italic;
+        padding: 0;
+        margin: 0;
+        margin-top: 30px;
+    }
+
+    #getstarted {
+        background-color: $orange;
+        height: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 30px;
+        width: 200px;
+        margin: 30px auto;
+        border: 2px solid $orange;
+        text-align: center;
+        @include border-radius(4px, 4px);
+    }
+
+    .section-footer {
+        position: relative;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 18px;
+        top: 120px;
+    }
 }
 
-div#our_experience {position: relative; background-color: white; width: 100%; clear: both; float: left; padding: 0 0 100px 0;
-  h2 {color: black; width: 100%; clear: both; margin-bottom: 0;}
+div#who_we_are {
+    position: relative;
+    width: 100%;
 
-  ul {width: 940px; float: left; clear: both; margin: 25px 0 90px 0; padding: 0; list-style-type: none; background-color: #f2f2e6; position: relative; @include border-radius(5px);
-    img {position: absolute; left: 38px; top: -30px;}
-    li {float: left; width: 780px; padding: 10px 0 0 90px; line-height: 30px; margin: 40px 0;
-      p {margin: 0;}
-      h4 {margin: 20px 0 0 0;
-        span {font-weight: normal; font-size: 16px; margin: 5px 0 0 30px;}
-      }
+    #ruby-divider {
+        @include icon-divider;
     }
-  }
 
-  #masonry {float: left; clear: both; width: 100%;
-    .box {width: 280px; border: 10px solid #f2f2e6; @include border-radius(5px); background-color: #f2f2e6; margin: 0 0 20px 0;
-      img { display: block; margin: 10px auto 10px auto;}
-      h4 {margin: 5px 0 0 0; float: left; clear: both;
-        a {color: $gray; text-decoration: none;}
-      }
-      p {margin: 8px 0 0 0; font-size: 18px; float: left; text-align: left;  line-height: 26px;}
+    p {
+        padding: 0 70px;
+        line-height: 30px;
+        margin: 40px auto 40px auto;
+        width: 50%;
+        text-align: center;
     }
-  }
+    h3 {
+        margin-top: 50px;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+
+    #started-sidebar {
+        // TODO: Box shadow
+        @include rotate(-90deg);
+        @include border-top-right-radius(3px);
+        @include border-top-left-radius(3px);
+        display: inline-block;
+        padding: 5px 10px;
+        position: absolute;
+        right: -55px;
+        top: 110px;
+    }
+
+    ul {
+        width: 100%;
+        min-height: 525px;
+        float: left;
+        clear: both;
+        padding: 0;
+        list-style-type: none;
+        margin-bottom: 0;
+
+        li {
+            float: left;
+            width: 50%;
+            height: 100%;
+            margin: 0;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            line-height: 26px;
+            text-align: center;
+        }
+    }
+
+    .bordered {
+        margin: 0 auto;
+        margin-top: 30px;
+    }
 }
 
-footer {clear: both; width: 100%; font-size: 14px; text-align: center; margin: 50px 0 20px 0; background: url("/img/crafters.png") center no-repeat; font-family: "Cubano Regular"; letter-spacing: 1px; }
+div#team {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 
-.tipsy { font-size: 16px; position: absolute; padding: 10px; z-index: 50; font-family: "Edmond Sans Regular"; }
-  .tipsy-inner { background-color: #fefefd; color: $gray; max-width: 330px; padding: 10px; text-align: left; }
+    h4 {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
 
-  /* Rounded corners */
-  .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+    h5 {
+        margin-top: 0px;
+        font-style: italic;
+        font-size: 15px;
+        font-weight: 400;
+    }
 
-  /* Uncomment for shadow */
-  .tipsy-inner { @include box-shadow(lighten(black, 80) 0 2px 5px) }
+    .split.vertical {
+        width: 622px;
+        margin: 0 auto;
+        height: 670px;
 
-  .tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 10px dashed #000;}
+        div {
+            width: 306px;
+            height: 630px;
+            h3 {
+                padding-top: 20px;
+            }
+        }
 
-  /* Rules to colour arrows */
-  .tipsy-arrow-n { border-bottom-color: #fefefd; }
-  .tipsy-arrow-s { border-top-color: #fefefd; }
-  .tipsy-arrow-e { border-left-color: #fefefd; }
-  .tipsy-arrow-w { border-right-color: #fefefd; }
+        div.right {
 
-  .tipsy-n .tipsy-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
-    .tipsy-nw .tipsy-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
-    .tipsy-ne .tipsy-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none;  border-left-color: transparent; border-right-color: transparent;}
-  .tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -10px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
-    .tipsy-sw .tipsy-arrow { bottom: 0; left: 15px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
-    .tipsy-se .tipsy-arrow { bottom: 0; right: 15px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
-  .tipsy-e .tipsy-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
-  .tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }
+            h4 {
+                margin-top: 0px;
+            }
+            a {
+                color: black;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            width: 80%;
+            margin: 0 auto;
+            min-height: 240px;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        h4 {
+            font-size: 15px;
+            font-style: italic;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+div#blog {
+    margin-top: 20px;
+
+    h3 {
+        font-size: 26px;
+    }
+    h4 {
+        text-align: center;
+        font-weight: 300;
+        font-style: italic;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    #quill-divider {
+        @include icon-divider;
+    }
+
+    #posts {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        display: block;
+
+        width: 70%;
+        .post {
+            width: 30%;
+            padding: 0 1%;
+            display: inline-block;
+            vertical-align: top;
+
+            .title {
+                color: $orange;
+                margin-bottom: 15px;
+            }
+
+            .lede {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            .link {
+                margin-top: 20px;
+
+                a {
+                    font-size: 18px;
+                    text-decoration: none;
+                    color: #000000;
+                    border-bottom: 2px solid $orange;
+                }
+            }
+        }
+    }
+}
+
+
+
+div#careers {
+    display: inline-block;
+    color: #FFFFFF;
+    padding: 30px 0;
+    background: url("../img/checkered-bkgd.jpg") center no-repeat;
+
+    div.split.vertical {
+        div.left {
+            p {
+                margin-right: 40px;
+                float: right;
+                font-size: 16px;
+                width: 50%;
+                padding-bottom: 20px;
+                line-height: 24px;
+                text-align: center;
+            }
+        }
+
+        div.right {
+            p {
+                font-size: 18px;
+                margin-bottom: 25px;
+                margin-left: 22px;
+            }
+
+            ul {
+                font-size: 17px;
+                li {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+    #join-the-team {
+        margin-top: 35px;
+        margin-left: 22px;
+        font-size: 22px;
+        padding: 5px 25px;
+    }
+}
+
+div#have_a_project {
+    clear: both;
+    background: url("../img/contact-bkgd.jpg") top left repeat-x;
+    padding-bottom: 25px;
+
+    h3 {
+        padding-top: 20px;
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    h4 {
+        margin-top: 0;
+        font-size: 20px;
+        font-weight: 300;
+        font-style: italic;
+        text-align: center;
+    }
+
+    p {
+        float: left;
+        clear: both;
+    }
+
+    form {
+        width: 40%;
+        margin: 0 auto;
+
+        input, textarea {
+            clear: both;
+            border: 0;
+            @include border-radius(2px);
+            width: 98%;
+            font-size: 22px;
+            line-height: 30px;
+
+            padding: 5px;
+            margin: 0 0 20px 0;
+
+            @include input-placeholder {
+              font-size: 14px;
+              padding-left: 5px;
+            }
+
+            &.deadline, &.budget {
+                width: 45%;
+            }
+
+            &.budget {
+                float: right;
+            }
+
+            &[type='submit'] {
+                display: block;
+                width: 38%;
+                text-align: center;
+                color: white;
+                background-color: $gray;
+                height: 45px;
+                line-height: 35px;
+                font-weight: normal;
+                @include border-radius(3px);
+                padding: 5px;
+                text-transform: uppercase;
+                font-size:  20px;
+
+                margin: 30px auto 0 auto;
+            }
+            &:invalid {
+                @include box-shadow(darken(red, 10) 0px 0px 5px);
+            }
+            &.error {
+                @include box-shadow(darken(red, 10) 0px 0px 5px);
+            }
+            &.valid {
+                @include box-shadow(darken(green, 10) 0px 0px 5px);
+            }
+        }
+        textarea {
+            height: 210px;
+        }
+        span.required {
+            color: $orange;
+        }
+        div.explanation {
+            position: absolute;
+            text-align: right;
+            bottom: 3px;
+            right: 0;
+            font-size: 14px;
+        }
+    }
+}
+
+div#contact {
+    position: relative;
+    background: url("img/contact_us.jpg") top left repeat-x;
+    height: 512px;
+    width: 100%;
+    clear: both;
+
+    h2 {
+        color: white;
+        width: 100%;
+        clear: both;
+    }
+    .column {
+        float: left;
+        width: 50%;
+        margin: 0;
+
+        .method {
+            float: left;
+            clear: both;
+            width: 100%;
+            margin: 60px 0 0 140px;
+            position: relative;
+
+            img {
+                position: absolute;
+
+                &#pin {
+                    left: -48px;
+                    top: 22px;
+                }
+                &#twitter {
+                    left: -54px;
+                    top: 13px;
+                }
+                &#mail {
+                    left: -54px;
+                    top: 18px;
+                }
+                &#github {
+                    left: -54px;
+                    top: 15px;
+                }
+            }
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+div#our_experience {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    clear: both;
+    float: left;
+    padding: 0 0 60px 0;
+
+    .background {
+        background: url("../img/experience-bkgd.jpg") center no-repeat;
+        height: 500px;
+
+        h4 {
+            padding-top: 120px;
+        }
+
+        h5 {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        p {
+            padding-top: 60px;
+            width: 60%;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 32px;
+        }
+    }
+
+    h2 {
+        color: black;
+        width: 100%;
+        clear: both;
+        margin-bottom: 0;
+    }
+
+    h4, h5 {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    ul {
+        width: 940px;
+        float: left;
+        clear: both;
+        margin: 25px 0 90px 0;
+        padding: 0;
+        list-style-type: none;
+        background-color: $light;
+        position: relative;
+        @include border-radius(5px);
+
+        img {
+            position: absolute;
+            left: 38px;
+            top: -30px;
+        }
+        li {
+            float: left;
+            width: 780px;
+            padding: 10px 0 0 90px;
+            line-height: 30px;
+            margin: 40px 0;
+
+            p {
+                margin: 0;
+            }
+            h4 {
+                margin: 20px 0 0 0;
+
+                span {
+                    font-weight: normal;
+                    font-size: 16px;
+                    margin: 5px 0 0 30px;
+                }
+            }
+        }
+    }
+
+    .title-area {
+        h4 {
+            padding-top: 60px;
+        }
+
+        h5 {
+            font-style: italic;
+            font-weight: 400;
+        }
+    }
+
+
+    $boxsize: 70px;
+    #tools {
+        margin-top: 40px;
+        text-align: center;
+        @include opacity(0.5);
+
+        .box {
+            width: auto;
+            height: $boxsize;
+            margin-right: $boxsize/2;
+            img {
+                width: auto;
+                height: $boxsize;
+            }
+        }
+    }
+}
+
+div#clients {
+    width: 100%;
+    display: inline-block;
+
+    #testimonials {
+        width: 35%;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 18px;
+        .card {
+            text-align: center;
+            color: $gray;
+            background-color: $white;
+            .card-interior {
+                padding: 20px;
+                .logo {
+                    margin-bottom: 20px;
+                    width: auto;
+                    height: 50px;
+                    display: inline;
+                }
+                .description {
+                    color: $orange;
+                    font-style: italic;
+                }
+                .title {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    h5 {
+        text-align: center;
+    }
+    #client_gallery {
+        width: 74%;
+        margin-left: 13%;
+        margin-right: 13%;
+        margin-bottom: 30px;
+        .gallery_item {
+            display: table-cell;
+            padding-right: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            vertical-align: middle;
+            height: 70px;
+            width: auto;
+            background-color: $white;
+            img {
+                max-height: 70px;
+                display: block;
+            }
+        }
+    }
+}
+
+footer {
+    clear: both;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    background-color: $gray;
+    color: #FFFFFF;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+    .centered {
+        width: 75%;
+    }
+
+    .left {
+        float: left;
+        text-transform: uppercase;
+    }
+
+    .divider {
+        border-top: 2px solid #58595b;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .right {
+        float: right;
+        a {
+            text-decoration: none;
+            color: $orange;
+            margin-right: 35px;
+            margin-left: 10px;
+        }
+    }
+
+    .bottom {
+        color: #929497;
+    }
+}
+
+.tipsy {
+    font-size: 16px;
+    position: absolute;
+    padding: 10px;
+    z-index: 50;
+    font-family: "Edmond Sans Regular";
+}
+.tipsy-inner {
+    background-color: #fefefd;
+    color: $gray;
+    max-width: 330px;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Rounded corners */
+.tipsy-inner {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+/* Uncomment for shadow */
+.tipsy-inner {
+    @include box-shadow(lighten(black, 80) 0 2px 5px) }
+
+.tipsy-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 10px dashed #000;
+}
+
+/* Rules to colour arrows */
+.tipsy-arrow-n {
+    border-bottom-color: #fefefd;
+}
+.tipsy-arrow-s {
+    border-top-color: #fefefd;
+}
+.tipsy-arrow-e {
+    border-left-color: #fefefd;
+}
+.tipsy-arrow-w {
+    border-right-color: #fefefd;
+}
+
+.tipsy-n .tipsy-arrow {
+    top: 0px;
+    left: 50%;
+    margin-left: -5px;
+    border-bottom-style: solid;
+    border-top: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.tipsy-nw .tipsy-arrow {
+    top: 0;
+    left: 10px;
+    border-bottom-style: solid;
+    border-top: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.tipsy-ne .tipsy-arrow {
+    top: 0;
+    right: 10px;
+    border-bottom-style: solid;
+    border-top: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.tipsy-s .tipsy-arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -10px;
+    border-top-style: solid;
+    border-bottom: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.tipsy-sw .tipsy-arrow {
+    bottom: 0;
+    left: 15px;
+    border-top-style: solid;
+    border-bottom: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.tipsy-se .tipsy-arrow {
+    bottom: 0;
+    right: 15px;
+    border-top-style: solid;
+    border-bottom: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.tipsy-e .tipsy-arrow {
+    right: 0;
+    top: 50%;
+    margin-top: -5px;
+    border-left-style: solid;
+    border-right: none;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+.tipsy-w .tipsy-arrow {
+    left: 0;
+    top: 50%;
+    margin-top: -5px;
+    border-right-style: solid;
+    border-left: none;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}

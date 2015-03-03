@@ -1,0 +1,29 @@
+testimonials:
+  - company: Jimmie Johnson Racing
+    logo: jimmie-johnson.png
+    description: "We initially utilized Symonds and Sons to update and correct our existing website code. We were immediately impressed with the breadth of knowledge and expertise they brought to the table, not just for the web but also for mobile applications and backend support/maintenance. Symonds & Son’s ability to provide guidance, innovation and timely solutions has allowed us to expand our digital presence and connect on a deeper level with Jimmie's fans across various platforms and with greater reliability no matter how much traffic we get."
+    title: "Lauren Murray, Digital & Social Communications Manager"
+  - company: Plyfe
+    logo: plyfe.png
+    description: "Having the Symonds & Son team which is composed of experts that know how to follow all of the best practices on server automation, RAILS & Full Stack Development not only made our environment management much better but also helped take our code to the next level!  In summation, they understand start ups and have been a pleasure to partner with!"
+    title: "Mateen Aini, Co-Founder / CEO of Plyfe"
+  - company: LiveWorld
+    logo: liveworld.png
+    description: "Symonds & Son unique combination of operational expertise and application development wizardry has allowed LiveWorld to scale its own engineering capabilities dramatically faster than we could have on our own.  Leveraging Symonds and Son’s skills and personalized attention has allowed LiveWorld to simultaneously rapidly evolve its own suite of tools with new features while reducing the application’s downtime."
+    title: "Michael Dosik, VP Engineering"
+
+client_logos:
+  - company: "AT&T"
+    logo: att.png
+  - company: "National Public Radio"
+    logo: npr.png
+  - company: "LiveWorld"
+    logo: liveworld.png
+  - company: Jimmie Johnson Racing
+    logo: jimmie-johnson.png
+  - company: Plyfe
+    logo: plyfe.png
+  - company: Intelsat
+    logo: intelsat.png
+  - company: Televisa
+    logo: televisa.png
