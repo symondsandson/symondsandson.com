@@ -13,42 +13,29 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="/css/normalize.css">
-        <link rel="stylesheet" href="/css/boilerplate.css">
-        <link rel="stylesheet" href="/css/main.css">
-        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+        <link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+        <%= stylesheet_link_tag "application" %>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body>
         <div id='navbar'>
-          <div class='centered'>
+          <div>
             <ul>
-              <li class='current'>
-                <%= link_to tag(:img, src: '/img/logo.png', width: '75', height: '75', id: 'logo', alt: 'Symonds & Son'), '/#top' %>
-              </li>
               <li><%= link_to 'Who We Are', '/#who_we_are' %></li>
               <li><%= link_to 'Our Experience', '/#our_experience' %></li>
-              <li><%= link_to 'Contact', '/#contact' %></li>
+              <li><%= link_to 'Team', '/#team' %></li>
+              <li><%= link_to tag(:img, src: 'img/logo.png', width: '100', height: '100', id: 'logo', alt: 'Symonds & Son'), '/#top' %></li>
+              <li><%= link_to 'Contact', '/#have_a_project' %></li>
               <li><%= link_to 'Blog', 'http://joshsymonds.com', target: '_blank', class: 'external' %></li>
-              <li id='button'><%= link_to 'Have a Project?', '/#have_a_project' %></li>
+              <li><%= link_to 'Hire a Developer', '/#have_a_project' %></li>
             </ul>
           </div>
         </div>
 
         <%= yield %>
 
-        <script src="/js/vendor/jquery-1.9.1.js"></script>
-        <script src="/js/plugins.js"></script>
-        <script src="/js/vendor/jquery.tipsy.js"></script>
-        <script src="/js/vendor/jquery.form.js"></script>
-        <script src="/js/vendor/jquery.validate.js"></script>
-        <script src="/js/vendor/jquery.scrollTo.js"></script>
-        <script src="/js/vendor/jquery.onePageNav.js"></script>
-        <script src="/js/vendor/jquery.masonry.js"></script>
-        <script src="/js/vendor/jquery.imagesLoaded.js"></script>
-        <script src="/js/vendor/jquery.animateShadow.js"></script>
-        <% if data.page.javascript %>
-            <script src="/js/<%= data.page.javascript %>.js"></script>
-        <% end %>
+        <%= javascript_include_tag "application" %>
+        <%= auto_javascript_include_tag %>
 
         <script>
             var _gaq=[['_setAccount','UA-39274431-1'],['_trackPageview']];
