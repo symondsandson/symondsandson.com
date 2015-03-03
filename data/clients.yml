@@ -16,7 +16,7 @@ client_logos:
   - company: "AT&T"
     logo: att.png
   - company: "National Public Radio"
-    logo: npr.png
+    logo: npr.jpg
   - company: "LiveWorld"
     logo: liveworld.png
   - company: Jimmie Johnson Racing
@@ -24,6 +24,6 @@ client_logos:
   - company: Plyfe
     logo: plyfe.png
   - company: Intelsat
-    logo: intelsat.png
+    logo: intelsat.jpg
   - company: Televisa
     logo: televisa.png
