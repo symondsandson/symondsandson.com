@@ -290,7 +290,7 @@ div#who_we_are {
 
     ul {
         width: 100%;
-        min-height: 525px;
+        height: 625px;
         float: left;
         clear: both;
         padding: 0;
@@ -319,10 +319,10 @@ div#team {
     display: inline-block;
     width: 100%;
     text-align: center;
-    margin: 40px 0 80px 0;
+    margin: 50px 0 80px 0;
 
     h4 {
-        margin-top: 30px;
+        margin-top: 20px;
         margin-bottom: 0;
     }
 
@@ -763,7 +763,7 @@ div#our_experience {
 div#clients {
     width: 100%;
     display: inline-block;
-    margin: 0 0 120px 0;
+    padding: 20px 0 30px 0;
 
     #testimonials {
         width: 35%;
