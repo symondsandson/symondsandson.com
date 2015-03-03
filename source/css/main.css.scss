@@ -44,8 +44,6 @@ $light: #F9F9F9;
     border: 2px solid #FFFFFF;
     text-align: center;
     @include border-radius(4px, 4px);
-    height: 35px;
-    line-height: 35px;
     padding: 0 5px;
     display: inline-block;
 }
@@ -61,7 +59,7 @@ $light: #F9F9F9;
 
 .black {
     background-color: $darkgray;
-    color: #FFFFFF
+    color: #FFFFFF;
 }
 
 .white {
@@ -332,6 +330,16 @@ div#team {
         font-weight: 400;
     }
 
+    .cofounders {
+        text-align: center;
+        display: inline-block;
+
+        img {
+            border-radius: 4px 4px 0 0;
+            max-width: 622px;
+        }
+    }
+
     .split.vertical {
         width: 622px;
         margin: 0 auto;
@@ -347,12 +355,18 @@ div#team {
 
         div.right {
 
+            border-radius: 0 0 4px 0;
+
             h4 {
                 margin-top: 0px;
             }
             a {
                 color: black;
             }
+        }
+
+        div.left {
+            border-radius: 0 0 0 4px;
         }
 
         a {
@@ -755,8 +769,11 @@ div#clients {
         font-size: 18px;
         .card {
             text-align: center;
-            color: $gray;
-            background-color: $white;
+            color: white;
+            display: inline-block;
+            min-height: 500px;
+            margin: 0 20px;
+            line-height: 24px;
             .card-interior {
                 padding: 20px;
                 .logo {
@@ -764,6 +781,12 @@ div#clients {
                     width: auto;
                     height: 50px;
                     display: inline;
+                    width: auto;
+                    height: auto;
+                    padding: 10px;
+                    background-color: white;
+                    max-width: 200px;
+                    @include border-radius(4px, 4px);
                 }
                 .description {
                     color: $orange;
@@ -778,22 +801,28 @@ div#clients {
 
     h5 {
         text-align: center;
+        padding-top: 10px;
     }
     #client_gallery {
-        width: 74%;
-        margin-left: 13%;
-        margin-right: 13%;
-        margin-bottom: 30px;
+        width: 70%;
+        margin: 0 auto 30px auto;
         .gallery_item {
-            display: table-cell;
-            padding-right: 25px;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            display: inline-block;
             vertical-align: middle;
-            height: 70px;
             width: auto;
             background-color: $white;
+            padding: 5px;
+            height: 70px;
+            margin: 5px;
+            span {
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+            }
+            @include border-radius(4px, 4px);
             img {
+                height: 100%;
+                vertical-align: middle;
                 max-height: 70px;
                 display: block;
             }

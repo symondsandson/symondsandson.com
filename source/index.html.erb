@@ -1,10 +1,10 @@
 <div id='top' class='centered'>
-  <h2>We're a team of developers<br/>and experts in Ruby</h2>
+  <h2>We're a team of developers<br/>and infrastructure experts</h2>
   <h4>We're Symonds &amp; Son</h4>
 
   <div id="getstarted">Let's Get Started</div>
 
-  <p class="section-footer">A tradition of excellence, dependability, and stability in developing &amp; managing DevOps systems.</p>
+  <p class="section-footer">A tradition of excellence, dependability, and stability in developing applications &amp; managing systems.</p>
 </div>
 
 <div id='who_we_are'>
@@ -43,7 +43,7 @@
       <h4 class="uppercase">Years of experience</h4>
       <h5>as digital architects</h5>
 
-      <p class="text-center">Our team has had dozens of years of experience with the technologies that make the Internet run at scale. Whether it's a web application or a mobile application, whatever software stack you seek to employ, chances are we've not only used it &mdash; we've used it to help a multi-million dollar company increase their uptime, reduce their operating costs, and most importantly, delight their customers. Here's a very small selection of the software we love using over and over again.</p>
+      <p class="text-center">Our team has had thousands of hours of experience with the technologies that make the Internet run at scale. Whether it's a web application or a mobile application, whatever software stack you seek to employ, chances are we've not only used it &mdash; we've used it to help a multi-million dollar company increase their uptime, reduce their operating costs, and most importantly, delight their customers.</p>
     </div>
     <span class="title-area">
       <h4 class="uppercase">We believe in choosing the right tools for the job</h4>
@@ -88,7 +88,7 @@
     <div id="testimonials">
 
       <% data.clients.testimonials.each do |testimonial| %>
-        <div class="card">
+        <div class="bordered card">
           <div class="card-interior">
             <%= tag(:img, src: "img/#{testimonial.logo}", alt: testimonial.company, class: 'logo') %>
 
@@ -104,7 +104,7 @@
     <div id="client_gallery">
       <% data.clients.client_logos.each do |client| %>
         <div class="gallery_item">
-          <%= tag(:img, src: "img/#{client.logo}", alt: client.company) %>
+          <span><%= tag(:img, src: "img/#{client.logo}", alt: client.company, height: '40') %></span>
         </div>
       <% end %>
     </div>
@@ -117,10 +117,13 @@
     <h4>Modern Day Artisans</h4>
     <h5>meet the team</h5>
 
+    <div class='cofounders'>
+      <%= tag(:img, src: 'img/symonds-and-son.jpg') %>
+    </div>
+
     <div class="split vertical">
       <div class="orange left">
-        <%= tag(:img, src: 'img/steve-symonds.jpg', alt: 'Steve Symonds', id: 'steve') %>
-        <h3>Symonds (Steve)</h3>
+        <h3>Steve Symonds</h3>
         <h4>Co-Founder, VP of Sales</h4>
         <p>
           Steve is a serial entrepreneur, experienced in building digital media, social media, mobile and high tech companies in a variety of verticals. Steve has propelled numerous early-stage companies through development of market-leading products and services, leveraging IP rights, and raising capital.
@@ -131,8 +134,7 @@
         </div>
       </div>
       <div class="right white">
-        <%= tag(:img, src: 'img/josh-symonds.jpg', alt: 'Josh Symonds', id: 'josh') %>
-        <h3>Son (Josh)</h3>
+        <h3>Josh Symonds</h3>
         <h4>Co-Founder, Lead Developer</h4>
         <p>
           Josh is an expert devops consultant, application developer, and systems administrator. He has created applications used on hundreds of thousands of mobile devices and has provisioned, managed, and ensured uptime of hundreds of servers in the cloud and in physical datacenters.
