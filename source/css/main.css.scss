@@ -296,17 +296,19 @@ div#top {
 }
 
 div#who_we_are {
+    margin: 10px 0 0 0;
     position: relative;
     width: 100%;
 
     #ruby-divider {
+        margin: 0 0 50px 0;
         @include icon-divider;
     }
 
     p {
         padding: 0 70px;
         line-height: 30px;
-        margin: 40px auto 40px auto;
+        margin: 40px auto 80px auto;
         width: 50%;
         text-align: center;
     }
@@ -319,7 +321,7 @@ div#who_we_are {
 
     ul {
         width: 100%;
-        min-height: 525px;
+        height: 625px;
         float: left;
         clear: both;
         padding: 0;
@@ -348,9 +350,10 @@ div#team {
     display: inline-block;
     width: 100%;
     text-align: center;
+    margin: 50px 0 80px 0;
 
     h4 {
-        margin-top: 30px;
+        margin-top: 20px;
         margin-bottom: 0;
     }
 
@@ -359,6 +362,7 @@ div#team {
         font-style: italic;
         font-size: 15px;
         font-weight: 400;
+        margin-bottom: 40px;
     }
 
     .cofounders {
@@ -432,7 +436,7 @@ div#team {
 
 
 div#blog {
-    margin-top: 20px;
+    margin: 80px 0 100px 0;
 
     h3 {
         font-size: 26px;
@@ -447,6 +451,7 @@ div#blog {
 
     #quill-divider {
         @include icon-divider;
+        margin: 60px 0 40px 0;
     }
 
     #posts {
@@ -470,6 +475,7 @@ div#blog {
             .lede {
                 font-size: 16px;
                 line-height: 20px;
+                min-height: 200px;
             }
 
             .link {
@@ -491,7 +497,7 @@ div#blog {
 div#careers {
     display: inline-block;
     color: #FFFFFF;
-    padding: 30px 0;
+    padding: 100px 0;
     background: url("../img/checkered-bkgd.jpg") center no-repeat;
 
     div.split.vertical {
@@ -533,8 +539,8 @@ div#careers {
 
 div#have_a_project {
     clear: both;
-    background: url("../img/contact-bkgd.jpg") top left repeat-x;
-    padding-bottom: 25px;
+    background: url("../img/contact-bkgd.jpg") top left repeat-y;
+    padding: 30px 0 40px 0;
     z-index: $above-sidebar;
     position: relative;
 
@@ -550,6 +556,7 @@ div#have_a_project {
         font-weight: 300;
         font-style: italic;
         text-align: center;
+        margin-bottom: 0;
     }
 
     p {
@@ -561,6 +568,12 @@ div#have_a_project {
         width: 40%;
         margin: 0 auto;
 
+        .g-recaptcha {
+            position: relative;
+            width: 300px;
+            margin: 20px auto 0 auto;
+        }
+
         input, textarea {
             clear: both;
             border: 0;
@@ -570,7 +583,7 @@ div#have_a_project {
             line-height: 30px;
 
             padding: 5px;
-            margin: 0 0 20px 0;
+            margin: 20px 0 0 0;
 
             @include input-placeholder {
               font-size: 14px;
@@ -598,17 +611,13 @@ div#have_a_project {
                 padding: 5px;
                 text-transform: uppercase;
                 font-size:  20px;
-
-                margin: 30px auto 0 auto;
+                margin: 20px auto 0 auto;
             }
             &:invalid {
-                @include box-shadow(darken(red, 10) 0px 0px 5px);
+                @include box-shadow(lighten(yellow, 10) 0px 0px 15px);
             }
             &.error {
-                @include box-shadow(darken(red, 10) 0px 0px 5px);
-            }
-            &.valid {
-                @include box-shadow(darken(green, 10) 0px 0px 5px);
+                @include box-shadow(lighten(yellow, 10) 0px 0px 15px);
             }
         }
         textarea {
@@ -793,6 +802,7 @@ div#our_experience {
 div#clients {
     width: 100%;
     display: inline-block;
+    padding: 20px 0 30px 0;
 
     #testimonials {
         width: 35%;
