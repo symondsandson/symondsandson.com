@@ -4,6 +4,9 @@ $darkgray: #3e3e3e;
 $white: #FFFFFF;
 $light: #F9F9F9;
 
+$above-sidebar: 100;
+$sidebar: 99;
+
 @import "compass/css3";
 
 @font-face {
@@ -112,7 +115,7 @@ div#navbar {
     position: absolute;
     height: 100px;
     width: 100%;
-    z-index: 101;
+    z-index: $above-sidebar + 1;
     top: 30px;
 
     div {
@@ -214,7 +217,7 @@ div#navbar {
     position: fixed;
     right: -55px;
     top: 50%;
-    z-index: 99;
+    z-index: $sidebar;
 }
 
 div#top {
@@ -222,7 +225,7 @@ div#top {
     height: 500px;
     width: 100%;
     padding-top: 270px;
-    z-index: 100;
+    z-index: $above-sidebar;
     background: url("../img/header-bkgd.jpg") top left repeat-x;
 
     h2, h4, p {
@@ -510,7 +513,7 @@ div#have_a_project {
     clear: both;
     background: url("../img/contact-bkgd.jpg") top left repeat-x;
     padding-bottom: 25px;
-    z-index: 100;
+    z-index: $above-sidebar;
     position: relative;
 
     h3 {
