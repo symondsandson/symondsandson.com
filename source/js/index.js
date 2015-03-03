@@ -20,6 +20,39 @@ $(function() {
       }, scrollSpeed);
     });
 
+    $('#getstarted').waypoint({
+      handler: function(direction) {
+        if (direction === 'down') {
+          $('#started-sidebar').addClass('show');
+          $('#started-sidebar').removeClass('fade');
+        }
+      },
+      offset: 50
+    });
+
+    $('#blog').waypoint({
+      handler: function(direction) {
+        if (direction === 'down') {
+          $('#started-sidebar').addClass('fade');
+          $('#started-sidebar').removeClass('show');
+        } else if (direction === 'up') {
+          $('#started-sidebar').addClass('show');
+          $('#started-sidebar').removeClass('fade');
+        }
+      },
+      offset: 20
+    });
+
+    $('#who_we_are').waypoint({
+      handler: function(direction) {
+        if (direction === 'up') {
+          $('#started-sidebar').addClass('fade');
+          $('#started-sidebar').removeClass('show');
+        }
+      },
+      offset: 'bottom-in-view'
+    });
+
     $("#contact_form").validate();
     $('#tailored').tipsy({gravity: 'sw', fade: true});
     $('#tradition').tipsy({gravity: 's', fade: true});

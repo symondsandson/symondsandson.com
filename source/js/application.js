@@ -1,6 +1,7 @@
 //= require jquery
 //= require modernizr/modernizr.js
 //= require slick.js/slick/slick.js
+//= require waypoints/lib/jquery.waypoints.js
 
 //= require plugins
 
