@@ -508,8 +508,8 @@ div#careers {
 
 div#have_a_project {
     clear: both;
-    background: url("../img/contact-bkgd.jpg") top left repeat-x;
-    padding: 40px 0 60px 0;
+    background: url("../img/contact-bkgd.jpg") top left repeat-y;
+    padding: 30px 0 40px 0;
 
     h3 {
         padding-top: 20px;
@@ -523,6 +523,7 @@ div#have_a_project {
         font-weight: 300;
         font-style: italic;
         text-align: center;
+        margin-bottom: 0;
     }
 
     p {
@@ -533,6 +534,12 @@ div#have_a_project {
     form {
         width: 40%;
         margin: 0 auto;
+
+        .g-recaptcha {
+            position: relative;
+            width: 300px;
+            margin: 20px auto 0 auto;
+        }
 
         input, textarea {
             clear: both;
@@ -571,8 +578,7 @@ div#have_a_project {
                 padding: 5px;
                 text-transform: uppercase;
                 font-size:  20px;
-
-                margin: 30px auto 0 auto;
+                margin: 20px auto 0 auto;
             }
             &:invalid {
                 @include box-shadow(lighten(yellow, 10) 0px 0px 15px);
