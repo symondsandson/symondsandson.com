@@ -4,10 +4,8 @@ $darkgray: #3e3e3e;
 $white: #FFFFFF;
 $light: #F9F9F9;
 
-$above-sidebar: 100;
-$sidebar: 99;
-
 @import "compass/css3";
+@import "compass/utilities";
 
 @font-face {
     font-family: "Edmond Sans Bold";
@@ -102,7 +100,7 @@ h2 {
     font-family: 'Lato', sans-serif;
     font-size: 42px;
     margin: 0 auto;
-    font-weight: normal;
+    font-weight: bold;
     clear: both;
     text-align: center;
 }
@@ -111,7 +109,7 @@ h3 {
     font-family: 'Lato', sans-serif;
     font-size: 36px;
     margin: 0 auto;
-    font-weight: normal;
+    font-weight: bold;
     clear: both;
     text-align: center;
 }
@@ -134,14 +132,52 @@ body {
 }
 
 div#navbar {
-    position: absolute;
-    height: 100px;
+    background-color: transparent;
+    position: fixed;
+    height: 120px;
     width: 100%;
-    z-index: $above-sidebar + 1;
-    top: 30px;
+    z-index: 1000;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+
+    img#logo {
+        margin: 10px 0 0 0;
+        width: 100px;
+        height: 100px;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+
+    &.moving {
+        background-color: $darkgray;
+        height: 80px;
+        @include opacity(0.95);
+        ul {
+            li {
+                a {
+                    height: 80px;
+                    line-height: 80px;
+                    img#logo {
+                        margin-top: 0;
+                        height: 60px;
+                        width: 60px;
+                    }
+                    &#contact_us_button {
+                        margin: 18px 0 30px 30px;
+                    }
+                }
+            }
+        }
+    }
 
     div {
-        width: 800px;
+        width: 710px;
         margin: 0 auto;
         padding: 0;
     }
@@ -159,6 +195,10 @@ div#navbar {
             float: left;
             text-align: center;
 
+            &.current a {
+                color: $orange;
+            }
+
             a {
                 font-size: 16px;
                 color: #FFFFFF;
@@ -168,8 +208,38 @@ div#navbar {
                 line-height: 105px;
                 float: left;
                 @include transition(all 0.2s linear);
+
+                &.logo-container {
+                    width: 100px;
+                    img {
+                        margin: 0 auto;
+                        text-align: center;
+                        vertical-align: middle;
+                    }
+                }
+
+                &#contact_us_button {
+                    position: relative;
+                    bottom: -7px;
+                    background-color: $orange;
+                    height: 30px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    line-height: 30px;
+                    width: 100px;
+                    margin: 30px 0 30px 30px;
+                    border: 2px solid $orange;
+                    color: $white;
+                    text-align: center;
+                    -webkit-transition: all 0.5s ease;
+                    -moz-transition: all 0.5s ease;
+                    -ms-transition: all 0.5s ease;
+                    -o-transition: all 0.5s ease;
+                    transition: all 0.5s ease;
+                    @include border-radius(4px, 4px);
+                }
             }
-            &:hover {
+            &:hover, {
                 a {
                     color: $orange;
                 }
@@ -229,25 +299,10 @@ div#navbar {
     }
 }
 
-#started-sidebar {
-    // TODO: Box shadow
-    @include rotate(-90deg);
-    @include border-top-right-radius(3px);
-    @include border-top-left-radius(3px);
-    display: inline-block;
-    padding: 5px 10px;
-    position: fixed;
-    right: -55px;
-    top: 50%;
-    z-index: $sidebar;
-}
-
 div#top {
     position: relative;
-    height: 500px;
     width: 100%;
-    padding-top: 270px;
-    z-index: $above-sidebar;
+    padding: 270px 0 139px 0;
     background: url("../img/header-bkgd.jpg") top left repeat-x;
 
     h2, h4, p {
@@ -275,14 +330,16 @@ div#top {
 
     #getstarted {
         background-color: $orange;
-        height: 30px;
+        height: 50px;
         font-size: 20px;
         font-weight: bold;
-        line-height: 30px;
-        width: 200px;
+        line-height: 50px;
+        width: 300px;
         margin: 30px auto;
         border: 2px solid $orange;
+        color: $white;
         text-align: center;
+        text-transform: uppercase;
         @include border-radius(4px, 4px);
     }
 
@@ -296,7 +353,7 @@ div#top {
 }
 
 div#who_we_are {
-    margin: 10px 0 0 0;
+    padding: 100px 0 0 0;
     position: relative;
     width: 100%;
 
@@ -350,7 +407,7 @@ div#team {
     display: inline-block;
     width: 100%;
     text-align: center;
-    margin: 50px 0 80px 0;
+    padding: 50px 0 80px 0;
 
     h4 {
         margin-top: 20px;
@@ -541,8 +598,8 @@ div#have_a_project {
     clear: both;
     background: url("../img/contact-bkgd.jpg") top left repeat-y;
     padding: 30px 0 40px 0;
-    z-index: $above-sidebar;
     position: relative;
+    @include clearfix;
 
     h3 {
         padding-top: 20px;
@@ -570,8 +627,8 @@ div#have_a_project {
 
         .g-recaptcha {
             position: relative;
-            width: 300px;
-            margin: 20px auto 0 auto;
+            width: 300px; float: left; clear: none;
+            margin: 20px 0 0 0; left: -1px;
         }
 
         input, textarea {
@@ -600,18 +657,19 @@ div#have_a_project {
 
             &[type='submit'] {
                 display: block;
-                width: 38%;
                 text-align: center;
                 color: white;
                 background-color: $gray;
-                height: 45px;
+                height: 77px;
                 line-height: 35px;
                 font-weight: normal;
                 @include border-radius(3px);
                 padding: 5px;
                 text-transform: uppercase;
                 font-size:  20px;
-                margin: 20px auto 0 auto;
+                margin: 20px 0 0 20px;
+                width: 248px;
+                float: left; clear: none;
             }
             &:invalid {
                 @include box-shadow(lighten(yellow, 10) 0px 0px 15px);
@@ -800,6 +858,20 @@ div#our_experience {
 }
 
 div#clients {
+    h4 {
+        text-align: center;
+        margin: 0;
+        padding-top: 60px;
+    }
+
+    h5 {
+        font-style: italic;
+        font-weight: 400;
+        text-align: center;
+        margin: 0;
+        padding-bottom: 40px;
+    }
+
     width: 100%;
     display: inline-block;
     padding: 20px 0 30px 0;
@@ -842,10 +914,11 @@ div#clients {
         }
     }
 
-    h5 {
+    h6 {
         text-align: center;
         padding-top: 10px;
     }
+
     #client_gallery {
         width: 70%;
         margin: 0 auto 30px auto;
