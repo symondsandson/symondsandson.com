@@ -31,5 +31,21 @@ $(function() {
       dots: true,
       adaptiveHeight: true
     });
+
+    $('#client_gallery').imagesLoaded(function() {
+      $('#client_gallery').packery({
+        gutter: 10,
+        itemSelector: '.gallery_item'
+      });
+    });
+
+    $('#technologies').imagesLoaded(function() {
+      $('#technologies').packery({
+        gutter: 10,
+        itemSelector: '.tech',
+        columnWidth: '.tech'
+      });
+    });
+
   });
 });

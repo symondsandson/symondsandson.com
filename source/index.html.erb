@@ -1,5 +1,5 @@
 <div id='top' class='centered'>
-  <h2>We're a team of developers<br/>and infrastructure experts</h2>
+  <h2>We're a team of app developers<br/>and infrastructure experts</h2>
   <h4>We're Symonds &amp; Son</h4>
 
   <a class="linkable_div" href="/#have_a_project">
@@ -24,7 +24,7 @@
         <h4>Development</h4>
         <p>At Symonds &amp; Son, we pride ourselves on our incredible developers and the many years of experience they've had creating the most complicated Rails applications on the Internet. We provide expert-level guidance and programming, creating Rails applications from scratch and improving existing ones to be more efficient, more user-friendly, and more tested.</p>
         <a class="linkable_div" href="/#have_a_project">
-          <div class="contact_button bordered uppercase">Hire a developer</div>
+          <div class="contact_button bordered uppercase">Hire us</div>
         </a>
       </li>
       <li class="right orange">
@@ -37,6 +37,28 @@
         </a>
       </li>
     </ul>
+  </div>
+</div>
+
+<div id="blog">
+  <div class="centered">
+    <h3>We're Not Just Developers</h3>
+    <h4>We're thought leaders of our craft</h4>
+    <div id="quill-divider">
+      <span class="line left"></span>
+      <span class="line right"></span>
+            <%= tag(:img, src: 'img/blog-icon.png') %>
+    </div>
+    <br/>
+    <div id="posts">
+      <% data.blog.posts.each do |post| %>
+        <div class="post">
+          <div class="title"><a href=<%= post.url %>><%= post.title %></a></div>
+          <div class="lede"><%= post.lede %></div>
+          <div class="link"><a href=<%= post.url %>>Read More</a></div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
 
@@ -53,34 +75,90 @@
       <h5>That's why we know many tools</h5>
     </span>
 
-    <div id='tools'>
-      <span class='box'>
-        <%= link_to tag(:img, src: 'img/rails.jpg', width: '87', height: '111', alt: 'Ruby on Rails'), 'http://rubyonrails.org', target: '_blank' %>
-      </span>
+    <div id='technologies'>
+      <div class='tech'>
+        <%= link_to tag(:img, src: 'img/rails.png', width: '87', alt: 'Ruby on Rails'), 'http://rubyonrails.org', target: '_blank' %>
+        <h4><%= link_to 'Ruby on Rails', 'http://rubyonrails.org/', target: '_blank' %></h4>
+        <p>Ruby on Rails is an amazing application framework that Symonds &amp; Son uses for quick, powerful application development. From the backend API of a iPhone application to a complicated web deployment, we can scale your Rails application from a few hundred users to many millions.</p>
+      </div>
 
-      <span class='box'>
-        <%= link_to tag(:img, src: 'img/ruby-motion.jpg', width: '120', height: '120', alt: 'RubyMotion'), 'http://www.rubymotion.com/', target: '_blank' %>
-      </span>
+      <div class='tech'>
+        <%= link_to tag(:img, src: 'img/rubymotion.png', width: '90', height: '90', alt: 'RubyMotion'), 'http://www.rubymotion.com/', target: '_blank' %>
+        <h4><%= link_to 'RubyMotion', 'http://rubymotion.com/', target: '_blank' %></h4>
+        <p>Want to quickly develop mobile applications? RubyMotion is what you've been looking for. For speed of development and getting to market quickly and easily, nothing can beat our use of this awesome tool-chain.</p>
+      </div>
 
-      <span class='box'>
-        <%= link_to tag(:img, src: 'img/postgres.jpg', width: '120', height: '120', alt: 'PostgreSQL'), 'http://www.postgresql.org/', target: '_blank' %>
-      </span>
+      <div class='tech'>
+        <%= link_to tag(:img, src: 'img/postgresql.png', width: '80', height: '80', alt: 'PostgreSQL'), 'http://www.postgresql.org/', target: '_blank' %>
+        <h4><%= link_to 'PostgreSQL', 'http://www.postgresql.org/', target: '_blank' %></h4>
+        <p>A modern, fast, and ACID-compliant database, PostgreSQL is widely used by Symonds &amp; Son. We've created replicated database clusters, multi-master solutions, and have tuned PostgreSQL for our clients' exacting needs.</p>
+      </div>
 
-      <span class='box'>
-        <%= link_to tag(:img, src: 'img/elasticsearch.jpg', width: '120', height: '85', alt: 'elasticsearch'), 'http://www.elasticsearch.org/', target: '_blank' %>
-      </span>
+      <div class='tech'>
+        <%= link_to tag(:img, src: 'img/chef.svg', width: '90', height: '90', alt: 'Chef'), 'http://www.getchef.com/chef/', target: '_blank' %>
+        <h4><%= link_to 'Chef', 'http://www.getchef.com/chef/', target: '_blank' %></h4>
+        <p>Chef is our software of choice for automating the provisioning and creation of servers. Our Chef installations save our customers thousands of dollars per month in hosting fees, while allowing them to quickly and responsively scale to the needs of their business.</p>
+      </div>
 
-      <span class='box'>
-        <%= link_to tag(:img, src: 'img/mysql.jpg', width: '170', height: '115', alt: 'MySQL'), 'http://www.mysql.com/', target: '_blank' %>
-      </span>
+      <div class='tech'>
+        <%= link_to tag(:img, src: 'img/aws.png', width: '100', alt: 'Amazon Web Services'), 'http://aws.amazon.com/', target: '_blank' %>
+        <h4><%= link_to 'Amazon Web Services', 'http://aws.amazon.com/', target: '_blank' %></h4>
+        <p>The home of the cloud. Symonds &amp; Son delivers amazing solutions targeted to Amazon Web Services, using Amazon's file storage service, content delivery networks, routing tables and auto-scaling instance creators.</p>
+      </div>
 
-      <span class='box'>
-        <%= link_to tag(:img, src: 'img/logstash.jpg', width: '75', height: '120', alt: 'logstash'), 'http://www.logstash.net/', target: '_blank' %>
-      </span>
+      <div class='tech'>
+        <%= link_to tag(:img, src: 'img/elasticsearch.png', width: '120', alt: 'elasticsearch'), 'http://www.elasticsearch.org/', target: '_blank' %>
+        <h4><%= link_to 'elasticsearch', 'http://www.elasticsearch.org/', target: '_blank' %></h4>
+        <p>If you have a lot of data &mdash; not just gigabytes, but terabytes &mdash; and need to search through it quickly and accurately, Symonds &amp; Son has extensive experiencing setting up and operating elasticsearch searching clusters. With lightning-fast search indexing and retrieval, elasticsearch is our cloud-scale search software of choice.</p>
+      </div>
 
-      <span class='box'>
-        <%= link_to tag(:img, src: 'img/centos.jpg', width: '96', height: '96', alt: 'CentOS'), 'http://www.centos.org/', target: '_blank' %>
-      </span>
+      <div class='tech'>
+        <%= link_to tag(:img, src: 'img/logstash.png', width: '40', alt: 'logstash'), 'http://www.logstash.net/', target: '_blank' %>
+        <h4><%= link_to 'logstash', 'http://logstash.net/', target: '_blank' %></h4>
+        <p>For seeing all your logs in one place, there's no better solution than logstash. Quickly see what's going on in any software running on any of your servers.</p>
+      </div>
+
+      <div class='tech'>
+        <%= link_to tag(:img, src: 'img/graylog2.png', width: '144', height: '25', alt: 'graylog2'), 'http://graylog2.org/', target: '_blank' %>
+        <h4><%= link_to 'graylog2', 'http://graylog2.org/', target: '_blank' %></h4>
+        <p>graylog2 is a professional event-driven log system that allows you to see events from multiple sources -- great for capturing log output or user activity in real-time.</p>
+      </div>
+
+      <div class='tech'>
+        <%= link_to tag(:img, src: 'img/MySQL.svg', width: '120', alt: 'MySQL'), 'http://www.mysql.com/', target: '_blank' %>
+        <h4><%= link_to 'MySQL', 'http://www.mysql.com/', target: '_blank' %></h4>
+        <p>Though less popular than PostgreSQL, MySQL is a powerful open-source database that Symonds &amp; Son has leveraged for its amazing clustering capabilities.</p>
+      </div>
+
+      <div class='tech'>
+        <%= link_to tag(:img, src: 'img/centos.png', width: '96', alt: 'CentOS'), 'http://www.centos.org/', target: '_blank' %>
+        <h4><%= link_to 'CentOS', 'http://www.centos.org/', target: '_blank' %></h4>
+        <p>A RedHat-based Linux distribution popular for its stability and reliability. Symonds &amp; Son has extensive experience creating large production applications on CentOS using customized deployment automation scripts.</p>
+      </div>
+
+      <div class='tech'>
+        <%= link_to tag(:img, src: 'img/ubuntu.svg', width: '110', alt: 'ubuntu'), 'http://www.ubuntu.com/', target: '_blank' %>
+        <h4><%= link_to 'ubuntu', 'http://www.ubuntu.com/', target: '_blank' %></h4>
+        <p>Known for its cutting-edge sensibilities and popularity on Amazon's cloud, ubuntu is a common selection for companies looking for a well-known, well-supported Linux operating system. Our ubuntu clusters serve millions of API and web hits per month.</p>
+      </div>
+
+      <div class='tech'>
+        <%= link_to tag(:img, src: 'img/nginx.png', width: '130', alt: 'nginx'), 'http://nginx.org/', target: '_blank' %>
+        <h4><%= link_to 'nginx', 'http://nginx.org/', target: '_blank' %></h4>
+        <p>Our server software of choice. nginx is a powerful, scalable web server: it is highly customizable and, when configured properly, extremely fast for both end-users and servers.</p>
+      </div>
+
+      <div class='tech'>
+        <%= link_to tag(:img, src: 'img/rackspace.png', width: '80', alt: 'RackSpace'), 'http://www.rackspace.com/', target: '_blank' %>
+        <h4><%= link_to 'RackSpace', 'http://www.rackspace.com/', target: '_blank' %></h4>
+        <p>As popular as Amazon Web Services, RackSpace provides excellent support and performance servers that can't be beat. Symonds &amp; Son's development team are experts at deploying into RackSpace's OpenCloud and using their hosted solutions.</p>
+      </div>
+
+      <div class='tech'>
+        <%= link_to tag(:img, src: 'img/rackspace.png', width: '80', alt: 'RackSpace'), 'http://www.rackspace.com/', target: '_blank' %>
+        <h4><%= link_to 'RackSpace', 'http://www.rackspace.com/', target: '_blank' %></h4>
+        <p>As popular as Amazon Web Services, RackSpace provides excellent support and performance servers that can't be beat. Symonds &amp; Son's development team are experts at deploying into RackSpace's OpenCloud and using their hosted solutions.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -110,7 +188,7 @@
     <div id="client_gallery">
       <% data.clients.client_logos.each do |client| %>
         <div class="gallery_item">
-          <span><%= tag(:img, src: "img/#{client.logo}", alt: client.company, height: '40') %></span>
+          <span><%= tag(:img, src: "img/#{client.logo}", alt: client.company) %></span>
         </div>
       <% end %>
     </div>
@@ -154,54 +232,10 @@
   </div>
 </div>
 
-<div id="careers">
-  <h3>Careers</h3>
-  <div class="black split vertical centered">
-    <div class="left">
-      <p>Do you have amazing skills, but feel you're undercompensated? Are you a meticulous, friendly, personable and responsible coder who works well in a team? Would you like to work remotely and still be an integral part of our projects? If you have many of the skills we need, here's your chance to work on the cutting edge of the technologies you love for top dollar.</p>
-      <p>If you're interested please provide a copy of your resume and cover letter. Include your GitHub account, StackOverflow profile, or whatever other information you have that would establish your credentials as a great coder and fine human being.</p>
-    </div>
-    <div class="right">
-      <p>We're hiring developers experienced in&hellip;</p>
-      <ul>
-        <li>Ruby and Ruby on Rails</li>
-        <li>Angular.js and/or Ember.js</li>
-        <li>Elasticsearch</li>
-        <li>Sidekiq, Resque, or other Redis backed delayed job system</li>
-        <li>DevOps (Chef preferred)</li>
-        <li>Working Remotely</li>
-      </ul>
-      <div id="join-the-team" class="bordered">Join The Team</div>
-    </div>
-  </div>
-</div>
-
-<div id="blog">
-  <div class="centered">
-    <h3>We're Not Just Developers</h3>
-    <h4>We're thought leaders of our craft.</h4>
-    <div id="quill-divider">
-      <span class="line left"></span>
-      <span class="line right"></span>
-            <%= tag(:img, src: 'img/blog-icon.png') %>
-    </div>
-    <br/>
-    <div id="posts">
-      <% data.blog.posts.each do |post| %>
-        <div class="post">
-          <div class="title"><%= post.title %></div>
-          <div class="lede"><%= post.lede %></div>
-          <div class="link"><a href=<%= post.url %>>Read More</a></div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-</div>
-
 <div id='have_a_project'>
   <div class="centered">
     <h3>Let's Talk</h3>
-    <h4>Give us your info and we'll be in touch within 24 hours.</h4>
+    <h4>We'll get back to you within 24 hours.</h4>
     <form action="https://symondsandson-contact.herokuapp.com/contact" method="post" id='contact_form'>
       <input type='text' name='name' placeholder="NAME"/>
 
@@ -222,15 +256,15 @@
   <div class='centered'>
     <span class="left">Symonds &amp; Son</span>
     <span class="right">
-      <%= tag(:img, src: "img/twitter-icon.png", alt: "twitter") %><a href="http://twitter.com/symondsandson">@symondsandson</a>
-      <%= tag(:img, src: "img/github-icon.png", alt: "github") %><a href="http://github.com/symondsandson">github.com/symondsandson</a>
-      <%= tag(:img, src: "img/mail-icon.png", alt: "email") %><a href="mailto:info@symondsandson.com">info@symondsandson.com</a>
+      <i class="fa fa-phone"></i><span>773-480-4810</span>
+      <i class="fa fa-github"></i><span><a href="http://github.com/symondsandson">github.com/symondsandson</a></span>
+      <i class="fa fa-envelope-o"></i><span><a href="mailto:info@symondsandson.com">info@symondsandson.com</a></span>
     </span>
     <br/>
     <div class="divider"></div>
     <br/>
     <span class="bottom">
-      Made with <%= tag(:img, src: 'img/heart-icon.png', alt: 'heart') %> in Chicago &copy; 2014 Symonds &amp; Son
+      Made with <%= tag(:img, src: 'img/heart-icon.png', alt: 'heart') %> in Chicago &copy; 2015 Symonds &amp; Son
     </span>
   </div>
 </footer>

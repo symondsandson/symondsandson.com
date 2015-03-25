@@ -356,6 +356,7 @@ div#who_we_are {
     padding: 100px 0 0 0;
     position: relative;
     width: 100%;
+    @include clearfix;
 
     #ruby-divider {
         margin: 0 0 50px 0;
@@ -525,8 +526,11 @@ div#blog {
             vertical-align: top;
 
             .title {
-                color: $orange;
                 margin-bottom: 15px;
+                a {
+                    color: $orange;
+                    text-decoration: none;
+                }
             }
 
             .lede {
@@ -549,55 +553,10 @@ div#blog {
     }
 }
 
-
-
-div#careers {
-    display: inline-block;
-    color: #FFFFFF;
-    padding: 100px 0;
-    background: url("../img/checkered-bkgd.jpg") center no-repeat;
-
-    div.split.vertical {
-        div.left {
-            p {
-                margin-right: 40px;
-                float: right;
-                font-size: 16px;
-                width: 50%;
-                padding-bottom: 20px;
-                line-height: 24px;
-                text-align: center;
-            }
-        }
-
-        div.right {
-            p {
-                font-size: 18px;
-                margin-bottom: 25px;
-                margin-left: 22px;
-            }
-
-            ul {
-                font-size: 17px;
-                li {
-                    margin-bottom: 8px;
-                }
-            }
-        }
-    }
-
-    #join-the-team {
-        margin-top: 35px;
-        margin-left: 22px;
-        font-size: 22px;
-        padding: 5px 25px;
-    }
-}
-
 div#have_a_project {
     clear: both;
     background: url("../img/contact-bkgd.jpg") top left repeat-y;
-    padding: 30px 0 40px 0;
+    padding: 30px 0 80px 0;
     position: relative;
     @include clearfix;
 
@@ -605,6 +564,8 @@ div#have_a_project {
         padding-top: 20px;
         font-size: 22px;
         font-weight: 500;
+        float: left; clear: both;
+        width: 100%; text-align: center;
     }
 
     h4 {
@@ -614,6 +575,8 @@ div#have_a_project {
         font-style: italic;
         text-align: center;
         margin-bottom: 0;
+        float: left; clear: both;
+        width: 100%; text-align: center;
     }
 
     p {
@@ -624,6 +587,8 @@ div#have_a_project {
     form {
         width: 40%;
         margin: 0 auto;
+        padding: 30px 0;
+        clear: both;
 
         .g-recaptcha {
             position: relative;
@@ -839,19 +804,33 @@ div#our_experience {
     }
 
 
-    $boxsize: 70px;
-    #tools {
-        margin-top: 40px;
-        text-align: center;
-        @include opacity(0.5);
+    #technologies {
+        width: 70%;
+        margin: 60px auto 0 auto;
 
-        .box {
-            width: auto;
-            height: $boxsize;
-            margin-right: $boxsize/2;
-            img {
-                width: auto;
-                height: $boxsize;
+        .tech {
+            width: 20%;
+            padding: 10px 20px;
+            background-color: lighten($gray, 10);
+            @include border-radius(4px, 4px);
+
+            img { display: block; margin: 10px auto 10px auto; max-width: 100%;}
+
+            h4 {
+                margin-bottom: 10px;
+                a {
+                    font-size: 18px;
+                    line-height: 18px;
+                    color: $orange;
+                    text-decoration: none;
+                }
+            }
+
+            p {
+                margin: 0 0 10px 0; padding: 0;
+                color: $white;
+                font-size: 15px;
+                line-height: 20px;
             }
         }
     }
@@ -976,132 +955,23 @@ footer {
 
     .right {
         float: right;
-        a {
+        i {
+            color: white;
+            font-size: 20px;
+            line-height: 20px;
+            position: relative;
+            bottom: -3px;
+            margin-left: 30px;
+            margin-right: 10px;
+        }
+        span, a {
             text-decoration: none;
             color: $orange;
-            margin-right: 35px;
-            margin-left: 10px;
+            display: inline-block;
         }
     }
 
     .bottom {
         color: #929497;
     }
-}
-
-.tipsy {
-    font-size: 16px;
-    position: absolute;
-    padding: 10px;
-    z-index: 50;
-    font-family: "Edmond Sans Regular";
-}
-.tipsy-inner {
-    background-color: #fefefd;
-    color: $gray;
-    max-width: 330px;
-    padding: 10px;
-    text-align: left;
-}
-
-/* Rounded corners */
-.tipsy-inner {
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-}
-
-/* Uncomment for shadow */
-.tipsy-inner {
-    @include box-shadow(lighten(black, 80) 0 2px 5px) }
-
-.tipsy-arrow {
-    position: absolute;
-    width: 0;
-    height: 0;
-    line-height: 0;
-    border: 10px dashed #000;
-}
-
-/* Rules to colour arrows */
-.tipsy-arrow-n {
-    border-bottom-color: #fefefd;
-}
-.tipsy-arrow-s {
-    border-top-color: #fefefd;
-}
-.tipsy-arrow-e {
-    border-left-color: #fefefd;
-}
-.tipsy-arrow-w {
-    border-right-color: #fefefd;
-}
-
-.tipsy-n .tipsy-arrow {
-    top: 0px;
-    left: 50%;
-    margin-left: -5px;
-    border-bottom-style: solid;
-    border-top: none;
-    border-left-color: transparent;
-    border-right-color: transparent;
-}
-.tipsy-nw .tipsy-arrow {
-    top: 0;
-    left: 10px;
-    border-bottom-style: solid;
-    border-top: none;
-    border-left-color: transparent;
-    border-right-color: transparent;
-}
-.tipsy-ne .tipsy-arrow {
-    top: 0;
-    right: 10px;
-    border-bottom-style: solid;
-    border-top: none;
-    border-left-color: transparent;
-    border-right-color: transparent;
-}
-.tipsy-s .tipsy-arrow {
-    bottom: 0;
-    left: 50%;
-    margin-left: -10px;
-    border-top-style: solid;
-    border-bottom: none;
-    border-left-color: transparent;
-    border-right-color: transparent;
-}
-.tipsy-sw .tipsy-arrow {
-    bottom: 0;
-    left: 15px;
-    border-top-style: solid;
-    border-bottom: none;
-    border-left-color: transparent;
-    border-right-color: transparent;
-}
-.tipsy-se .tipsy-arrow {
-    bottom: 0;
-    right: 15px;
-    border-top-style: solid;
-    border-bottom: none;
-    border-left-color: transparent;
-    border-right-color: transparent;
-}
-.tipsy-e .tipsy-arrow {
-    right: 0;
-    top: 50%;
-    margin-top: -5px;
-    border-left-style: solid;
-    border-right: none;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-}
-.tipsy-w .tipsy-arrow {
-    left: 0;
-    top: 50%;
-    margin-top: -5px;
-    border-right-style: solid;
-    border-left: none;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
 }
