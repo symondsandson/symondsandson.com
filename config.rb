@@ -81,6 +81,8 @@ activate :s3_sync do |s3_sync|
   s3_sync.version_bucket             = false
 end
 
+activate :directory_indexes
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -91,11 +93,6 @@ configure :build do
 
   # Enable cache buster
   activate :cache_buster
-
-  activate :directory_indexes
-
-  # Use relative URLs
-  activate :relative_assets
 
   # Compress PNGs after build
   # First: gem install middleman-smusher

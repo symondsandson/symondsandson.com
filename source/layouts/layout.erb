@@ -18,31 +18,257 @@
         <%= stylesheet_link_tag "application" %>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
+
     <body>
-        <div id='navbar'>
-          <div>
-            <ul>
-              <li><%= link_to 'About Us', '/#who_we_are' %></li>
-              <li><%= link_to 'Our Tools', '/#our_experience' %></li>
-              <li><%= link_to 'Clients', '/#clients' %></li>
-              <li><%= link_to(tag(:img, src: '/img/logo.png', id: 'logo', alt: 'Symonds & Son'), '/#top', class: 'logo-container') %></li>
-              <li><%= link_to 'Our Team', '/#team' %></li>
-              <li><%= link_to 'Blog', 'http://joshsymonds.com', target: '_blank', class: 'external' %></li>
-              <li><%= link_to 'Contact Us', '/#have_a_project', id: 'contact_us_button' %></li>
-            </ul>
+      <div id='navbar'>
+        <div>
+          <ul>
+            <li><%= link_to 'About Us', '#who_we_are' %></li>
+            <li><%= link_to 'Our Tools', '#our_experience' %></li>
+            <li><%= link_to 'Clients', '#clients' %></li>
+            <li><%= link_to(tag(:img, src: '/img/logo.png', id: 'logo', alt: 'Symonds & Son'), '/#top', class: 'logo-container') %></li>
+            <li><%= link_to 'Our Team', '#team' %></li>
+            <li><%= link_to 'Blog', 'http://joshsymonds.com', target: '_blank', class: 'external' %></li>
+            <li><%= link_to 'Contact Us', '#have_a_project', id: 'contact_us_button' %></li>
+          </ul>
+        </div>
+      </div>
+
+      <%= yield %>
+
+      <div id="blog">
+        <div class="centered">
+          <h3>We're Not Just Developers</h3>
+          <h4>We're thought leaders of our craft</h4>
+          <div id="quill-divider">
+            <span class="line left"></span>
+            <span class="line right"></span>
+                  <%= tag(:img, src: '/img/blog-icon.png') %>
+          </div>
+          <br/>
+          <div id="posts">
+            <% data.blog.posts.each do |post| %>
+              <div class="post">
+                <div class="title"><a href=<%= post.url %>><%= post.title %></a></div>
+                <div class="lede"><%= post.lede %></div>
+                <div class="link"><a href=<%= post.url %>>Read More</a></div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div id='our_experience'>
+        <div class='centered'>
+          <div class="background">
+            <h4 class="uppercase">Years of experience</h4>
+            <h5>as digital architects</h5>
+
+            <p class="text-center">Our team has had thousands of hours of experience with the technologies that make the Internet run at scale. Whether it's a web application or a mobile application, whatever software stack you seek to employ, chances are we've not only used it &mdash; we've used it to help a multi-million dollar company increase their uptime, reduce their operating costs, and most importantly, delight their customers.</p>
+          </div>
+          <span class="title-area">
+            <h4 class="uppercase">We believe in choosing the right tools for the job</h4>
+            <h5>That's why we know many tools</h5>
+          </span>
+
+          <div id='technologies'>
+            <div class='tech'>
+              <%= link_to tag(:img, src: '/img/rails.png', width: '87', alt: 'Ruby on Rails'), 'http://rubyonrails.org', target: '_blank' %>
+              <h4><%= link_to 'Ruby on Rails', 'http://rubyonrails.org/', target: '_blank' %></h4>
+              <p>Ruby on Rails is an amazing application framework that Symonds &amp; Son uses for quick, powerful application development. From the backend API of a iPhone application to a complicated web deployment, we can scale your Rails application from a few hundred users to many millions.</p>
+            </div>
+
+            <div class='tech'>
+              <%= link_to tag(:img, src: '/img/rubymotion.png', width: '90', height: '90', alt: 'RubyMotion'), 'http://www.rubymotion.com/', target: '_blank' %>
+              <h4><%= link_to 'RubyMotion', 'http://rubymotion.com/', target: '_blank' %></h4>
+              <p>Want to quickly develop mobile applications? RubyMotion is what you've been looking for. For speed of development and getting to market quickly and easily, nothing can beat our use of this awesome tool-chain.</p>
+            </div>
+
+            <div class='tech'>
+              <%= link_to tag(:img, src: '/img/postgresql.png', width: '80', height: '80', alt: 'PostgreSQL'), 'http://www.postgresql.org/', target: '_blank' %>
+              <h4><%= link_to 'PostgreSQL', 'http://www.postgresql.org/', target: '_blank' %></h4>
+              <p>A modern, fast, and ACID-compliant database, PostgreSQL is widely used by Symonds &amp; Son. We've created replicated database clusters, multi-master solutions, and have tuned PostgreSQL for our clients' exacting needs.</p>
+            </div>
+
+            <div class='tech'>
+              <%= link_to tag(:img, src: '/img/chef.svg', width: '90', height: '90', alt: 'Chef'), 'http://www.getchef.com/chef/', target: '_blank' %>
+              <h4><%= link_to 'Chef', 'http://www.getchef.com/chef/', target: '_blank' %></h4>
+              <p>Chef is our software of choice for automating the provisioning and creation of servers. Our Chef installations save our customers thousands of dollars per month in hosting fees, while allowing them to quickly and responsively scale to the needs of their business.</p>
+            </div>
+
+            <div class='tech'>
+              <%= link_to tag(:img, src: '/img/aws.png', width: '100', alt: 'Amazon Web Services'), 'http://aws.amazon.com/', target: '_blank' %>
+              <h4><%= link_to 'Amazon Web Services', 'http://aws.amazon.com/', target: '_blank' %></h4>
+              <p>The home of the cloud. Symonds &amp; Son delivers amazing solutions targeted to Amazon Web Services, using Amazon's file storage service, content delivery networks, routing tables and auto-scaling instance creators.</p>
+            </div>
+
+            <div class='tech'>
+              <%= link_to tag(:img, src: '/img/elasticsearch.png', width: '120', alt: 'elasticsearch'), 'http://www.elasticsearch.org/', target: '_blank' %>
+              <h4><%= link_to 'elasticsearch', 'http://www.elasticsearch.org/', target: '_blank' %></h4>
+              <p>If you have a lot of data &mdash; not just gigabytes, but terabytes &mdash; and need to search through it quickly and accurately, Symonds &amp; Son has extensive experiencing setting up and operating elasticsearch searching clusters. With lightning-fast search indexing and retrieval, elasticsearch is our cloud-scale search software of choice.</p>
+            </div>
+
+            <div class='tech'>
+              <%= link_to tag(:img, src: '/img/logstash.png', width: '40', alt: 'logstash'), 'http://www.logstash.net/', target: '_blank' %>
+              <h4><%= link_to 'logstash', 'http://logstash.net/', target: '_blank' %></h4>
+              <p>For seeing all your logs in one place, there's no better solution than logstash. Quickly see what's going on in any software running on any of your servers.</p>
+            </div>
+
+            <div class='tech'>
+              <%= link_to tag(:img, src: '/img/graylog2.png', width: '144', height: '25', alt: 'graylog2'), 'http://graylog2.org/', target: '_blank' %>
+              <h4><%= link_to 'graylog2', 'http://graylog2.org/', target: '_blank' %></h4>
+              <p>graylog2 is a professional event-driven log system that allows you to see events from multiple sources -- great for capturing log output or user activity in real-time.</p>
+            </div>
+
+            <div class='tech'>
+              <%= link_to tag(:img, src: '/img/MySQL.svg', width: '120', alt: 'MySQL'), 'http://www.mysql.com/', target: '_blank' %>
+              <h4><%= link_to 'MySQL', 'http://www.mysql.com/', target: '_blank' %></h4>
+              <p>Though less popular than PostgreSQL, MySQL is a powerful open-source database that Symonds &amp; Son has leveraged for its amazing clustering capabilities.</p>
+            </div>
+
+            <div class='tech'>
+              <%= link_to tag(:img, src: '/img/centos.png', width: '96', alt: 'CentOS'), 'http://www.centos.org/', target: '_blank' %>
+              <h4><%= link_to 'CentOS', 'http://www.centos.org/', target: '_blank' %></h4>
+              <p>A RedHat-based Linux distribution popular for its stability and reliability. Symonds &amp; Son has extensive experience creating large production applications on CentOS using customized deployment automation scripts.</p>
+            </div>
+
+            <div class='tech'>
+              <%= link_to tag(:img, src: '/img/ubuntu.svg', width: '110', alt: 'ubuntu'), 'http://www.ubuntu.com/', target: '_blank' %>
+              <h4><%= link_to 'ubuntu', 'http://www.ubuntu.com/', target: '_blank' %></h4>
+              <p>Known for its cutting-edge sensibilities and popularity on Amazon's cloud, ubuntu is a common selection for companies looking for a well-known, well-supported Linux operating system. Our ubuntu clusters serve millions of API and web hits per month.</p>
+            </div>
+
+            <div class='tech'>
+              <%= link_to tag(:img, src: '/img/nginx.png', width: '130', alt: 'nginx'), 'http://nginx.org/', target: '_blank' %>
+              <h4><%= link_to 'nginx', 'http://nginx.org/', target: '_blank' %></h4>
+              <p>Our server software of choice. nginx is a powerful, scalable web server: it is highly customizable and, when configured properly, extremely fast for both end-users and servers.</p>
+            </div>
+
+            <div class='tech'>
+              <%= link_to tag(:img, src: '/img/rackspace.png', width: '80', alt: 'RackSpace'), 'http://www.rackspace.com/', target: '_blank' %>
+              <h4><%= link_to 'RackSpace', 'http://www.rackspace.com/', target: '_blank' %></h4>
+              <p>As popular as Amazon Web Services, RackSpace provides excellent support and performance servers that can't be beat. Symonds &amp; Son's development team are experts at deploying into RackSpace's OpenCloud and using their hosted solutions.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="clients" class="black">
+
+        <h4 class="uppercase">Our clients love us</h4>
+        <h5>And you will too</h5>
+
+        <div class="centered">
+          <div id="testimonials">
+
+            <% data.clients.testimonials.each do |testimonial| %>
+              <div class="bordered card">
+                <div class="card-interior">
+                  <%= tag(:img, src: "/img/#{testimonial.logo}", alt: testimonial.company, class: 'logo') %>
+
+                  <div class="description">"<%= testimonial.description %>"</div>
+                  <div class="title"><%= testimonial.title %></div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+
+          <h6>Just some of our clients</h5>
+
+          <div id="client_gallery">
+            <% data.clients.client_logos.each do |client| %>
+              <div class="gallery_item">
+                <span><%= tag(:img, src: "/img/#{client.logo}", alt: client.company) %></span>
+              </div>
+            <% end %>
           </div>
         </div>
 
-        <%= yield %>
+      </div>
 
-        <%= javascript_include_tag "application" %>
-        <%= auto_javascript_include_tag %>
+      <div id="team">
+        <div class="centered">
+          <h4>Modern Day Artisans</h4>
+          <h5>meet the team</h5>
 
-        <script>
-            var _gaq=[['_setAccount','UA-39274431-1'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
+          <div class='cofounders'>
+            <%= tag(:img, src: '/img/symonds-and-son.jpg') %>
+          </div>
+
+          <div class="split vertical">
+            <div class="orange left">
+              <h3>Steve Symonds</h3>
+              <h4>Co-Founder, VP of Sales</h4>
+              <p>
+                Steve is a serial entrepreneur, experienced in building digital media, social media, mobile and high tech companies in a variety of verticals. Steve has propelled numerous early-stage companies through development of market-leading products and services, leveraging IP rights, and raising capital.
+              </p>
+              <div class="email">
+                <%= tag(:img, src: '/img/mail-icon.png', height: 10, width: 14) %>
+                <a href="mailto:steve@symondsandson.com">steve@symondsandson.com</a>
+              </div>
+            </div>
+            <div class="right white">
+              <h3>Josh Symonds</h3>
+              <h4>Co-Founder, Lead Developer</h4>
+              <p>
+                Josh is an expert devops consultant, application developer, and systems administrator. He has created applications used on hundreds of thousands of mobile devices and has provisioned, managed, and ensured uptime of hundreds of servers in the cloud and in physical datacenters.
+              </p>
+              <div class="email">
+                <%= tag(:img, src: '/img/mail-icon-black.png', height: 10, width: 14) %>
+                <a href="mailto:josh@symondsandson.com">josh@symondsandson.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id='have_a_project'>
+        <div class="centered">
+          <h3>Let's Talk</h3>
+          <h4>We'll get back to you within 24 hours.</h4>
+          <form action="https://symondsandson-contact.herokuapp.com/contact" method="post" id='contact_form'>
+            <input type='text' name='name' placeholder="NAME"/>
+
+            <input type='text' name='phone' placeholder="PHONE"/>
+
+            <input type='email' name='email' class='email' placeholder="EMAIL"/>
+
+            <textarea name='description' placeholder="DESCRIBE YOUR PROJECT"></textarea>
+
+            <div class="g-recaptcha" data-sitekey="6Lc08QITAAAAAMdN4cwIUzCT7u-nOepneFHbo8Pf"></div>
+
+            <input class="button" name="send" type="submit" value="Contact Us">
+          </form>
+        </div>
+      </div>
+
+      <footer>
+        <div class='centered'>
+          <span class="left">Symonds &amp; Son</span>
+          <span class="right">
+            <i class="fa fa-phone"></i><span>773-480-4810</span>
+            <i class="fa fa-github"></i><span><a href="http://github.com/symondsandson">github.com/symondsandson</a></span>
+            <i class="fa fa-envelope-o"></i><span><a href="mailto:info@symondsandson.com">info@symondsandson.com</a></span>
+          </span>
+          <br/>
+          <div class="divider"></div>
+          <br/>
+          <span class="bottom">
+            Made with <%= tag(:img, src: '/img/heart-icon.png', alt: 'heart') %> in Chicago &copy; 2015 Symonds &amp; Son
+          </span>
+        </div>
+      </footer>
+
+
+      <%= javascript_include_tag "application" %>
+      <%= auto_javascript_include_tag %>
+
+      <script>
+          var _gaq=[['_setAccount','UA-39274431-1'],['_trackPageview']];
+          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+          g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+          s.parentNode.insertBefore(g,s)}(document,'script'));
+      </script>
     </body>
 </html>

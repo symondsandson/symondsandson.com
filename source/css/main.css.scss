@@ -304,8 +304,42 @@ div#top {
     width: 100%;
     padding: 270px 0 139px 0;
     background: url("../img/header-bkgd.jpg") top left repeat-x;
+    @include clearfix;
+
+    div.title {
+        width: 800px;
+        margin: 0 auto;
+        @include clearfix;
+
+        img {
+            float: left;
+            clear: none;
+            display: inline-block;
+            position: relative;
+
+            &.rails {
+                padding: 0 0 0 20px;
+                top: 3px;
+            }
+
+            &.aws {
+                top: 17px;
+            }
+
+            &.elastic {
+                top: 25px;
+            }
+
+            &.white {
+                padding: 5px;
+                @include border-radius(4px, 4px);
+                background-color: white;
+            }
+        }
+    }
 
     h2, h4, p {
+        clear: none;
         margin: 0 auto;
         text-align: center;
         color: #FFFFFF;
