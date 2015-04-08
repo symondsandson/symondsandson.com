@@ -15,39 +15,303 @@
 
         <link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <link href="../css/application.css?1427293646" rel="stylesheet" type="text/css" />
+        <link href="/css/application.css?1428513472" rel="stylesheet" type="text/css" />
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
-    <body>
-        <div id='navbar'>
-          <div>
-            <ul>
-              <li><a href="/#who_we_are">About Us</a></li>
-              <li><a href="/#our_experience">Our Tools</a></li>
-              <li><a href="/#clients">Clients</a></li>
-              <li><a class="logo-container" href="/#top"><img src="/img/logo.png" id="logo" alt="Symonds &amp; Son" /></a></li>
-              <li><a href="/#team">Our Team</a></li>
-              <li><a target="_blank" class="external" href="http://joshsymonds.com">Blog</a></li>
-              <li><a id="contact_us_button" href="/#have_a_project">Contact Us</a></li>
-            </ul>
-          </div>
-        </div>
 
-        <div id='top' class='centered'>
+    <body>
+      <div id='navbar'>
+        <div>
+          <ul>
+            <li><a href="#who_we_are">About Us</a></li>
+            <li><a href="#our_experience">Our Tools</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a class="logo-container" href="/#top"><img src="/img/logo.png" id="logo" alt="Symonds &amp; Son" /></a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a target="_blank" class="external" href="http://joshsymonds.com">Blog</a></li>
+            <li><a id="contact_us_button" href="#have_a_project">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id='top' class='centered'>
   <h2>Thanks!</h2>
 
   <p class="section-footer">We'll get back to you as soon as possible.</p>
 </div>
 
 
-        <script src="../js/application.js?1427293650" type="text/javascript"></script>
-        
+      <div id="blog">
+        <div class="centered">
+          <h3>We're Not Just Developers</h3>
+          <h4>We're thought leaders of our craft</h4>
+          <div id="quill-divider">
+            <span class="line left"></span>
+            <span class="line right"></span>
+                  <img src="/img/blog-icon.png" />
+          </div>
+          <br/>
+          <div id="posts">
+              <div class="post">
+                <div class="title"><a href=http://joshsymonds.com/blog/2015/02/04/chef-cookbook-continuous-integration/>Chef Cookbook Continuous Integration</a></div>
+                <div class="lede">Testing infrastructure is as crucial to the success of a business as testing applications. Yet most infrastructure is untested and validated only occasionally, and only by hand – this is especially a tragedy when chef is used, because chef has many high-quality tools to provide testing coverage from static analysis to unit testing and even full convergence runs.</div>
+                <div class="link"><a href=http://joshsymonds.com/blog/2015/02/04/chef-cookbook-continuous-integration/>Read More</a></div>
+              </div>
+              <div class="post">
+                <div class="title"><a href=http://joshsymonds.com/blog/2015/01/06/the-numbers-behind-consulting-in-2014/>The Numbers Behind Consulting in 2014</a></div>
+                <div class="lede">I’ve always loved reading behind-the-scenes articles about people’s businesses: where their money came from, where it went, and what they learned from operating their companies. Since I recently finished closing the books on my business for 2014, I thought I’d make that sort of post for my own company – real numbers and real thoughts from a real business.</div>
+                <div class="link"><a href=http://joshsymonds.com/blog/2015/01/06/the-numbers-behind-consulting-in-2014/>Read More</a></div>
+              </div>
+              <div class="post">
+                <div class="title"><a href=http://joshsymonds.com/blog/2014/10/21/continuous-deployments-with-consul/>Continuous Deployments With Consul</a></div>
+                <div class="lede">I’ve fallen in love with consul. At first glance, it’s a bit like zookeeper or etcd – it handles service discovery, health checking, and even features a very simple k/v store. But consul does much more than merely expose a lovely DNS interface: one of its more powerful features is its ability to do cluster orchestration, efficiently and effectively propagating messages to all nodes.</div>
+                <div class="link"><a href=http://joshsymonds.com/blog/2014/10/21/continuous-deployments-with-consul/>Read More</a></div>
+              </div>
+          </div>
+        </div>
+      </div>
 
-        <script>
-            var _gaq=[['_setAccount','UA-39274431-1'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
+      <div id='our_experience'>
+        <div class='centered'>
+          <div class="background">
+            <h4 class="uppercase">Years of experience</h4>
+            <h5>as digital architects</h5>
+
+            <p class="text-center">Our team has had thousands of hours of experience with the technologies that make the Internet run at scale. Whether it's a web application or a mobile application, whatever software stack you seek to employ, chances are we've not only used it &mdash; we've used it to help a multi-million dollar company increase their uptime, reduce their operating costs, and most importantly, delight their customers.</p>
+          </div>
+          <span class="title-area">
+            <h4 class="uppercase">We believe in choosing the right tools for the job</h4>
+            <h5>That's why we know many tools</h5>
+          </span>
+
+          <div id='technologies'>
+            <div class='tech'>
+              <a target="_blank" href="http://rubyonrails.org"><img src="/img/rails.png" width="87" alt="Ruby on Rails" /></a>
+              <h4><a target="_blank" href="http://rubyonrails.org/">Ruby on Rails</a></h4>
+              <p>Ruby on Rails is an amazing application framework that Symonds &amp; Son uses for quick, powerful application development. From the backend API of a iPhone application to a complicated web deployment, we can scale your Rails application from a few hundred users to many millions.</p>
+            </div>
+
+            <div class='tech'>
+              <a target="_blank" href="http://www.rubymotion.com/"><img src="/img/rubymotion.png" width="90" height="90" alt="RubyMotion" /></a>
+              <h4><a target="_blank" href="http://rubymotion.com/">RubyMotion</a></h4>
+              <p>Want to quickly develop mobile applications? RubyMotion is what you've been looking for. For speed of development and getting to market quickly and easily, nothing can beat our use of this awesome tool-chain.</p>
+            </div>
+
+            <div class='tech'>
+              <a target="_blank" href="http://www.postgresql.org/"><img src="/img/postgresql.png" width="80" height="80" alt="PostgreSQL" /></a>
+              <h4><a target="_blank" href="http://www.postgresql.org/">PostgreSQL</a></h4>
+              <p>A modern, fast, and ACID-compliant database, PostgreSQL is widely used by Symonds &amp; Son. We've created replicated database clusters, multi-master solutions, and have tuned PostgreSQL for our clients' exacting needs.</p>
+            </div>
+
+            <div class='tech'>
+              <a target="_blank" href="http://www.getchef.com/chef/"><img src="/img/chef.svg" width="90" height="90" alt="Chef" /></a>
+              <h4><a target="_blank" href="http://www.getchef.com/chef/">Chef</a></h4>
+              <p>Chef is our software of choice for automating the provisioning and creation of servers. Our Chef installations save our customers thousands of dollars per month in hosting fees, while allowing them to quickly and responsively scale to the needs of their business.</p>
+            </div>
+
+            <div class='tech'>
+              <a target="_blank" href="http://aws.amazon.com/"><img src="/img/aws.png" width="100" alt="Amazon Web Services" /></a>
+              <h4><a target="_blank" href="http://aws.amazon.com/">Amazon Web Services</a></h4>
+              <p>The home of the cloud. Symonds &amp; Son delivers amazing solutions targeted to Amazon Web Services, using Amazon's file storage service, content delivery networks, routing tables and auto-scaling instance creators.</p>
+            </div>
+
+            <div class='tech'>
+              <a target="_blank" href="http://www.elasticsearch.org/"><img src="/img/elasticsearch.png" width="120" alt="elasticsearch" /></a>
+              <h4><a target="_blank" href="http://www.elasticsearch.org/">elasticsearch</a></h4>
+              <p>If you have a lot of data &mdash; not just gigabytes, but terabytes &mdash; and need to search through it quickly and accurately, Symonds &amp; Son has extensive experiencing setting up and operating elasticsearch searching clusters. With lightning-fast search indexing and retrieval, elasticsearch is our cloud-scale search software of choice.</p>
+            </div>
+
+            <div class='tech'>
+              <a target="_blank" href="http://www.logstash.net/"><img src="/img/logstash.png" width="40" alt="logstash" /></a>
+              <h4><a target="_blank" href="http://logstash.net/">logstash</a></h4>
+              <p>For seeing all your logs in one place, there's no better solution than logstash. Quickly see what's going on in any software running on any of your servers.</p>
+            </div>
+
+            <div class='tech'>
+              <a target="_blank" href="http://graylog2.org/"><img src="/img/graylog2.png" width="144" height="25" alt="graylog2" /></a>
+              <h4><a target="_blank" href="http://graylog2.org/">graylog2</a></h4>
+              <p>graylog2 is a professional event-driven log system that allows you to see events from multiple sources -- great for capturing log output or user activity in real-time.</p>
+            </div>
+
+            <div class='tech'>
+              <a target="_blank" href="http://www.mysql.com/"><img src="/img/MySQL.svg" width="120" alt="MySQL" /></a>
+              <h4><a target="_blank" href="http://www.mysql.com/">MySQL</a></h4>
+              <p>Though less popular than PostgreSQL, MySQL is a powerful open-source database that Symonds &amp; Son has leveraged for its amazing clustering capabilities.</p>
+            </div>
+
+            <div class='tech'>
+              <a target="_blank" href="http://www.centos.org/"><img src="/img/centos.png" width="96" alt="CentOS" /></a>
+              <h4><a target="_blank" href="http://www.centos.org/">CentOS</a></h4>
+              <p>A RedHat-based Linux distribution popular for its stability and reliability. Symonds &amp; Son has extensive experience creating large production applications on CentOS using customized deployment automation scripts.</p>
+            </div>
+
+            <div class='tech'>
+              <a target="_blank" href="http://www.ubuntu.com/"><img src="/img/ubuntu.svg" width="110" alt="ubuntu" /></a>
+              <h4><a target="_blank" href="http://www.ubuntu.com/">ubuntu</a></h4>
+              <p>Known for its cutting-edge sensibilities and popularity on Amazon's cloud, ubuntu is a common selection for companies looking for a well-known, well-supported Linux operating system. Our ubuntu clusters serve millions of API and web hits per month.</p>
+            </div>
+
+            <div class='tech'>
+              <a target="_blank" href="http://nginx.org/"><img src="/img/nginx.png" width="130" alt="nginx" /></a>
+              <h4><a target="_blank" href="http://nginx.org/">nginx</a></h4>
+              <p>Our server software of choice. nginx is a powerful, scalable web server: it is highly customizable and, when configured properly, extremely fast for both end-users and servers.</p>
+            </div>
+
+            <div class='tech'>
+              <a target="_blank" href="http://www.rackspace.com/"><img src="/img/rackspace.png" width="80" alt="RackSpace" /></a>
+              <h4><a target="_blank" href="http://www.rackspace.com/">RackSpace</a></h4>
+              <p>As popular as Amazon Web Services, RackSpace provides excellent support and performance servers that can't be beat. Symonds &amp; Son's development team are experts at deploying into RackSpace's OpenCloud and using their hosted solutions.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="clients" class="black">
+
+        <h4 class="uppercase">Our clients love us</h4>
+        <h5>And you will too</h5>
+
+        <div class="centered">
+          <div id="testimonials">
+
+              <div class="bordered card">
+                <div class="card-interior">
+                  <img src="/img/jimmie-johnson.png" alt="Jimmie Johnson Racing" class="logo" />
+
+                  <div class="description">"We initially utilized Symonds and Sons to update and correct our existing website code. We were immediately impressed with the breadth of knowledge and expertise they brought to the table, not just for the web but also for mobile applications and backend support/maintenance. Symonds & Son’s ability to provide guidance, innovation and timely solutions has allowed us to expand our digital presence and connect on a deeper level with Jimmie's fans across various platforms and with greater reliability no matter how much traffic we get."</div>
+                  <div class="title">Lauren Murray, Digital & Social Communications Manager</div>
+                </div>
+              </div>
+              <div class="bordered card">
+                <div class="card-interior">
+                  <img src="/img/plyfe.png" alt="Plyfe" class="logo" />
+
+                  <div class="description">"Having the Symonds & Son team which is composed of experts that know how to follow all of the best practices on server automation, RAILS & Full Stack Development not only made our environment management much better but also helped take our code to the next level!  In summation, they understand start ups and have been a pleasure to partner with!"</div>
+                  <div class="title">Mateen Aini, Co-Founder / CEO of Plyfe</div>
+                </div>
+              </div>
+              <div class="bordered card">
+                <div class="card-interior">
+                  <img src="/img/liveworld.png" alt="LiveWorld" class="logo" />
+
+                  <div class="description">"Symonds & Son unique combination of operational expertise and application development wizardry has allowed LiveWorld to scale its own engineering capabilities dramatically faster than we could have on our own.  Leveraging Symonds and Son’s skills and personalized attention has allowed LiveWorld to simultaneously rapidly evolve its own suite of tools with new features while reducing the application’s downtime."</div>
+                  <div class="title">Michael Dosik, VP Engineering</div>
+                </div>
+              </div>
+          </div>
+
+          <h6>Just some of our clients</h5>
+
+          <div id="client_gallery">
+              <div class="gallery_item">
+                <span><img src="/img/att.png" alt="AT&amp;T" /></span>
+              </div>
+              <div class="gallery_item">
+                <span><img src="/img/npr.jpg" alt="National Public Radio" /></span>
+              </div>
+              <div class="gallery_item">
+                <span><img src="/img/liveworld.png" alt="LiveWorld" /></span>
+              </div>
+              <div class="gallery_item">
+                <span><img src="/img/jimmie-johnson.png" alt="Jimmie Johnson Racing" /></span>
+              </div>
+              <div class="gallery_item">
+                <span><img src="/img/plyfe.png" alt="Plyfe" /></span>
+              </div>
+              <div class="gallery_item">
+                <span><img src="/img/intelsat.jpg" alt="Intelsat" /></span>
+              </div>
+              <div class="gallery_item">
+                <span><img src="/img/televisa.png" alt="Televisa" /></span>
+              </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="team">
+        <div class="centered">
+          <h4>Modern Day Artisans</h4>
+          <h5>meet the team</h5>
+
+          <div class='cofounders'>
+            <img src="/img/symonds-and-son.jpg" />
+          </div>
+
+          <div class="split vertical">
+            <div class="orange left">
+              <h3>Steve Symonds</h3>
+              <h4>Co-Founder, VP of Sales</h4>
+              <p>
+                Steve is a serial entrepreneur, experienced in building digital media, social media, mobile and high tech companies in a variety of verticals. Steve has propelled numerous early-stage companies through development of market-leading products and services, leveraging IP rights, and raising capital.
+              </p>
+              <div class="email">
+                <img src="/img/mail-icon.png" height="10" width="14" />
+                <a href="mailto:steve@symondsandson.com">steve@symondsandson.com</a>
+              </div>
+            </div>
+            <div class="right white">
+              <h3>Josh Symonds</h3>
+              <h4>Co-Founder, Lead Developer</h4>
+              <p>
+                Josh is an expert devops consultant, application developer, and systems administrator. He has created applications used on hundreds of thousands of mobile devices and has provisioned, managed, and ensured uptime of hundreds of servers in the cloud and in physical datacenters.
+              </p>
+              <div class="email">
+                <img src="/img/mail-icon-black.png" height="10" width="14" />
+                <a href="mailto:josh@symondsandson.com">josh@symondsandson.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id='have_a_project'>
+        <div class="centered">
+          <h3>Let's Talk</h3>
+          <h4>We'll get back to you within 24 hours.</h4>
+          <form action="https://symondsandson-contact.herokuapp.com/contact" method="post" id='contact_form'>
+            <input type='text' name='name' placeholder="NAME"/>
+
+            <input type='text' name='phone' placeholder="PHONE"/>
+
+            <input type='email' name='email' class='email' placeholder="EMAIL"/>
+
+            <textarea name='description' placeholder="DESCRIBE YOUR PROJECT"></textarea>
+
+            <div class="g-recaptcha" data-sitekey="6Lc08QITAAAAAMdN4cwIUzCT7u-nOepneFHbo8Pf"></div>
+
+            <input class="button" name="send" type="submit" value="Contact Us">
+          </form>
+        </div>
+      </div>
+
+      <footer>
+        <div class='centered'>
+          <span class="left">Symonds &amp; Son</span>
+          <span class="right">
+            <i class="fa fa-phone"></i><span>773-480-4810</span>
+            <i class="fa fa-github"></i><span><a href="http://github.com/symondsandson">github.com/symondsandson</a></span>
+            <i class="fa fa-envelope-o"></i><span><a href="mailto:info@symondsandson.com">info@symondsandson.com</a></span>
+          </span>
+          <br/>
+          <div class="divider"></div>
+          <br/>
+          <span class="bottom">
+            Made with <img src="/img/heart-icon.png" alt="heart" /> in Chicago &copy; 2015 Symonds &amp; Son
+          </span>
+        </div>
+      </footer>
+
+
+      <script src="/js/application.js?1428513476" type="text/javascript"></script>
+      
+
+      <script>
+          var _gaq=[['_setAccount','UA-39274431-1'],['_trackPageview']];
+          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+          g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+          s.parentNode.insertBefore(g,s)}(document,'script'));
+      </script>
     </body>
 </html>
