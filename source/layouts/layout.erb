@@ -174,15 +174,6 @@
             <% end %>
           </div>
 
-          <h6>Just some of our clients</h5>
-
-          <div id="client_gallery">
-            <% data.clients.client_logos.each do |client| %>
-              <div class="gallery_item">
-                <span><%= tag(:img, src: "/img/#{client.logo}", alt: client.company) %></span>
-              </div>
-            <% end %>
-          </div>
         </div>
 
       </div>
